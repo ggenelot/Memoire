@@ -1,0 +1,12 @@
+\chapter{Effets des fonctions de dommage sur un modèle}
+\label{chapter:modelisation}
+
+\chapterabstract{Ce chapitre propose une approche plus économétrique des effets de la modélisation des fonctions de dommage. On utilise le modèle WILIAM, qui pourrait devenir un modèle de référence de la commission européenne, auquel on change les fonctions de dommage. On le fait tourner avec de nombreux scénarios, pour obtenir des résultats. On réalise ensuite une étude économétrique de ces résultats, pour savoir qu'elle paramètre a le plus d'effet sur les résultats du modèle.}
+
+\begin{methodbox}
+On utilise ici le modèle WILIAM. Il s'agit d'un modèle open source, donc il est assez facile de le répliquer, modifier et distribuer. Le code source est disponible sur Github. On réalise une fork du code source, c'est à dire une branche de code. Notre branche de code devient un projet autonome sur lequel on peut travailler de manière semi-indépendante du projet. En effet, les modifications du projet WILIAM ou celles réalisées ici ne s'affecteront pas, à moins que l'on push notre code vers le code principal, ou que l'on pull les nouvelles modifications du code principal vers notre branche. Ces deux opérations peuvent se faire sous supervision, pour s'assurer que l'on n'interagit pas avec différentes parties de notre code, ce qui risquerait de fausser nos résultats. \\
+
+Dans cette branche, on modifie le code pour qu'il représente les fonctions de dommage. On modélise ainsi plusieurs formes de fonctions de dommage, issues de la revue de littérature évoquée plus haut. On fait tourner le modèle avec ces différentes fonctions de dommage, et en faisant varier aléatoirement les différents paramètres : taux d'actualisation, les différents paramètres qui entrent en compte dans le modèle. \\
+
+On récupère les résultats et on procéde à des analyses économétriques sur les résultats pour voir quels sont les paramètres qui ont le plus influencé les résultats. 
+\end{methodbox}

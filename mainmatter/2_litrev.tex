@@ -1,0 +1,41 @@
+\chapter{Revue de littérature des fonctions de dommages}
+\label{chapter:litrev}
+
+\chapterabstract{Les fonctions de dommage permettent de modéliser les impacts du changement climatique sur d'autres parties du modèle. Elles peuvent varient par leur existence, forme, calibration ou par les paramètres ou secteurs qu'elles prennent en compte. Pourtant, un changement dans ces fonctions peut radicalement faire changer le fonctionnement d'un modèle, et ainsi les résultats et les conclusions qu'on en tire. Cette partie s'intéresse donc aux différentes fonctions de dommage qui existent dans la littérature.}
+
+%%Accroche
+Les modèles intégrés sont ainsi derrière de nombreuses publications qui informent le débat public : rapports du GIEC, Stern Review, revue du coût social du carbone. Ils ont donc un rôle de premier plan dans la prise de décisions sur les questions climatiques, sur les options qu'ils estiment possibles ainsi que sur les conséquences anticipées de telle ou telle action. Un élément clé de cette modélisation est la prise en compte des impacts climatiques. 
+
+
+%%Définition des termes
+
+%%Rappel du sujet
+Les différentes formes de fonction de dommage dans les modèles intégrés
+
+%%Problématique
+Quelles sont les fonctions de dommages utilisées dans les modèles intégrés ? Et, plus précisement, quels modèles utilisent des fonctions de dommage ? Quels phénomènes sont représentés ? Quelles variables entrent en compte, et comment sont-elles paramétrisées ? 
+
+%% Annonce du plan
+Dans une première partie, nous détaillerons la méthodologie utilisée pour obtenir la base de donnée des fonctions de dommage. Dans une seconde partie, nous la décrirons avec différentes statistiques descriptives. Enfin, nous aborderons trois points critiques des fonctions de dommage : leur forme; leurs paramètres; et la calibration. 
+
+\begin{methodbox}[Revue de la littérature]
+Pour obtenir une base de données des différentes fonctions de dommage, nous avons cherché à fusionner plusieurs sources de données. D'abord, l'IAM Consortium publie sur son site internet les documentations de nombreux modèles intégrés, sous la forme d'un wiki. Ces fiches sont rédigées par les équipes des modèles - ce qui permet d'avoir une source primaire sur les informations concernant les modèles - mais sont souvent incomplètes. En revanches, des "cartes", qui détaillent les principales caractéristiques de chaque modèle, sont également disponibles. Ce sont principalement celles-ci qui sont utilisées dans la base de données. Une autre source de données est le fichier des scénarios utilisés par le GIEC. Celui-ci permet d'avoir des informations sur chacun des scénarios soumis pour l'AR6, et d'avoir accès à de nombreuses informations : modèle utilisé, vetted ou non, impacts climatiques pris en compte ou non. A ces différentes sources, on ajoute manuellement des modèles, basée sur une lecture aléatoire de la littérature. Ils comprennenent notablement les modèles utilisés par l'agence interagence du coût social du carbone, ceux cités par Souffron et Jacques, ceux utilisés par les SSP, ainsi que d'autres modèles intégrés trouvés par littérature interposée. 
+Le monde de la modélisation est très vaste, les modèles souvent compliqués à comprendre et parfois peu transparents. Ainsi, il a toujours été préféré de se baser sur des sources explicites. Bien qu'un véritable effort pour chercher à avoir une vision sur le plus de modèles possibles, cette étude ne peut pas être considérée comme un recensement exhaustif des modèles intégrés ni de leurs fonctions de dommage. \\ \gls{latex}
+
+Une fois cette première liste de modèles obtenue, un premier tri est effectué entre ceux qui intègrent une fonction de dommage et ceux qui n'en intégrent pas. On considére ici les fonctions de dommages explicitement définies telles quelles, bien que d'autres fonctions puissent in fine avoir un comportement similaire. Ainsi, pour certaines, on a une connaissance explicite : par exemple, les fiches de l'IAMC comportent une case sur les impacts modélisés. Pour les autres, on considère qu'elles n'ont pas de fonction de dommage si les termes "damage function" ou "damage" ne sont pas présents dans leur documentation ou les publications associées, et s'il n'est pas fait mention de fonctions de dommage dans d'autres sources. \\
+
+Pour chaque modèle incluant des fonctions de dommage, on cherche dans sa documentation la description de ces fonctions de dommage. La plupart du temps, celle-ci comporte une équation et les variables associées. Un script Chat-GPT est alors utilisé sur la partie du document qui est décrit la fonction de dommage. Celui-ci interprète et met en forme (sous la forme d'un tableau CSV) toutes les variables présentes dans cette fonction. Elles sont alors contrôlées visuellement. Cette étape est repétée pour chaque fonction de dommage. Une fois les variables de chaque fonction de dommage d'un modèle identifiées, ce fichier est téléversé dans la base de données, à l'aide du logiciel Airtable, dans la table 'Variable'. \\
+
+Une fois les variables insérées dans leur table, les fonctions de dommage sont incluses dans la table 'Damage functions'. Chaque fonction est assortie à un nom, soit celui-donné dans la publication, soit choisi selon le contexte. Sont également ajoutés le nom du modèle, le numéro de l'équation, l'annotation zotero et le DOI de la publication, afin de pouvoir retrouver rapidement la fonction de dommage. Sont alors ajoutés d'une part les variables qui viennent en entrées de l'équation, et la variable qui sur laquelle l'équation agit. \\
+
+Enfin, une autre table est ajoutée : celle des risques identifiés par le GIEC. Ceux-ci sont issus du rapport de synthèse de l'AR6, et la classification est faite par l'auteur. Lorsqu'une fonction de dommage décrit un des risques identifiés par le GIEC, elle se voit liée à celui-ci. 
+\end{methodbox}
+
+
+\section{La forme : comment représenter un phénomène qui n'existe pas encore ?}
+
+
+\section{Les paramètres : quel niveau de complexité faut-il ?}
+
+\section{La calibration : un \textit{"tiens"} vaut-il deux \textit{"tu l'auras"} ?}
+

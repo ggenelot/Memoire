@@ -1,0 +1,138 @@
+\documentclass{layout/epfl-report}
+
+%% Set up the bibliography
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{lipsum}
+
+%% Index
+
+\usepackage{imakeidx}
+\makeindex[columns=2]
+
+
+\usepackage{glossaries}
+\makeglossaries
+
+
+
+%% Additional packages and commands
+\setlist{itemsep=-2pt} % Reducing white space in lists slightly
+\renewcommand{\deg}{\si{\degree}\xspace} % Use \deg easily, everywhere
+
+\renewcommand{\listfigurename}{Liste des illustrations}
+\renewcommand{\listtablename}{Liste des tableaux}
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{newfloat}
+
+% Définition d'un nouvel environnement pour les encarts méthodologiques
+\DeclareFloatingEnvironment[fileext=frm,placement={!ht},name=Encart]{method}
+\captionsetup[method]{labelfont=bf}
+
+% Couleur de fond pour les encarts
+\definecolor{lightgray}{RGB}{240,240,240}
+
+% Définition du style des encarts
+\mdfdefinestyle{methodstyle}{
+    backgroundcolor=lightgray,
+    linewidth=0pt,
+    roundcorner=5pt,
+    innertopmargin=10pt,
+    innerbottommargin=10pt,
+    innerleftmargin=10pt,
+    innerrightmargin=10pt
+}
+
+
+
+\newcommand{\methodtitle}[1]{%
+    \refstepcounter{method}%
+    \textbf{Méthode \arabic{method} : #1} \\
+    \par
+}
+
+% Définition de l'environnement "methodbox"
+\newenvironment{methodbox}[1][]
+{\begin{mdframed}[style=methodstyle]\methodtitle{#1}\ignorespaces}
+{\end{mdframed}}
+
+
+%% ----------------------------------------------------------------------
+%%    Begin of document + Frontmatter (Roman page numbering)
+%% ----------------------------------------------------------------------
+
+\linespread{1.15}
+
+
+
+\begin{document}
+
+\input{mainmatter/glossaire}
+
+
+
+\frontmatter
+
+%% Define the main parameters
+\title{Fonctions de dommages dans les modèles intégrés}
+\subtitle{Quelle forme, étendus et enjeux pour les fonctions de dommage ?}
+\author{Gabriel Genelot}
+
+\subject{\textit{Mémoire de recherche}} % Cover only
+\affiliation{} % Cover only
+\coverimage{} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{A9CA53} % Color for cover title
+
+\makecover
+
+\input{frontmatter/title-report}
+\input{frontmatter/preface}
+\input{frontmatter/summary}
+
+\tableofcontents
+
+
+%\input{frontmatter/nomenclature}
+
+%% ----------------------------------------------------------------------
+%%    Mainmatter (Arabic page numbering)
+%% ----------------------------------------------------------------------
+
+\mainmatter
+
+\input{mainmatter/0_Introduction}
+
+\input{mainmatter/1_introduction}
+
+\input{mainmatter/2_litrev}
+\input{mainmatter/3_modelisation}
+\input{mainmatter/4_ethique} % Create file to add
+\input{mainmatter/5_socio}
+
+\input{mainmatter/6_conclusion}
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\printbibliography[heading=bibintoc,title=References]
+
+%% ----------------------------------------------------------------------
+%%    Appendix (Letters for chapters)
+%% ----------------------------------------------------------------------
+
+\appendix
+
+%\listoffigures
+%\listoftables
+
+%\input{appendix/appendix-a}
+%\input{appendix/appendix-b}
+%\input{appendix/appendix-c} % Create file to add
+
+\end{document}

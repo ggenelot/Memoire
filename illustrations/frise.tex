@@ -1,0 +1,47 @@
+\begin{tikzpicture}[scale=1]
+
+\def\figureheight{20} % Choisis la hauteur désirée
+\def\nodedistance{\textwidth*1/3}
+\def\verticaldistance{2cm}
+\def\nodewidth{3cm}
+
+% Trajectory
+\draw[line width = 2pt, rounded corners=8pt] (0,0) -- node[midway, below]{Les premières intuitions} (\textwidth,0) -- (\textwidth,-\figureheight*1/3) -- node[midway, below]{L'essor de la climatologie}(0,-\figureheight*1/3) -- (0,-\figureheight*2/3) -- node[midway, below]{Naissance du \textit{régime climatique}}(\textwidth,-\figureheight*2/3);
+
+
+% Phase 1 : les premières intuitions
+
+
+\node (1822) at (0,0.5) {1822};
+\node (fourrier) [rectangle, draw, above of = 1822, text width=\nodewidth, text centered, yshift=2cm]{
+Fourrier théorise l'effet de serre \\
+\includegraphics[width=\linewidth]{images/Fourier2.jpg}
+};
+
+\node (1859) [right of = 1822, node distance = \nodedistance] {1859};
+\node (tyndall) [rectangle, draw, above of=1859, text width=\nodewidth, text centered]{John Tyndall};
+
+\node (1896) [right of = 1859, node distance = \nodedistance] {1896};
+\node (farrhenius) [rectangle, draw, above of=1896, text width=\nodewidth, text centered]{Svante Arrhenius};
+
+\node (1938) [right of = 1896, node distance = \nodedistance] {1938};
+\node (callendar) [rectangle, draw, above of=1938, text width=\nodewidth, text centered]{Guy Callendar};
+
+% 1822 : Joseph Fourrier
+% 1859 : John Tyndall
+% 1896 : Svante Arrhenius
+% 1938 : Guy Callendar
+
+
+% Phase 2 : l'essor de la climatologie
+
+% Phase 3 : l'essor du régime climatique
+
+
+% Information boxes
+\draw[fill=blue!20] (0.5,-1) rectangle (2.5,-2);
+\node at (1.5,-1.5) {Création du GIEC};
+\draw[fill=green!20] (7.5,-1) rectangle (9.5,-2);
+\node at (8.5,-1.5) {Première COP};
+% Add more information boxes as needed
+\end{tikzpicture}
