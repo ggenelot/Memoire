@@ -203,17 +203,18 @@
 \fancypagestyle{plain}{%
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[C]{\headerstyle\thepage}}
+    %\fancyfoot[C]{\headerstyle\thepage}
+    }
 
 %% Format the header and footer of 'fancy' pages (based on twoside option)
 \if@twoside
     \fancyhf{}
     %\fancyhead[LE,RO]{\headerstyle\thepage}
     \renewcommand{\headrulewidth}{0pt} % Ajoutez cette ligne pour supprimer la ligne de règle sous l'en-tête
-    \fancyhead[RE]{\headerstyle\nouppercase{\color{gray}\underline\leftmark}}
-    \fancyhead[LO]{\headerstyle\nouppercase{\color{gray}\underline\rightmark}}
-    \fancyfoot[RE]{\headerstyle\color{gray}\thepage}
-    \fancyfoot[LO]{\headerstyle\color{gray}\thepage} % Clear center footer
+    %\fancyhead[RE]{\headerstyle\nouppercase{\color{gray}\underline\leftmark}}
+    %\fancyhead[LO]{\headerstyle\nouppercase{\color{gray}\underline\rightmark}}
+    %\fancyfoot[RE]{\headerstyle\color{gray}\thepage}
+    %\fancyfoot[LO]{\headerstyle\color{gray}\thepage} % Clear center footer
 
     \RequirePackage{emptypage} % Remove header and footer on empty pages
 \else
