@@ -77,20 +77,21 @@
 %\frontmatter
 
 %% Define the main parameters
-\title{Fonctions de dommages dans les modèles intégrés}
+\title{Fonctions de dommages dans les modèles intégrés - 16h45}
 %\subtitle{Quelle forme, étendus et enjeux pour les fonctions de dommage ?}
 \author{Gabriel Genelot}
 
-%\subject{\textit{Mémoire de recherche}} % Cover only
-%\affiliation{} % Cover only
-%\coverimage{} % Aspect ratio of 2:3 (portrait) recommended
-%\definecolor{title}{HTML}{A9CA53} % Color for cover title
+
+\subject{\textit{Mémoire de recherche}} % Cover only
+\affiliation{} % Cover only
+\coverimage{figures/campus.jpg} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{A9CA53} % Color for cover title
 
 %\makecover
 
-\input{frontmatter/title-report}
-\input{frontmatter/preface}
-\input{frontmatter/summary}
+% \input{frontmatter/title-report}
+%\input{frontmatter/preface}
+%\input{frontmatter/summary}
 
 \tableofcontents
 
@@ -107,7 +108,7 @@ coucou tout le monde
 
 \input{mainmatter/0_Introduction}
 
-\input{mainmatter/1_introduction}
+\input{mainmatter/1_impacts-risques}
 
 \input{mainmatter/2_litrev}
 \input{mainmatter/3_modelisation}
@@ -121,8 +122,7 @@ coucou tout le monde
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{7000}
 
-%% Add bibliography
-\printbibliography[heading=bibintoc,title=References]
+
 
 %% ----------------------------------------------------------------------
 %%    Appendix (Letters for chapters)
@@ -130,7 +130,14 @@ coucou tout le monde
 
 \appendix
 
-%\printindex
+\printglossary[title=Glossaire]
+
+%% Add bibliography
+
+\chapter{Bibliographie}
+\begin{multicols}{2}
+\printbibliography
+\end{multicols}
 
 %\listoffigures
 %\listoftables
