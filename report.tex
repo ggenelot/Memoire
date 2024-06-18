@@ -1,4 +1,4 @@
-\documentclass{layout/epfl-report}
+\documentclass{report}
 
 %% Set up the bibliography
 \usepackage[style=authoryear]{biblatex}
@@ -8,8 +8,8 @@
 
 %% Index
 
-\usepackage{imakeidx}
-\makeindex[columns=2]
+%\usepackage{imakeidx}
+%\makeindex[columns=2]
 
 
 \usepackage{glossaries}
@@ -18,7 +18,7 @@
 
 
 %% Additional packages and commands
-\setlist{itemsep=-2pt} % Reducing white space in lists slightly
+%\setlist{itemsep=-2pt} % Reducing white space in lists slightly
 \renewcommand{\deg}{\si{\degree}\xspace} % Use \deg easily, everywhere
 
 \renewcommand{\listfigurename}{Liste des illustrations}
@@ -30,10 +30,10 @@
 
 % Définition d'un nouvel environnement pour les encarts méthodologiques
 \DeclareFloatingEnvironment[fileext=frm,placement={!ht},name=Encart]{method}
-\captionsetup[method]{labelfont=bf}
+%\captionsetup[method]{labelfont=bf}
 
 % Couleur de fond pour les encarts
-\definecolor{lightgray}{RGB}{240,240,240}
+%\definecolor{lightgray}{RGB}{240,240,240}
 
 % Définition du style des encarts
 \mdfdefinestyle{methodstyle}{
@@ -74,25 +74,27 @@
 
 
 
-\frontmatter
+%\frontmatter
 
 %% Define the main parameters
 \title{Fonctions de dommages dans les modèles intégrés}
-\subtitle{Quelle forme, étendus et enjeux pour les fonctions de dommage ?}
+%\subtitle{Quelle forme, étendus et enjeux pour les fonctions de dommage ?}
 \author{Gabriel Genelot}
 
-\subject{\textit{Mémoire de recherche}} % Cover only
-\affiliation{} % Cover only
-\coverimage{} % Aspect ratio of 2:3 (portrait) recommended
-\definecolor{title}{HTML}{A9CA53} % Color for cover title
+%\subject{\textit{Mémoire de recherche}} % Cover only
+%\affiliation{} % Cover only
+%\coverimage{} % Aspect ratio of 2:3 (portrait) recommended
+%\definecolor{title}{HTML}{A9CA53} % Color for cover title
 
-\makecover
+%\makecover
 
 \input{frontmatter/title-report}
 \input{frontmatter/preface}
 \input{frontmatter/summary}
 
 \tableofcontents
+
+coucou tout le monde 
 
 
 %\input{frontmatter/nomenclature}
@@ -101,7 +103,7 @@
 %%    Mainmatter (Arabic page numbering)
 %% ----------------------------------------------------------------------
 
-\mainmatter
+%\mainmatter
 
 \input{mainmatter/0_Introduction}
 
@@ -127,6 +129,8 @@
 %% ----------------------------------------------------------------------
 
 \appendix
+
+%\printindex
 
 %\listoffigures
 %\listoftables
