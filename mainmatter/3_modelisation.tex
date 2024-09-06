@@ -1,39 +1,154 @@
-\chapter{Effets des fonctions de dommage sur un modèle}
+\chapter{Rendre visible : quantifier les choix éthiques}
 \label{chapter:modelisation}
+\newrefsegment
+\PEEL{Les différents choix de modélisation abordés plus haut ont une variation sur le niveau de dommage importantes, presque aussi / plus importante que d'autres facteurs souvent pris en compte (incertitude, scénario climatique).}{On utilise une analyse économétrique pour essayer de quantifier ce phénomène. }{Même si les résultats ne sont pas super forts, on voit qu'il y a une variation importante qui est issue de la variation de ces paramètres éthiques.}{Le modèle ne donne pas de vérité absolue, il sort ce qu'on y a fait entrer => les modèles sont profondément politiques, et reflètent en ce sens une certaine conception du monde.}
+
+
+
 
 \chapterabstract{Ce chapitre propose une approche plus économétrique des effets de la modélisation des fonctions de dommage. On utilise le modèle WILIAM, qui pourrait devenir un modèle de référence de la commission européenne, auquel on change les fonctions de dommage. On le fait tourner avec de nombreux scénarios, pour obtenir des résultats. On réalise ensuite une étude économétrique de ces résultats, pour savoir qu'elle paramètre a le plus d'effet sur les résultats du modèle.}
 
+\cite{errickson_equity_2021} => il peut y avoir une plus grande variation du SCC selon l'équité que selon l'incertitude climatique
+
+Nous avons vu dans le chapitre précédent que les modèles varient dans leurs choix de représentations des dommages. De plus, ces différents choix semblent tous valables à leur manière : les phénomènes représentés sont incertains, et cette variabilité représente surtout l'incertitude qui entoure ces phénomènes. Pourtant, ce sont bien les mêmes phénomènes; il ne devrait donc pas y avoir de différence entre les modèles. Ces différences sont donc apportées exclusivement par les choix de modélisation; or, elles peuvent être importantes, et donner des conclusions radicalement différentes, donnant lieu à des interprétations opposées. La querelle entre Nordhaus et Stern, évoquée plus haut, en est un exempe éloquent. On définit ici la notion de paramètre éthique : elle désigne les paramètres qui n'ont pas vocation à représenter un phénomène physique ou social observable, mais plutot à représenter une valeur morale. Le taux d'actualisation, par exemple, entre tout à fait dans cette définition. En effet, il représente l'importance accordée à l'équité inter-générationnelle. bien qu'il y ait eu des tentatives d'observer empiriquement cette valeur, notamment en s'intéressant au taux de préférence pure pour le présent dans les prêts de long terme, il semble difficile de penser que cette valeur soit valable a plus long terme ou dans d'autres contexte. Plutot, il apparait que ce paramètre reflète un système normatif, et relève de ce fait plutot du choix moral que du choix technique. Se pose alors la question suivante : quelle part de la variation du niveau total de dommage est-elle expliquée par ces paramètres éthiques. Dans cette partie, on développe un protocole expérimental qui vise à mesurer le niveau de dommage produit par différents modèles, différentes fonctions de dommages et surtout différents niveau pour ces paramètres éthiques. On régresse ensuite les données obtenues pour mesurer quantitativement la part de la variation qui est expliquée par ces fameux paramètres. 
+
+\section{Cadre conceptuel}
+
+Le cadre conceptuel général de cette expérience est celui de la modélisation intégré. Il s'inscrit en cela dans la lignée des réflexions développées dans le chapitre \ref{chapter:introduction}. Il semble néanmoins nécessaire de préciser quelques points. \\
+
+D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons choisi d'utiliser le modèle WILIAM, pour plusieurs raisons. 
+
+\paragraph{Modèle Open-source}WILIAM est un modèle Open-Source, ce qui signifie que l'ensemble du code source est disponible en ligne, avec une licence permettant une utilisation, diffusion et modification du programme sans limites. C'est nécessaire puisqu'on a ainsi accès à tous le code source, ce qui permet de travailler sur une base solide; on peut également le modifier librement, ce qui est au coeur de l'expérience; enfin, on peut le diffuser librement aussi, ce qui est fait à travers le dépôt GitHub et le blog. Par ailleurs, bien que ce ne soit pas en soi une garantie de qualité, l'utilisation de l'open source permet d'améliorer la robustesse et la transparence des modèles, puisque chacun peut voir les hypothèses, proposer des modifications, et corriger des erreurs. 
+
+\paragraph{Application aux politiques publiques} WILIAM est issu du projet LOCOMOTION, financé par la Commission Européenne. Il répond à une demande de celle-ci de s'équiper d'un nouveau modèle. Ainsi, WILIAM est un modèle qui vise à répondre à des questions de politique publique. 
+
+\paragraph{Modèle complexe} WILIAM est un modèle particulièrement complexe : il compte près de 4000 variables. Cela le rend particulièrement vulnérable aux problématiques de transparence et de complexité excessive que nous développerons plus tard. Néanmoins, cela nous permet d'avoir un modèle le plus comple possible. Cela permet d'intégrer les fonctions de dommage facilement, car les variables sont déjà existantes. 
+
+\paragraph{Modèle de simulation} WILIAM est un modèle de simulation. Cette caractéristique est importante car elle permet de voir les valeurs de chaque paramètre à tout moment, mais aussi de représenter des paramètres non-monétaires. De plus, ça le rend moins sensible aux critiques de normativité inhérente aux modèles d'optimisation \ref{}. 
+
+\section{Méthode}
+
+\begin{methodbox}[Modélisation des fonctions de dommage dans WILIAM]
+
+Pour modéliser les fonctions de dommage dans WILIAM, on commence par créer un nouveau repo sur github, dans lequel on télécharge le code source de WILIAM. On s'assure que tout est fonctionnel, et que le modèle tourne bien. La visualisation du modèle se fait grâce au logiciel VENSIM. \\
+
+On rassemble les sources de données disponibles des modèles : code source, documentation et / ou publications qui y font référence. Ces sources n'offrent pas le même niveau d'information. Par exemple, les modèles dont on ne trouve pas le code source mais uniquement des publications sont plus difficiles à modéliser car il manque souvent des informations cruciales, telles que les valeurs obtenues pour les paramètres. \\
+
+Une fois la définition de la fonction identifiée, on les modélise à l'aide de l'interface graphique du logiciel VENSIM. On sauvegarde régulièrement, en réalisant des \textit{commit} sur github pour garder une trace de la progression.
+    
+\end{methodbox}
+
+\begin{methodbox}[Conversion des paramètres selon les bonnes zones géographiques]
+
+    Le modèle WILIAM comporte 35 régions. En revanche, les autres modèles n'ont pas nécessairement le même découpage géographique. Deux cas se distinguent : soit le modèle est agrégé au niveau mondial; on peut alors utiliser les fonctions de dommage région par région, sans besoin de les changer. Soit le modèle possède des régions, et il faut alors convertir les régions du modèle A en régions de WILIAM pour avoir la bonne paramètrisation. Ce deuxième cas de figure est particulièrement vrai dans le cas du modèle FUND, qui a des régions très différentes de celles de WILIAM, et qui repose beaucoup sur de la paramétrisation. Il faut donc convertir les paramètres des régions de FUND en régions de WILIAM. 
+
+    Par ailleurs, il est à noter que si la documentation de FUND est très complète et accessible en ligne, les tables de paramètre ne sont pas disponible dans un format facilement lisible tel que CSV. La méthode retenue a été de lire la page de la documentation (en markdown), et de la découper table par table puis valeur par valeur à l'aide d'un script python, qui permet ensuite d'enregistrer ces données dans un format lisible par VENSIM. Ces opérations sont longues et peuvent être source de nombreuses erreurs. Ainsi, le non-partage des données dans un format standard est un vrai frein à la reproductibilité. \\
+    
+    On utilise alors un script Python qui désagrège les zones de FUND en pays, et qui associe à chaque pays sa zone dans WILIAM. 
+    
+\end{methodbox}
+
+La plupart des fonctions de dommage dépendent du niveau de revenu par habitant, de plusieurs manières. Le premier cas de figure est qu'elles donnent un niveau de dommage qui est exprimé en proportion du PIB. On a alors un niveau de dommage absolu qui est plus grand dans les régions plus riches, puisque le PIB est lui-même plus grand. Ce point est essentiel, en particulier dans les modèles d'optimisation. En effet, ces modèles cherchant à trouver la solution la moins couteuse, ils vont être beaucoup plus sensibles aux dommages dans les pays ayant un PIB plus important que dans les pays ayant un niveau de revenu plus faible. \emph{De facto}, ils vont chercher à minimiser les dommages dans les pays les plus riches, quitte à augmenter les dommages dans les pays les plus pauvres. \\
+
+La deuxième manière est que la fonction de dommage intègre directement le niveau de revenu dans le calcul du niveau de dommage. Selon le signe de l'équation, cette méthode peut renforcer les effets dans les pays les plus pauvres, ou au contraire les augmenter. 
+
+On peut finalement citer une technique permettant de monétiser des impacts non-monétaires, tels que des morts ou des années d'invalidité. La technique utilisée est assez classique en économie : il s'agit de calculer la valeur d'une vie statistique, ou \emph{value of a statistical life} (VSL). Cette méthode part de l'hypothèse que la valeur de la vie dans un lieu donnée correspond à un certain multiple du niveau de revenu par habitant dans ce lieu. On peut prendre en exemple la VSL du modèle FUND, qui prend la forme suivante : 
+
+\begin{equation}
+    VSL_{t, r} = \alpha (\frac{y_{t,r}}{y_0})^\epsilon
+\end{equation}
+où $t$ désigne l'année, $r$ désigne la région, $\alpha$ et $\epsilon$ des paramètres permettant de calibrer la fonction, $y_{t,r}$ le revenu par habitant dans la région $t$ à l'instant $r$, et $y_0$ un revenu de référence.  \\
+
+Ce choix de modélisation pose de nombreuses questions. 
+D'abord, d'un point de vue pragmatique. Les pays les plus pauvres sont susceptibles d'être les pays les plus impactés par le changement climatique, d'une part par une exposition plus grande à des phénomènes extremes, et d'autre part par une situation de pauvreté préexistante qui fragilise la résilience. 
+Ensuite, pour des raisons morales. Le principe de responsabilité commune mais différenciée sur le changement climatique, qui préside le régime climatique depuis sa formation, instaure une distinction claire entre les pays des Nords, qui ont bénéficié de l'émission de carbone pendant des décennies pour leur développement, et les pays des Suds, dont le poids historique est relativement limité. On pourrait penser qu'il est souhaitable de pénaliser grandement les impacts du changement climatique dans les pays des Suds, du fait de cette responsabilité moindre. 
+Enfin,  on peut aussi envisager une perspective de justice sociale pour traiter de ce sujet. On peut par exemple imaginer que les dommages sur les plus pauvres, touchant des populations déjà fragiles, sont particulièrement impactants. Il pourrait être dès lors notre responsabilité de limiter ces impacts, à la manière du Maximin de Rawls. 
+
+Notre propos ici n'est pas de défendre l'une ou l'autre de ces positions. Chacune défend un objectif et un système normatif différent. Elles ont toutes leurs arguments et leurs travers, et il n'est pas question d'affirmer que l'une d'elle est la seule manière possible de concevoir le problème. Il s'agit même plutot de l'inverse : montrer qu'une multitude de choix de modélisation existent, et que leurs implications sont radicalement différentes. 
+
+En revanche, nous argumentons qu'il y a nécessairement, dans les pratiques de modélisation, le choix de l'une ou l'autre de ces conceptions.  Nous cherchons dès lors à comprendre les effets de ce choix sur le niveau de sortie du modèle, en appliquant un coefficient éthique (voir encadré méthodologique) en sortie des fonctions de dommage. Le rôle de ce coefficient est précisément de  rendre visible l'existence de ce choix, et de permettre aux utilisateurs de varier les paramètres. 
+
+\begin{methodbox}[Définition d'un coefficient éthique]
+Nous observons la forme de la valeur d'une vie statistique, développée dans FUND. Cette expression est une bonne référence, car : 
+
+\begin{itemize}
+    \item il s'agit d'une pratique courante
+    \item elle représente un phénomène dont on pourrait penser qu'il ait la même valeur partout (en l'occurence, la mort)
+\end{itemize}
+
+Cette expression permet de comparer un même phénomène (la mort), dans des contextes où le revenu est différent. Elle est donc adaptée pour représenter un même phénomène (un niveau de dommage, au sens physique) dans un système de comptabilité différent (en l'occurence monétaire). 
+
+Nous l'adaptons ainsi : 
+
+\begin{itemize}
+    \item les variations du coefficient $\alpha$ permettent de faire varier le sens et l'intensité de la relation entre niveau de revenu et niveau de dommage comptabilisé
+    \item les variations de $y_0$ permettent de faire varier la limite entre les pays considérés comme riches et les pays considérés comme pauvres
+    \item les variations de $\epsilon$ permettent de faire varier la convexité de la relation, c'est à dire à quelle point les valeurs pour les différents pays vont être différentes. 
+\end{itemize}
+
+\vspace{2cm}
+
+\centering
+\includegraphics[width=0.75\linewidth]{figures/coef.png}
+
+\end{methodbox}
+\begin{methodbox}[Execution des différents runs]
+
+    
+    
+\end{methodbox}
+
 \begin{methodbox}
-On utilise ici le modèle WILIAM. Il s'agit d'un modèle open source, donc il est assez facile de le répliquer, modifier et distribuer. Le code source est disponible sur Github. On réalise une fork du code source, c'est-à-dire une branche de code. Notre branche de code devient un projet autonome sur lequel on peut travailler de manière semi-indépendante du projet. En effet, les modifications du projet WILIAM ou celles réalisées ici ne s'affecteront pas, à moins que l'on push notre code vers le code principal, ou que l'on pull les nouvelles modifications du code principal vers notre branche. Ces deux opérations peuvent se faire sous supervision, pour s'assurer que l'on n'interagit pas avec différentes parties de notre code, ce qui risquerait de fausser nos résultats. \\
+On utilise ici le modèle WILIAM. Il s'agit d'un modèle open source, donc il est assez facile de le répliquer, modifier et distribuer. Le code source est disponible sur Github. On réalise une fork du code source, c'est-à-dire une branche de code. Notre branche de code devient un projet autonome sur lequel on peut travailler de manière semi-indépendante du projet. En effet, les modifications du projet WILIAM ou celles réalisées ici ne s'affecteront pas, à moins que l'on push notre code vers le code principal, ou que l'on pull les nouvelles modifications du code principal vers notre branche. Ces deux opérations peuvent se faire sous supervision, pour s'assurer que l'on n'interagit pas avec différentes parties de notre code, ce qui risquerait de fausser nos résultats. \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_notebooks/spatial_temporal_equity.html} \\
 
 Dans cette branche, on modifie le code pour qu'il représente les fonctions de dommage. On modélise ainsi plusieurs formes de fonctions de dommage, issues de la revue de littérature évoquée plus haut. On fait tourner le modèle avec ces différentes fonctions de dommage, et en faisant varier aléatoirement les différents paramètres : taux d'actualisation, les différents paramètres qui entrent en compte dans le modèle. \\
 
-On récupère les résultats et on procéde à des analyses économétriques sur les résultats pour voir quels sont les paramètres qui ont le plus influencé les résultats. 
+On récupère les résultats et on procéde à des analyses économétriques sur les résultats pour voir quels sont les paramètres qui ont le plus influencé les résultats. La largeur de la page est \the\textwidth. En centimètres, cela donne \uselengthunit{cm}\printlength{\textwidth}.
 
 \end{methodbox}
+
+\begin{figure}
+    \centering
+    \begin{overpic}[width=\linewidth,grid,tics=10]{illustrations/methodo_econometrie.png}
+        \put(10, 90){WILIAM}
+        \put(50,70){\Huge $E=mc^2$} % Texte au centre de l'image
+        \put(10,20){\color{red}\huge Important} % Texte en bas à gauche
+    \end{overpic}
+    %\includegraphics[width=0.9\textwidth]{illustrations/methodo_econometrie.png}
+    \legende{Méthodologie de la comparaison des modèles. (SVG)}{On utilise le modèle open-source WILIAM. Celui ci est composé de différents modules, dont un module représentant les dommages (représenté ici en rouge). On identifié les fonctions de dommage d'autres modèles (DICE, FUND et DEFINE). On les isole, et on les implémente dans le modèle WILIAM. On a alors un nouveau modèle, qui contient simultanément plusieurs manières de représenter les dommages. On connait la distribution de certains paramètres, et on cherche à voir l'effet de cette variation sur les résultats du modèle. On réalise des scénarios, qui sont des combinaisons de tirage aléatoire des variables. Le modèle est executé avec chaque scénario, de nombreuses fois. Tous ces \textit{runs} forment une grande base de donnée, sur laquelle on va réaliser une étude économétrique. }
+    \label{fig:methodo-simu}
+\end{figure}
+
+\section{Limites et contraintes}
+
+Plusieurs limitations doivent être soulignées. 
+
+\paragraph{Transposition dans un autre modèle} D'abord, on utilise les fonctions de dommage de différents modèles dans le modèle WILIAM. Cela permet d'avoir les même conditions pour toutes les fonctions de dommage. Ceci étant dit, les fonctions ne sont plus dans leur milieu d'origine. Ceci pose deux problème. D'abord, les fonctions peuvent avoir été calibrées pour fonctionner correctement dans certaines conditions de fonctionnement de température, et pas au delà; et ces conditions peuvent ne pas être atteinte dans WILIAM. Cela est notamment vrai pour toutes les variables qui nécessitent une calibration, par exemple celles où la population entre en jeux. Une population différente peut aboutir à une fonction de dommage qui est différente. Ensuite, il y a un grand risque d'erreur de transcription. En effet, les variables peuvent avoir les mêmes noms mais ne pas désigner la même chose précisement ou ne pas être calculée de la même manière; ou encore, la documentation d'origine peut ne pas être claire sur les caractéristiques précises d'une variable (notamment, le niveau de désagrégation). On peut néanmoins considérer que ce n'est pas une limitation très forte. En effet, nous nous intéressons ici à la \emph{relation} entre les hypothèses et le niveau de dommage, et pas au niveau de dommage \emph{en soi}. Ainsi, une mauvaise calibration risque de donner des valeurs trop faibles ou trop élèvées, mais n'a pas d'effet sur la relation en soi. Par ailleurs, ces fonctions sont justement présentées comme des relations liant les phénomènes climatiques à un niveau de dommage. Si changer de modèle affecte grandement la validité de la relation, alors on peut interroger la validité de la relation dans son ensemnle. 
+
+\paragraph{Collinéarité} Le problème majeur de cette technique est que les données analysées ont été produites dans la perspective de cette analyse. Ainsi, il est possible que le résultat de l'analyse de reflète que les hypothèses et les variations qui ont été volontairement ajoutées au modèle. En particulier, le niveau de dommage dépend beaucoup de la valeur du coefficient d'éthique spatial, qui est lui même construit pour l'expérience. 
+
+
+
+
 
 
 \begin{figure}
     \centering
-    %\includegraphics{}
-    \caption{Méthodologie de la comparaison des modèles. }
+    \include{figures/tikz/econometrie}
+    \legende{Méthodologie de la comparaison des modèles. (tikz)}{}
     \label{fig:methodo-simu}
 \end{figure}
 
 
 
 
-\section{Méthode}
+
+
+
+
+
 
 \section{Résultats}
-
-\begin{figure}
-    \centering
-    %\includegraphics{}
-    \caption{Coûts des dommages selon la fonction de dommage incluse dans le modèle WILIAM. \textit{Graphiques représentant la valeur totale des dommages dans le modèle WILIAM selon la fonction de dommage. Les couleurs représentant le modèle d'origine de la fonction de dommage; la ligne pleine la médiane, la zone grisée les valeurs interquartiles.}}
-    \label{fig:simu}
-\end{figure}
-
 
 \begin{table}[]
     \centering
@@ -41,7 +156,28 @@ On récupère les résultats et on procéde à des analyses économétriques sur
          &  \\
          & 
     \end{tabular}
-    \caption{Résultats de la régression}
-    \label{tab:reg}
+    \legende{Résultats issus de la régression des données de sortie du modèle}{}
+    \label{tab:reg1}
 \end{table}
+
+\subsection{Inégalités temporelles}
+\subsection{Inégalités spatiales}
+
+\begin{figure}
+    \centering
+    %\includegraphics[width=0.5\linewidth]{}
+    \legende{Les dommages selon la manière de comptabiliser le revenu par habitants}{}
+    \label{fig:carte1}
+\end{figure}
+\subsection{Inégalités sociales}
+
+
+\begin{figure}
+    \centering
+    %\includegraphics{}
+    \legende{Coûts des dommages selon la fonction de dommage incluse dans le modèle WILIAM.}{Graphiques représentant la valeur totale des dommages dans le modèle WILIAM selon la fonction de dommage. Les couleurs représentant le modèle d'origine de la fonction de dommage; la ligne pleine la médiane, la zone grisée les valeurs interquartiles.}
+    \label{fig:simu}
+\end{figure}
+
+
 \section{Discussion}

@@ -1,5 +1,6 @@
 \chapter{Impacts, risques et mesures}
 \label{chapter:introduction}
+\newrefsegment
 
 \chapterabstract{Le changement climatique est à la fois extremement incertain, et nécessite des actions et des prises de décisions rapides et de grande envergure. Ce paradoxe a donné naissance à des institutions, comme le CCNUCC ou le GIEC, et à des outils, comme la modélisation intégrés. A chaque fois, l'objectif est de réduire l'incertitude et de favoriser le rapprochement entre l'action politique et la connaissance scientifique. Dans cette introduction, nous introduisons quelques uns des concepts cadres qui nous serons utiles tout au long du mémoire}
 
@@ -34,29 +35,56 @@ Ce chapitre est construit en trois parties. Dans une première partie, nous nous
 \section{Le changement climatique : tendances et impacts}
 \label{sect/1/1}
 
-Cette section décrit les impacts du changement climatique et la manière de les prendre en compte
+Dans cette première section, nous allons présenter (très) succinctement les effets du changement climatique sur les sociétés. Il s'agit principalement d'une mise en contexte de différents éléments tirés du Synthesis report de l'AR6 du GIEC \cite{lee_ipcc_2023}. \\
 
-\subsection{Les effets moyens}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/spm1.png}
+    \legende{Les impacts du changement climatique sont nombreux et sous des formes variées}{Les impacts du changement climatique vont continuer à s'intensifier. Ceux-ci sont regroupés en quatre catégories : eau et nourriture; santé et bien-être; villes, peuplement et infrastructures; biodiversité et écosystème (panneau a). Ces impacts sont issus de phénomènes naturels attribués à l'action humaine (panneau b). Les choix de trajectoires d'émissions impactent le niveau de réchauffement moyen, qui lui même impacte l'intensification des phénomènes. Figure issue du Synthesis Report du GIEC.}
+    \label{fig:ipcc-impacts}
+\end{figure}
+
+Pour coller au mieux aux enjeux de la modélisation, nous classons ici les impacts du changement climatique en trois catégories : les effets tendanciels, qui désignent une tendance longue, dont la progression est stable et durable (augmenation du niveau de la mer, acidification des océans); les catastrophes, qui désignent des évenements soudains et de grande ampleur, souvent peu probable mais avec un impact fort (cyclones, inondations, sécheresses); enfin, on décrit les tipping points, ou points de bascule : ce sont des altérations du fonctionnement même du système, qui ne réagit plus de la même manière. 
+
+\subsection{Les effets tendanciels}
 \label{sect/1/1/1}
 
 % Presenter les rapports du GIEC
 
-Présenter ici les rapports du Giec. a la différence des tipping points
+Les effets les plus connus et souvent présentés en premier sont les effets que l'on pourrait qualifier de tendanciels. On désigne par ce terme des effets qui ont lieu de manière progressive, régulière et sur le long terme. Un exemple caractéristique est la montée du niveau de la mer. Celle-ci étant liée à la fonte des glaces et à la température des océans, elle a lieu de manière régulière au fur et à mesure que les océans se réchauffent. 
+
+
 
 \subsection{Les catastrophes}
 \label{sect/1/1/2}
 
+A l'inverse des effets tendanciels, les catastrophes désignent des évenement soudains, ponctuels et peu probables. Ils ont la particularité d'être très mal représenté par une moyenne. Ces événements sont dans la majorité des cas non réalisés, et ont donc un niveau de dommage nul; en revanche, lorsqu'ils se réalisent, ils causent des dommages importants. Ainsi, la moyenne (ou espérance) du niveau de dommage ne capte que très mal ces phénomènes. En effet, cette moyenne serait assez faible par rapport au niveau maximal de dommage; par ailleurs, ce niveau de dommage catastrophique, lorsqu'il est atteint, peut être exacerbé par la saturation des moyens de réponse, telle que la destruction d'infrastructures critiques (routes, hopitaux) ou la surcharge de structure de réponse (services de secours, mécanismes de soutien aux populations). 
+
 \subsection{Les tipping points}
 \label{sect/1/1/3}
 
+Enfin, les tipping points consistent en une altération profonde et durable du fonctionnement d'un système. Ayant changé de conditions, le système évolue dans une nouvelle zone, où les comportements peuvent avoir changé. Par exemple, si des conditions de sécheresse ont amené à une dégradation profonde de la flore, celle-ci ne peut plus jouer son rôle de régulateur hydrique. La disparition de ce régulateur provoque en retour des sécheresses plus importantes qu'initialement, ce qui exacerbe le phénomène. 
+
 \begin{figure}
     \centering
-    %\includegraphics{}
-    \caption{Après un point de bascule, la dynamique du système change radicalement. \textit{Les tipping points, comme les événements catastrophiques, sont plus difficiles à modéliser que la tendance moyenne des dommages. }}
+    \includegraphics[width=\linewidth]{figures/tipping_point.png}
+    \legende{Après un point de bascule, la dynamique du système change radicalement.}{Les tipping points, comme les événements catastrophiques, sont plus difficiles à modéliser que la tendance moyenne des dommages. }
     \label{fig:tipping-point}
 \end{figure}
 
-Les points de bascule, ou tipping points, sont des évolutions d'un système sous lequel celui-ci se comporte différemment. 
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/earth_tipping_point.png}
+    \legende{Les points de bascule dans le contexte climatique}{}
+    \label{fig:earth-tipping-point}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Tipping_points_2022_list.jpeg}
+    \legende{Liste des points de bascule à l'échelle planétaire}{}
+    \label{fig:enter-label}
+\end{figure}
 
 \paragraph{Les risk tipping points}
 
@@ -67,11 +95,21 @@ Ce concept est intéressant pour deux raisons : d'abord, il illustre la complexi
 \section{Prendre des décisions dans l'incertain : le rapprochement de la science et du pouvoir}
 \label{sect/1/2}
 
+Dans cette section, nous proposons un bref retour historique sur des grandes dates ayant marqué la politique climatique. Des premières identifications du changement climatique à l'avènement d'un \emph{régime climatique}, nous verrons comment les discussions autour des enjeux climatiques se sont structurés. On cherchera à présenter les grands repères, tout en montrant comment l'histoire des négociations climatiques et des modèles intégrés sont intimmement liées, et s'influencent réciproquement. Cette partie permettra donc d'introduire l'influence qu'a le contexte sur les modèles et vice-versa. 
 
-Ressource : gouverner le climat
+%Ressource : gouverner le climat
 
 \subsection{Historique des négociations climatiques}
 \label{sect:1.2.1}
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{illustrations/frise.png}
+    \legende{Historique des négociations climatiques}{A faire sur Inkscape + regarder chez PBL s'ils ont pas déjà des choses comme ça}
+    \label{fig:frise}
+\end{figure}
 
 \subsection{Le cadre général : CCNUCC et COP}
 \label{sect:1.2.2}
@@ -88,6 +126,14 @@ Faire un retour de l'histoire des COP, de la CCNUCC
 
 Un des outils phare développé pour comprendre le changement climatique sont les \gls{iam}.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/spm2_5.png}
+    \legende{Trajectoires présentées dans le rapport de synthèse du GIEC}{Les rapports du GIEC présentent des trajectoires. Celles-ci sont obtenues à l'aide de modèles.}
+    \label{fig:ipcc-pathways}
+\end{figure}
+
+
 \subsection{Les modèles intégrés, ou comment cartographier les dynamiques du monde}
 \label{sect:1.3.1}
 
@@ -98,10 +144,40 @@ La modélisation intégrée a pris beaucoup de place au fur et à mesure que le 
 \subsection{Le coût social du carbone}
 \label{sect:1.3.2}
 
+Le coût social du carbone désigne la valorisation économique de toutes les conséquences de l'émission de carbone. Il part du principe que le coût d'utilisation des énergies carbonées (en particulier, le prix de vente de l'essence, du gaz, etc.) ne reflète pas l'ensemble des coûts qui sont causés par cette utilisation. Il y donc création d'une externalité, c'est à dire d'un impact (en l'occurence, les dommages environnementaux) qui n'est pas pris en compte lors de la transaction (en l'occurence, l'achat de carburant). Cette situation est donc suboptimale, et le surcoût est supporté par la communauté, et non par les acteurs, qui dès lors prennent une décision qui est globalement désaventageuse. Ce concept s'inscrit dans une conception économique néolibérale des échanges et dans l'analyse économique du droit.  \\
+
+Il s'agit d'un concept utilisé principalement par les administrations des Etats-Unis, qui doivent prendre en compte cette mesure dans l'évaluation d'impact des différents projets qu'elles mettent en place. La définition donnée par l'Académie Nationale des Sciences des Etats Unis est la suivante : \emph{The social cost of carbon is « defined for a given year as the present discounted value of the future damage4 caused by a 1 metric ton increase in CO2 emissions to the atmosphere, in that year, or, equivalently, the benefits of reducing CO2 emissions by the same amount in that year. » }\footnote{Le coût social du carbone est défini pour une année donnée comme la valeur actualisée des dommages futurs causés par une tonne de CO2 émises dans l'atmosphère, ou, de manière équivalente, aux bénéfices apportés par la réduction des émissions de CO2 de la même quantité.} \\
+
+Depuis plus de 30 ans, le coût social du carbone est calculé par un groupe de travail inter-agences fédérales qui évalue et donne une valeur chiffrée à une tonne de carbone. Des décrets présidentiels ont progressivement fixé les conditions dans lesquelles les agences doivent tenir compte de cette mesure. Désormais, toutes les agences fédérales doivent considérer l'impact en termes d’émissions de CO2 dans leurs évaluations d'impact, en tenant compte de cette valeur monétaire. \\
+
+\begin{quote}[National Academy of Science, 2017]
+     In deciding whether and how to regulate, agencies should assess all costs and benefits of available regulatory alternatives, including the alternative of not regulating. Costs and benefits shall be understood to include both quantifiable measures (to the fullest extent that these can be usefully estimated) and qualitative measures of costs and benefits that are difficult to quantify, but nevertheless essential to consider. Further, in choosing among alternative regulatory approaches, agencies should select those approaches that maximize net benefits. 
+\end{quote}
+
+Les valeurs du SCC sont calculées par le groupe de travail inter-agences sur le coût social du carbone. Pour ce faire, le groupe de travail utilise trois modèles (FUND, DICE et PAGE) et exécute des simulations en faisant varier aléatoirement les paramètres. La valeur qui est conservée est la moyenne de l'ensemble des simulations. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/scc.png}
+    \legende{Distribution du Coût Social du Carbone selon les simulations et le taux d'actualisation (en \$/T $CO_2$)}{Le groupe de travail inter-agences pour le coût social du carbone réalise de nombreuses simulations à partir des modèles FUND, DICE et PAGE. Chaque simulation abouti à une estimation du SCC, dont les distributions sont représentées ici. Elles sont séparées par taux d'actualisation, c'est à dire la valeur que perdent les dommages chaque année. Plus cette valeur est importante, plus la préférence pour le présent est importante, et moins les dégâts futurs sont reflétés dans le SCC. On voit que ces valeurs varient considérablement selon le choix du taux d'actualisation. D'après \cite{national_academy_of_sciences_valuing_2017}}
+    \label{fig:scc}
+\end{figure}
+
+\subsubsection{Historique du concept}
+
+Le coût social du carbone 
+
+\subsubsection{Intérêt}
+
+\subsubsection{Critiques}
+
+
+
+
 \begin{figure}
     \centering
     %\includegraphics{}
-    \caption{Estimations des coûts sociaux du carbone. \textit{Depuis 30 ans, les agences fédérales des États-Unis doivent inclure le coût social du carbone dans leurs études d'impact. Celui-ci est estimé à partir de trois modèles intégrés : RICE, FUND et PAGE. Sa valeur est très sensible du taux d'actualisation.}}
+    \legende{Estimation des coûts sociaux du carbone par le groupe inter-agence}{Depuis 30 ans, les agences fédérales des États-Unis doivent inclure le coût social du carbone dans leurs études d'impact. Celui-ci est estimé à partir de trois modèles intégrés : RICE, FUND et PAGE. Sa valeur est très sensible du taux d'actualisation.}
     \label{fig:scc}
 \end{figure}
 
@@ -112,7 +188,7 @@ La modélisation intégrée a pris beaucoup de place au fur et à mesure que le 
     \centering
     \includegraphics[width=4cm]{figures/campus.jpg}
     %\include{illustrations/frise}
-    \caption{Évolution jointe de la modélisation et des négociations climatiques. \textit{Les modèles climatiques ont permis en premier de concevoir et de détecter le changement climatique (A). Leur essor a accompagné le cadrage de la question climatique (B), et ils sont désormais un outil de prise de décision (C).}}
+    \legende{Évolution jointe de la modélisation et des négociations climatiques.}{Les modèles climatiques ont permis en premier de concevoir et de détecter le changement climatique (A). Leur essor a accompagné le cadrage de la question climatique (B), et ils sont désormais un outil de prise de décision (C).}
     \label{fig:frise}
 \end{figure}
 
