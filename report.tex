@@ -1,19 +1,85 @@
 \documentclass{layout/epfl-report}
 
 %% Set up the bibliography
-\usepackage[style=authoryear]{biblatex}
+\usepackage[style=authoryear, backend=biber, backref=true, url=false]{biblatex}
 \addbibresource{references.bib}
 
 \usepackage{lipsum}
+\usepackage{printlen}
 
 %% Index
 
 \usepackage{imakeidx}
 \makeindex[columns=2]
 
+\usepackage{cleveref}
+\usepackage[francais]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{overpic}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.7}
+\usepackage{subcaption} % Pour les sous-figures
+
+
+
+
+\usepackage{tcolorbox}
+\usepackage{ifthen}
+
+\newcommand{\showPEEL}{false} % Changer "true" en "false" pour masquer l'encadré
+
+% Commande pour l'encadré PEEL
+\newcommand{\PEEL}[4]{%
+    \ifthenelse{\equal{\showPEEL}{true}}{
+        \begin{tcolorbox}[colback=gray!10, colframe=gray!50, title={PEEL}]
+            \textbf{Point:} #1 \\
+            \textbf{Evidence:} #2 \\
+            \textbf{Explanation:} #3 \\
+            \textbf{Link:} #4
+        \end{tcolorbox}
+    }{}
+}
+
+% Définition de la commande \blog
+
+\usepackage{marginnote} % Pour insérer des éléments dans la marge
+%\usepackage[marginparwidth=2cm]{geometry} % Pour ajuster la largeur de la marge si nécessaire
+
+\newcommand{\blog}[1]{
+    \marginnote{%
+        \href{#1}{%
+            \includegraphics[width=1.5cm]{figures/logos/development.png}%
+        }
+    }[0cm]
+}
+
+
+
+
+%% Legende 
+
+% Justifier le texte
+\usepackage{ragged2e}
+
+% Définition de la commande \legende
+\newcommand{\legende}[2]{
+    \caption[#1]{\textbf{#1} \hspace{0.1em} \footnotesize#2} % Titre en gras et légende en italique sur la même ligne
+}
+
 
 \usepackage{glossaries}
 \makeglossaries
+
+
+%% Biblio
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=gray,
+    citecolor=blue,
+    urlcolor=blue
+}
 
 
 
@@ -64,13 +130,14 @@
 %%    Begin of document + Frontmatter (Roman page numbering)
 %% ----------------------------------------------------------------------
 
-\linespread{1.15}
+\linespread{1.3}
 
 
 
 \begin{document}
 
 \input{mainmatter/glossaire}
+
 
 
 
@@ -83,17 +150,20 @@
 
 \subject{\textit{Mémoire de recherche}} % Cover only
 \affiliation{} % Cover only
-\coverimage{figures/campus.jpg} % Aspect ratio of 2:3 (portrait) recommended
+\coverimage{figures/logos/clouds.jpg} % Aspect ratio of 2:3 (portrait) recommended
 \definecolor{title}{HTML}{A9CA53} % Color for cover title
 
 \makecover
 
 \input{frontmatter/title-report}
-%\input{frontmatter/preface}
+\input{frontmatter/preface}
 %\input{frontmatter/summary}
 
 \tableofcontents
 
+%\listoffigures
+
+%\listoftables
 
 %\input{frontmatter/nomenclature}
 
@@ -127,14 +197,33 @@
 
 \appendix
 
-\printglossary[title=Glossaire]
+\renewcommand{\chaptername}{Annexe}
+\newrefsegment
+
+
+\chapter{Glossaire}
+\begin{multicols}{2}
+    \printglossary[title=]
+\end{multicols}
 
 %% Add bibliography
 
 \chapter{Bibliographie}
 \begin{multicols}{2}
-\printbibliography
+\printbibliography[heading=subbibliography,segment=0,title={Préambule}]
+\printbibliography[heading=subbibliography,segment=1,title={Introduction}]
+\printbibliography[heading=subbibliography,segment=2,title={Impact, risques et mesures}]
+\printbibliography[heading=subbibliography,segment=3,title={La relative diversité de la représentation des dommages}]
+\printbibliography[heading=subbibliography,segment=4,title={Rendre visible : quantifier les choix éthiques}]
+\printbibliography[heading=subbibliography,segment=5,title={Ethique de la modélisation intégrée}]
+\printbibliography[heading=subbibliography,segment=6,title={Interpréter le modèle dans le monde réel}]
 \end{multicols}
+
+%\chapter{Liste des figures}
+\listoffigures
+
+%\chapter{Liste des tables}
+\listoftables
 
 %\listoffigures
 %\listoftables
