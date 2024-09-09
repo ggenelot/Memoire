@@ -109,10 +109,10 @@ On récupère les résultats et on procéde à des analyses économétriques sur
 
 \begin{figure}
     \centering
-    \begin{overpic}[width=\linewidth,grid,tics=10]{illustrations/methodo_econometrie.png}
+    \begin{overpic}[width=\linewidth]{illustrations/methodo_econometrie.png}
         \put(10, 90){WILIAM}
-        \put(50,70){\Huge $E=mc^2$} % Texte au centre de l'image
-        \put(10,20){\color{red}\huge Important} % Texte en bas à gauche
+        %\put(50,70){\Huge $E=mc^2$} % Texte au centre de l'image
+        %\put(10,20){\color{red}\huge Important} % Texte en bas à gauche
     \end{overpic}
     %\includegraphics[width=0.9\textwidth]{illustrations/methodo_econometrie.png}
     \legende{Méthodologie de la comparaison des modèles. (SVG)}{On utilise le modèle open-source WILIAM. Celui ci est composé de différents modules, dont un module représentant les dommages (représenté ici en rouge). On identifié les fonctions de dommage d'autres modèles (DICE, FUND et DEFINE). On les isole, et on les implémente dans le modèle WILIAM. On a alors un nouveau modèle, qui contient simultanément plusieurs manières de représenter les dommages. On connait la distribution de certains paramètres, et on cherche à voir l'effet de cette variation sur les résultats du modèle. On réalise des scénarios, qui sont des combinaisons de tirage aléatoire des variables. Le modèle est executé avec chaque scénario, de nombreuses fois. Tous ces \textit{runs} forment une grande base de donnée, sur laquelle on va réaliser une étude économétrique. }
@@ -130,25 +130,9 @@ Plusieurs limitations doivent être soulignées.
 
 
 
-
-
-\begin{figure}
-    \centering
-    \include{figures/tikz/econometrie}
-    \legende{Méthodologie de la comparaison des modèles. (tikz)}{}
-    \label{fig:methodo-simu}
-\end{figure}
-
-
-
-
-
-
-
-
-
-
 \section{Résultats}
+
+%\input{results/regression_1}
 
 \begin{table}[]
     \centering
