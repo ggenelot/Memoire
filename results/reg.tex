@@ -1,27 +1,27 @@
 \begin{table}[!htbp] \centering
-  \caption{Résultats de la régression}
 \begin{tabular}{@{\extracolsep{5pt}}lcccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
-& \multicolumn{4}{c}{\textit{Dependent variable: total\_damage}} \
+& \multicolumn{4}{c}{\textit{Dependent variable: log\_total\_damage}} \
 \cr \cline{2-5}
 \\[-1.8ex] & \multicolumn{1}{c}{Simple} & \multicolumn{1}{c}{Equation} & \multicolumn{1}{c}{Country} & \multicolumn{1}{c}{Double}  \\
+\\[-1.8ex] & (1) & (2) & (3) & (4) \\
 \hline \\[-1.8ex]
- Temperature Change & 334557.294$^{***}$ & 334557.294$^{***}$ & 333482.860$^{***}$ & 333482.860$^{***}$ \\
-& (6291.904) & (6287.111) & (5800.258) & (5795.036) \\[2em]
- Ethical coefficient & 132668.641$^{***}$ & 132668.641$^{***}$ & 133515.991$^{***}$ & 133515.991$^{***}$ \\
-& (2707.984) & (2705.921) & (2527.884) & (2525.609) \\[2em]
- DICE form damage function & & -47348.510$^{***}$ & & -47348.510$^{***}$ \\
-& & (6685.847) & & (6159.629) \\[2em]
- WITNESS form damage function & & 21463.523$^{***}$ & & 21463.523$^{***}$ \\
-& & (6685.847) & & (6159.629) \\[2em]
+ Temperature Change & 2.597$^{***}$ & 2.597$^{***}$ & 2.613$^{***}$ & 2.613$^{***}$ \\
+& (0.019) & (0.019) & (0.007) & (0.007) \\[2em]
+ Ethical coefficient & 0.892$^{***}$ & 0.892$^{***}$ & 0.841$^{***}$ & 0.841$^{***}$ \\
+& (0.008) & (0.008) & (0.003) & (0.003) \\[2em]
+ DICE form damage function & & -0.068$^{***}$ & & -0.068$^{***}$ \\
+& & (0.020) & & (0.007) \\[2em]
+ WITNESS form damage function & & 0.467$^{***}$ & & 0.467$^{***}$ \\
+& & (0.020) & & (0.007) \\[2em]
  Regional dummy & No & No & Yes & Yes \\
 \hline \\[-1.8ex]
  Observations & 71415 & 71415 & 71415 & 71415 \\
- $R^2$ & 0.071 & 0.073 & 0.212 & 0.213 \\
- Adjusted $R^2$ & 0.071 & 0.073 & 0.212 & 0.213 \\
- Residual Std. Error & 729972.460 (df=71412) & 729416.378 (df=71410) & 672612.225 (df=71384) & 672006.765 (df=71382) \\
- F Statistic & 2742.806$^{***}$ (df=2; 71412) & 1401.226$^{***}$ (df=4; 71410) & 639.616$^{***}$ (df=30; 71384) & 604.805$^{***}$ (df=32; 71382) \\
+ $R^2$ & 0.311 & 0.319 & 0.904 & 0.912 \\
+ Adjusted $R^2$ & 0.311 & 0.319 & 0.904 & 0.912 \\
+ Residual Std. Error & 2.198 (df=71412) & 2.186 (df=71410) & 0.819 (df=71384) & 0.784 (df=71382) \\
+ F Statistic & 16109.678$^{***}$ (df=2; 71412) & 8361.750$^{***}$ (df=4; 71410) & 22485.857$^{***}$ (df=30; 71384) & 23227.838$^{***}$ (df=32; 71382) \\
 \hline
 \hline \\[-1.8ex]
 \textit{Note:} & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
