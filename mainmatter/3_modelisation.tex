@@ -98,7 +98,9 @@ Nous l'adaptons ainsi :
     
 \end{methodbox}
 
-\input{results/reg}
+\begin{landscape}
+    \input{results/reg}
+\end{landscape}
 
 \begin{methodbox}
 On utilise ici le modèle WILIAM. Il s'agit d'un modèle open source, donc il est assez facile de le répliquer, modifier et distribuer. Le code source est disponible sur Github. On réalise une fork du code source, c'est-à-dire une branche de code. Notre branche de code devient un projet autonome sur lequel on peut travailler de manière semi-indépendante du projet. En effet, les modifications du projet WILIAM ou celles réalisées ici ne s'affecteront pas, à moins que l'on push notre code vers le code principal, ou que l'on pull les nouvelles modifications du code principal vers notre branche. Ces deux opérations peuvent se faire sous supervision, pour s'assurer que l'on n'interagit pas avec différentes parties de notre code, ce qui risquerait de fausser nos résultats. \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_notebooks/spatial_temporal_equity.html} \\
@@ -129,7 +131,12 @@ Plusieurs limitations doivent être soulignées.
 
 \paragraph{Collinéarité} Le problème majeur de cette technique est que les données analysées ont été produites dans la perspective de cette analyse. Ainsi, il est possible que le résultat de l'analyse de reflète que les hypothèses et les variations qui ont été volontairement ajoutées au modèle. En particulier, le niveau de dommage dépend beaucoup de la valeur du coefficient d'éthique spatial, qui est lui même construit pour l'expérience. 
 
-
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{output}
+    \caption{Caption}
+    \label{fig:enter-label}
+\end{figure}
 
 
 \section{Résultats}
