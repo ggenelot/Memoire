@@ -32,7 +32,7 @@
 
 \RequirePackage{graphicx}   % Enhanced support for images
 \RequirePackage{float}      % Improved interface for floating objects
-\RequirePackage[labelfont=bf,justification=centering,footnotesize]{caption} % Captions
+\RequirePackage[labelfont=bf,justification=justified,footnotesize]{caption} % Captions
 \RequirePackage{subcaption} % Support for sub-captions
 \RequirePackage{pdfpages}   % Include PDF documents
 
@@ -197,6 +197,8 @@
 %% Redéfinition de \leftmark pour afficher "Chapitre <numéro du chapitre>"
 \renewcommand{\leftmark}{Chapitre \thechapter}
 
+%\newcommand{\headerstyle}{\fontfamily{cmr}\fontseries{m}\fontshape{it}\selectfont} style italique fancy
+\newcommand{\headerstyle}{\fontseries{m}\selectfont} % style plus sobre
 
 
 %% Format the header and footer of 'plain' pages
@@ -211,10 +213,10 @@
     \fancyhf{}
     %\fancyhead[LE,RO]{\headerstyle\thepage}
     \renewcommand{\headrulewidth}{0pt} % Ajoutez cette ligne pour supprimer la ligne de règle sous l'en-tête
-    %\fancyhead[RE]{\headerstyle\nouppercase{\color{gray}\underline\leftmark}}
-    %\fancyhead[LO]{\headerstyle\nouppercase{\color{gray}\underline\rightmark}}
-    %\fancyfoot[RE]{\headerstyle\color{gray}\thepage}
-    %\fancyfoot[LO]{\headerstyle\color{gray}\thepage} % Clear center footer
+    \fancyhead[RO]{\headerstyle\nouppercase{\color{gray}\underline\leftmark}}
+    \fancyhead[LE]{\headerstyle\nouppercase{\color{gray}\underline\rightmark}}
+    \fancyfoot[RO]{\headerstyle\color{gray}\thepage}
+    \fancyfoot[LE]{\headerstyle\color{gray}\thepage} % Clear center footer
 
     \RequirePackage{emptypage} % Remove header and footer on empty pages
 \else
@@ -249,10 +251,10 @@
 
         %% Add the logo in the bottom left
         \node[above right=15mm] at (current page.south west) {%
-            \includegraphics[width=0.35\linewidth]{layout/epfl/logo-white.png}};
+            \includegraphics[height=30mm]{figures/logos/CMA.png}};
 
         \node[above left=15mm] at (current page.south east) {%
-            \includegraphics[width=0.2\linewidth]{layout/epfl/logo_ipsl.png}};
+            \includegraphics[height=30mm]{figures/logos/iedes_logo.jpg}};
 
         %% Add the banner with the title, subtitle, subject and author(s)
         \node[below=2cm,fill=black!55,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
