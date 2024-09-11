@@ -24,9 +24,15 @@ D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons chois
 
 \paragraph{Modèle complexe} WILIAM est un modèle particulièrement complexe : il compte près de 4000 variables. Cela le rend particulièrement vulnérable aux problématiques de transparence et de complexité excessive que nous développerons plus tard. Néanmoins, cela nous permet d'avoir un modèle le plus comple possible. Cela permet d'intégrer les fonctions de dommage facilement, car les variables sont déjà existantes. 
 
-\paragraph{Modèle de simulation} WILIAM est un modèle de simulation. Cette caractéristique est importante car elle permet de voir les valeurs de chaque paramètre à tout moment, mais aussi de représenter des paramètres non-monétaires. De plus, ça le rend moins sensible aux critiques de normativité inhérente aux modèles d'optimisation \ref{}. 
+\paragraph{Modèle de simulation} WILIAM est un modèle de simulation. Cette caractéristique est importante car elle permet de voir les valeurs de chaque paramètre à tout moment, mais aussi de représenter des paramètres non monétaires. De plus, ça le rend moins sensible aux critiques de normativité inhérente aux modèles d'optimisation \ref{}. 
+
+% \section{Présentation des données}
+
+\section{Variables descriptives}
 
 \section{Méthode}
+
+\subsection{Construction du coefficient éthique}
 
 \begin{methodbox}[Modélisation des fonctions de dommage dans WILIAM]
 
@@ -34,7 +40,7 @@ Pour modéliser les fonctions de dommage dans WILIAM, on commence par créer un 
 
 On rassemble les sources de données disponibles des modèles : code source, documentation et / ou publications qui y font référence. Ces sources n'offrent pas le même niveau d'information. Par exemple, les modèles dont on ne trouve pas le code source mais uniquement des publications sont plus difficiles à modéliser car il manque souvent des informations cruciales, telles que les valeurs obtenues pour les paramètres. \\
 
-Une fois la définition de la fonction identifiée, on les modélise à l'aide de l'interface graphique du logiciel VENSIM. On sauvegarde régulièrement, en réalisant des \textit{commit} sur github pour garder une trace de la progression.
+Une fois la définition de la fonction identifiée, on les modélise à l'aide de l'interface graphique du logiciel VENSIM. On sauvegarde régulièrement en réalisant des \textit{commit} sur GitHub pour garder une trace de la progression.
     
 \end{methodbox}
 
@@ -42,7 +48,7 @@ Une fois la définition de la fonction identifiée, on les modélise à l'aide d
 
     Le modèle WILIAM comporte 35 régions. En revanche, les autres modèles n'ont pas nécessairement le même découpage géographique. Deux cas se distinguent : soit le modèle est agrégé au niveau mondial; on peut alors utiliser les fonctions de dommage région par région, sans besoin de les changer. Soit le modèle possède des régions, et il faut alors convertir les régions du modèle A en régions de WILIAM pour avoir la bonne paramètrisation. Ce deuxième cas de figure est particulièrement vrai dans le cas du modèle FUND, qui a des régions très différentes de celles de WILIAM, et qui repose beaucoup sur de la paramétrisation. Il faut donc convertir les paramètres des régions de FUND en régions de WILIAM. 
 
-    Par ailleurs, il est à noter que si la documentation de FUND est très complète et accessible en ligne, les tables de paramètre ne sont pas disponible dans un format facilement lisible tel que CSV. La méthode retenue a été de lire la page de la documentation (en markdown), et de la découper table par table puis valeur par valeur à l'aide d'un script python, qui permet ensuite d'enregistrer ces données dans un format lisible par VENSIM. Ces opérations sont longues et peuvent être source de nombreuses erreurs. Ainsi, le non-partage des données dans un format standard est un vrai frein à la reproductibilité. \\
+    Par ailleurs, il est à noter que si la documentation de FUND est très complète et accessible en ligne, les tables de paramètre ne sont pas disponible dans un format facilement lisible tel que CSV. La méthode retenue a été de lire la page de la documentation (en Markdown), et de la découper table par table puis valeur par valeur à l'aide d'un script python, qui permet ensuite d'enregistrer ces données dans un format lisible par VENSIM. Ces opérations sont longues et peuvent être source de nombreuses erreurs. Ainsi, le non-partage des données dans un format standard est un vrai frein à la reproductibilité. \\
     
     On utilise alors un script Python qui désagrège les zones de FUND en pays, et qui associe à chaque pays sa zone dans WILIAM. 
     
@@ -98,16 +104,78 @@ Nous l'adaptons ainsi :
     
 \end{methodbox}
 
+\subsection{Modèle économétrique}
+
+On construit un modèle économétrique dont la forme générale est la suivante : 
+
+
+\begin{align}
+\label{eq:modele}
+    \text{Niveau de dommage} = & \ \beta_0  + \underbrace{\beta_1 \cdot \text{temperature}}_\text{Variables physiques}  + \underbrace{\beta_3 \cdot \text{equation}}_\text{Variables méthodologiques} \\
+    & + \underbrace{ \beta_2 \cdot \text{coefficient ethique} + \beta_3 \cdot \text{taux d'actualisation}}_\text{variables éthiques}  + \epsilon
+    \end{align}
+
+
+Les résultats sont plus probants lorsque l'on passe le niveau de dommage au log. Ceci n'a rien d'étonnant. En effet, le modèle a été construit ainsi. En repartant de la manière dont le niveau de dommage est calculé et implémenté dans le dommage, on peut obtenir des équivalences entre ces différentes équations : 
+
+\begin{align*}
+& D_{t,r} = f_{dommages} \cdot GDP \cdot \text{coefficient éthique}\\
+\iff & D_{t,r} = f(\text{temperature}, \text{ autres facteurs})_{t,r} \cdot GDP_{t,r} \cdot \text{coefficient éthique} \\
+\iff  & D_{t,r} = \text{temperature}_{t,r}^{\beta_1} \cdot GDP_{t,r}^{\beta_2} \cdot \text{coef}^{\beta_3} \\
+\iff & log(D_{t,r}) = log(\text{temperature}_{t,r}^{\beta_1} \cdot GDP_{t,r}^{\beta_2} \cdot \text{coef}^{\beta_3}) \\
+\iff & log(D_{t,r}) = \beta_1 \cdot log(\text{temperature}_{t,r}) + \beta_2 \cdot log(GDP_{t,r}) + \beta_3 \cdot log(\text{coef})
+\end{align*}
+$D_{t,r}$ désigne le niveau de dommage; $f_{dommages}$ désigne la fonction de dommage, qui donne un premier niveau de dommage en fraction du PIB, généralement selon la température.  \\
+
+On obtient ainsi quasiment la forme du modèle économétrique. Ceci peut interroger : en effet, que démontrons-nous, si ce n'est la validité empirique de ces équivalences ? En effet, le pouvoir de démonstration est faible. De toute façon, la causalité ne nous intéresse pas ici :  puisque l'on a \emph{construit} le modèle, on sait de façon certaine la causalité; c'est même une définition. Par ailleurs, on a un contrôle total sur les facteurs qui influencent nos données. En effet, dans les travaux empiriques, les données sont issues de collectes. Elles font l'objet de nombreux biais, et surtout sont influencées par de nombreux facteurs autres que ceux mesurés par le modèle. Ici, on construit ces données, et on peut donc savoir précisément quel facteur influence nos résultats. \\
+
+L'objectif ici n'est pourtant pas de montrer une causalité, mais bien de mesurer l'ampleur de cette variation, et de pouvoir comparer les impacts des différents facteurs. Les régressions permettent de synthétiser ces variations en des coefficients uniques, \emph{ceteris paribus}.
+
+L'objectif est de quantifier l'impact relatif des variables physiques, méthodologiques et éthiques. On réalise ensuite cinq régressions linéaires, qui sont des variations du modèle présenté plus haut. 
+
+
+On a d'abord une régression simple du niveau de dommage selon la température : 
+
+\begin{align}
+\text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \epsilon
+\end{align}
+
+Cette première étape nous permet de comparer les résultats de nos modèles plus complexe avec un modèle plus simple, pour s'assurer que prendre en compte les autres facteurs apporte effectivement un pouvoir explicatif complémentaire.  \\
+
+On ajoute ensuite le coefficient éthique, sans tenir compte à ce stade de la forme de l'équation ni contrôler par la région. 
+
+\begin{align}
+\text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \beta_2 \cdot \text{coefficient ethique} + \epsilon
+\end{align}
+
+On cherche maintenant à observer l'effet de la forme de la fonction de dommage : 
+
+\begin{align}
+\text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \beta_3 \cdot \text{equation} + 
+ \beta_2 \cdot \text{coefficient ethique} + \beta_3 \cdot \text{taux d'actualisation}  + \epsilon
+\end{align}
+
+On essaie également de contrôler les différences régionales en tenant compte de celles-ci grâce à une dummy. 
+
+\begin{align}
+\text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \beta_2 \cdot \text{coefficient ethique} + \beta_3 \cdot \text{région} + \epsilon
+\end{align}
+
+Finalement, le modèle le plus complet prend en compte à la fois la température (variable physique), l'équation (variable méthodologique) et le coefficient éthique (variable éthique), tout en contrôlant par les régions. 
+\begin{align}
+\text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \beta_2 \cdot \text{coefficient ethique} + \beta_3 \cdot \text{région} + \beta_4 \cdot \text{équation} + \epsilon
+\end{align}
+\paragraph{Evaluation de l'estimateur} \cite{wooldridge_introductory_2016} propose 5 critères pour un bon estimateur. D'abord, on doit écrire notre modèle économétrique sous la forme d'une combinaison linéaire des variables explicatives. C'est bien le cas ici (voir équation \ref{eq:modele} Ensuite, l'échantillon doit être aléatoire. Dans notre cas, nous avons fait varier de manière aléatoire les paramètre du modèle; on observe néanmoins des schémas dans la distribution des valeurs des niveaux de dommage; il est donc possible que cet échantillon ne soit pas tout à fait aléatoire. Cela s'expliquerait par exemple par des différences systématiques liées à la région (on observe d'ailleurs que lorsque l'on contrôle par la région, cet effet disparait).  Il faut ensuite avoir une variation des échantillons, ce qui est notre cas. Puis, il faut que l'espérance conditionnelle des termes d'erreur soit nulle. On observe bien cela ici. En revanche, les tests d'homoscédasticité montrent qu'il y a de l'hétéroscédasticité.  Ces différentes analyses sont développées sur le site \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_modelling/regprep.html}.
+
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{results/carte_progressive.png}
-    \legende{Double progression du niveau de dommage}{Le niveau de dommage suit une double progression. D'une part, il augmente avec le temps (qui est lui même très lié au niveau de réchauffement); d'autre part, il augmente avec le modèle : certains modèles donnent des niveaux de dommage plus importants que d'autres.}
-    \label{fig:carte-progressive}
+    \includegraphics[width=0.5\linewidth]{slr}
+    \caption{Caption}
+    \label{fig:enter-label}
 \end{figure}
 
-\begin{landscape}
-    \input{results/reg}
-\end{landscape}
+L'échantillon ne respect pas les cinq critères de Wooldridge. De ce point de vue, on peut penser que ce n'est pas un très bon estimateur, et qu'il faut chercher à améliorer notre modèle. Cependant, nous ne cherchons pas ici à avoir un pouvoir explicatif, mais bien à avoir une mesure quantitative d'un phénomène dont on sait qu'il existe, puisque nous l'avons définit ainsi. 
+
 
 \begin{methodbox}
 On utilise ici le modèle WILIAM. Il s'agit d'un modèle open source, donc il est assez facile de le répliquer, modifier et distribuer. Le code source est disponible sur Github. On réalise une fork du code source, c'est-à-dire une branche de code. Notre branche de code devient un projet autonome sur lequel on peut travailler de manière semi-indépendante du projet. En effet, les modifications du projet WILIAM ou celles réalisées ici ne s'affecteront pas, à moins que l'on push notre code vers le code principal, ou que l'on pull les nouvelles modifications du code principal vers notre branche. Ces deux opérations peuvent se faire sous supervision, pour s'assurer que l'on n'interagit pas avec différentes parties de notre code, ce qui risquerait de fausser nos résultats. \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_notebooks/spatial_temporal_equity.html} \\
@@ -142,17 +210,9 @@ Plusieurs limitations doivent être soulignées.
 
 \section{Résultats}
 
-%\input{results/regression_1}
-
-\begin{table}[]
-    \centering
-    \begin{tabular}{c|c}
-         &  \\
-         & 
-    \end{tabular}
-    \legende{Résultats issus de la régression des données de sortie du modèle}{}
-    \label{tab:reg1}
-\end{table}
+\begin{landscape}
+    \input{results/reg}
+\end{landscape}
 
 \subsection{Inégalités temporelles}
 
@@ -161,9 +221,9 @@ Plusieurs limitations doivent être soulignées.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{cartogram}
-    \caption{Caption}
-    \label{fig:enter-label}
+    \includegraphics[width=\linewidth]{results/cartogramme.png}
+    \legende{Carte en anamorphose selon le niveau de dommage}{Cette carte déforme l'espace pour que la surface de chaque zone soit proportionnelle à la valeur absolue des dommages subis.}
+    \label{fig:anamorphose}
 \end{figure}
 
 \begin{figure}
