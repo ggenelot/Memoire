@@ -1,29 +1,27 @@
 \begin{table}[!htbp] \centering
-\begin{tabular}{@{\extracolsep{5pt}}lc}
+\begin{tabular}{@{\extracolsep{5pt}}lccccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
-& \multicolumn{1}{c}{\textit{Dependent variable: total_damage}} \
-\cr \cline{2-2}
-\\[-1.8ex] & (1) \\
+\\[-1.8ex] & \multicolumn{1}{c}{Temp} & \multicolumn{1}{c}{Simple} & \multicolumn{1}{c}{Equation} & \multicolumn{1}{c}{Country} & \multicolumn{1}{c}{Double}  \\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) \\
 \hline \\[-1.8ex]
- coef & 98983.902$^{***}$ \\
-& (7328.425) \\
- const & -14886131.099$^{***}$ \\
-& (466565.386) \\
- equation_dice_tot_eq_dice_total_impact & -1341822.952$^{***}$ \\
-& (244920.818) \\
- equation_witness_tot_eq_witness_total_impact & 608260.919$^{**}$ \\
-& (244920.818) \\
- total_radiative_forcing & 5345723.126$^{***}$ \\
-& (131309.687) \\
+ Temperature Change & 231628.725$^{***}$ & 2.687$^{***}$ & 2.687$^{***}$ & 2.710$^{***}$ & 2.710$^{***}$ \\
+& (6531.738) & (0.018) & (0.018) & (0.007) & (0.007) \\[2em]
+ Ethical coefficient & & 0.887$^{***}$ & 0.887$^{***}$ & 0.828$^{***}$ & 0.828$^{***}$ \\
+& & (0.008) & (0.008) & (0.003) & (0.003) \\[2em]
+ DICE form damage function & & & -0.069$^{***}$ & & -0.069$^{***}$ \\
+& & & (0.019) & & (0.008) \\[2em]
+ WITNESS form damage function & & & 0.467$^{***}$ & & 0.467$^{***}$ \\
+& & & (0.019) & & (0.008) \\[2em]
+ Regional dummy & No & No & No & Yes & Yes \\
 \hline \\[-1.8ex]
- Observations & 2520 \\
- $R^2$ & 0.443 \\
- Adjusted $R^2$ & 0.443 \\
- Residual Std. Error & 5019383.135 (df=2515) \\
- F Statistic & 500.959$^{***}$ (df=4; 2515) \\
+ Observations & 64305 & 64305 & 64305 & 64305 & 64305 \\
+ $R^2$ & 0.019 & 0.366 & 0.375 & 0.889 & 0.899 \\
+ Adjusted $R^2$ & 0.019 & 0.366 & 0.375 & 0.889 & 0.899 \\
+ Residual Std. Error & 719259.334 (df=64303) & 1.946 (df=64302) & 1.931 (df=64300) & 0.813 (df=64280) & 0.777 (df=64278) \\
+ F Statistic & 1257.556$^{***}$ (df=1; 64303) & 18558.523$^{***}$ (df=2; 64302) & 9663.848$^{***}$ (df=4; 64300) & 21547.351$^{***}$ (df=24; 64280) & 21986.657$^{***}$ (df=26; 64278) \\
 \hline
 \hline \\[-1.8ex]
-\textit{Note:} & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\textit{Note:} & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
 \end{tabular}
 \end{table}
