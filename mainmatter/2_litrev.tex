@@ -213,37 +213,7 @@ Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de tempé
 
 \begin{figure}[ht]
 \centering
-\begin{tikzpicture}
-    \begin{axis}[
-        width=12cm, height=8cm,
-        xlabel={Augmentation de température (°C)},
-        ylabel={Niveau de dommage (échelle arbitraire)},
-        xmin=0, xmax=6,
-        ymin=0, ymax=15,
-        domain=0:6,
-        legend pos=north west,
-        samples=100,
-        grid=major,
-        legend cell align={left},
-        every axis legend/.append style={nodes={right}}
-    ]
-    
-    % Courbe principale (véritable) en rouge
-    \addplot [thick, red] {x^2 / (1 + exp(3*(1.2-x)))};
-    \addlegendentry{Véritable dommage}
-    
-    % Courbes incertaines (grises) avec différentes formes fonctionnelles
-    \addplot [thick, gray, dashed] {0.8*x^2 / (1 + exp(3*(1.2-x))) + 0.3*sin(3*x)};
-    \addplot [thick, gray, dashed] {x};
-    \addplot [thick, gray, dashed] {cos(x)};
-    \addplot [thick, gray, dashed] {0.9*x^2 / (1 + exp(3*(1.2-x))) + 0.2*cos(3*x)};
-    
-    % Ligne verticale à 1.2 degrés
-    %\draw [dashed] (axis cs:1.2,0) -- (axis cs:1.2,15);
-    %\node at (axis cs:1.4,14.5) [anchor=west] {1.2°C};
-
-    \end{axis}
-\end{tikzpicture}
+\includegraphics[width=\textwidth]{results/shape.png}
 \legende{Niveau de dommage en fonction de l'augmentation de température}{Différentes formes fonctionnelles peuvent avoir un pouvoir explicatif important sur l'intervalle $[+0; +1.2]$, sur lequel on dispose de données empiriques, tout en divergeant grandement pour des valeurs plus haute de changement de température. Une fonction de dommage correctement calibrée pour des phénomènes observés n'est pas forcément calibrée pour les phénomènes futurs.}
 \end{figure}
 
