@@ -49,14 +49,31 @@ Enfin, une autre table est ajoutée : celle des risques identifiés par le GIEC.
 
 Les modèles intégrés sont très variés. Ils ont des histoires différentes (issus de l'énergie, de l'économie ou du climat), des perspectives différentes (en particulier entre les États-Unis ou l'Union européenne), des questions différentes, des choix de modélisation différents (simulation ou optimisation). 
 
-\subsection{D'autres revues de littérature}
+Revue de la littérature se classe en 3 catégories : la construction des IAMs, la comparaison des résultats des IAMs, les articles iam par iam
 
-Revues de la littérature des différents modèles
-\cite{diaz_quantifying_2017} => présente les trois SCC, les formes des fonctions de dommage et d'autres caractéristiques // c'est une base de mon travail puisque j'ai essaye de faire quelque chose d'assez similaire
+\subsection{Une littérature composée d'article par modèle ou de méta-analyses}
 
-\cite{souffron_successful_2024} => présente plein de modèles et les commente. Pas vraiment une revue de littérature sur les damage functions mais plus général, permet de bien se repérer dans la littérature + grosse emphase sur les modèles hétérodoxes
+La littérature existante s'articule autour de trois axes. D'abord, il y a une abondante littérature autour des modèles. En effet, chaque modèle fait l'objet de nombreuses publications pour en présenter la structure, puis pour en donner les résultats. Il y a par ailleurs de nombreuses ressources appartenant à la littérature grise : des blogs, du code source, des rapports aux commanditaires, des modèles, etc. Ensuite, il y a des méta-analyses qui comparent les résultats des modèles; enfin, tout un pan de la littérature s'intéresse à la structure même des modèles, à travers des comparaisons entre modèles. 
 
-\cite{review of information on models}  Une revue des différents modèles 
+\subsubsection{Documentation et résultats de chaque modèle}
+
+\paragraph{Les modèles sont accompagnés d'analyses}
+
+La principale source d'information que l'on a sur les modèles est les publications scientifiques qui en présentent les résultats.
+Il s'agit de publications qui démontrent quelque chose ou répondent à une question (voir, par exemple, \cite{int_panis_externe_2000, dafermos_how_2021, baumstark_remind21_2021, dafermos_stock-flow-fund_2017, cherp_global_2016, burke_global_2015}). Le modèle et/ou la fonction de dommage y sont peu décrits (au plus une équation sans paramétrisation), souvent dans la section méthodologie. Ces articles sont intéressants car ils permettent de comprendre la finalité des modèles, les conditions pour lesquelles ils ont été conçus. En revanche, ils ne permettent pas à eux seuls de reproduire l'analyse ou de la modifier. 
+
+
+\paragraph{Le niveau de documentation et d'ouverture varie considérablement}
+
+Une autre source de documentation est la littérature grise qui accompagne les publications scientifiques. On en trouve des formes très variées, telles que des rapports (voir \cite{medeas_guiding_2019, asbjorn_aaheim_grace_2018, european_commission_ginfors-e_2022, european_commission_gem-e3_2013, nordhaus_dice_2013}), des \emph{working papers} (voir par exemple \cite{dafermos_stock-flow-fund_2017, giraud_coping_2016, calvin_gcam_2019, bosetti_witch_2006, ghersi_imaclim-p_2014}), des blogs (voir par exemple \cite{tol}
+
+\paragraph{}
+
+\subsubsection{Sur les résultats des IAMs}
+
+
+
+
 
 Meta analyse des estimations du niveau du changement climatique
 \cite{howard_few_2017} => 
@@ -67,12 +84,47 @@ Meta analyse des estimations du niveau du changement climatique
 
 \cite{harmsen_integrated_2021} => évaluation des IAMs à travers une méthodologie précise
 
-\cite{krey_looking_2019} => comparaison des hypohtèses technologiques des modèles
 
+
+
+\subsubsection{Sur la structure des IAMs }
+
+\paragraph{Il existe des fonctions de dommage, mais sous des modèles semblables entre eux et orthodoxes.}
+
+Dans une importante revue de littérature sur l'évaluation des dommages climatiques par les modèles intégrés, \cite{diaz_quantifying_2017} passe en revue les caractéristiques et contraintes liées aux fonctions de dommages. Elle inspecte en particulier DICE, FUND et PAGE, qui sont trois modèles conçus spécifiquement pour évaluer monétairement les impacts. Elle formule de nombreuses critiques : l'extrapolation à de hautes températures ou à d'autres régions, le choix des impacts représentés, l'absence d'interaction inter-régionales ou temporelles, l'absence de représentation de l'adaptation, des données scientifiques datées, la représentation lacunaire de l'incertitude, et d'autres encore. 
+
+Cet article a servi de réference à la suite de ce travail. Néanmoins, les modèles représentés sont similaires, avec des objectifs similaires et produits par des communautés scientifiques proches. Or, la plupart des critiques faites par Diaz sont liées à des méthodes de modélisation ou  à des hypothèses générales. Pour comparer ces modèles et défier ces hypothèses, il faut sortir de cette communauté.  \\
+
+
+Nous nous intéressons donc à d'autres revues de littératures, plus large, mais permettant d'avoir un plus large panel de modèles. 
+
+\paragraph{Chercher des modèles plus divers permet de répondre à certaines des critiques}
+
+
+Par exemple, \cite{souffron_successful_2024} cherchent à explorer la diversité des modèles, et montrent qu'un plus large panel de modèles permet de mieux guider les politiques publiques. Ils montrent que les modèles orthodoxes sont particulièrement limités. Ils présentent ensuite des modèles alternatifs, mettant en avant les atouts et contraintes de chacun. Enfin, ils émettent des recommandations de caractéristiques que pourraient avoir des modèles idéaux, notamment le fait d'avoir des fonctions de dommage. 
+
+
+
+
+
+
+\cite{souffron_successful_2024} => présente plein de modèles et les commente. Pas vraiment une revue de littérature sur les damage functions mais plus général, permet de bien se repérer dans la littérature + grosse emphase sur les modèles hétérodoxes
+
+\cite{review of information on models}  Une revue des différents modèles 
+
+\paragraph{D'autres revues comparent des hypothèses plus varéies dans les modèles}
+
+\cite{krey_looking_2019} => comparaison des hypohtèses technologiques des modèles
 
 Sur les types de modèles : 
 \cite{mercure_modelling_2019} => présente les principales différences entre les modèles de simulation et d'optimisation, et montre que c'est aussi une différence paradigmatique. 
-\subsection{Méthode : construction de la base de données}
+
+\paragraph{La place particulière de l'IAMC}
+
+
+Il y a une multitude de ressources liées à la modélisation des dommages dans les modèles intégrés. Il n'existe pourtant pas de plateforme unique permettant de recenser toutes les formes de fonctions de dommage, leurs effets, atouts et contraintes. 
+
+\section{Méthode : construction de la base de données}
 
 \begin{table}[]
     \centering
