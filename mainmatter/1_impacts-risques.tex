@@ -16,7 +16,7 @@ Les impacts du changement climatique sont de plus en plus présents dans le déb
 C'est justement la définition classique d'un risque : l'interaction entre un aléa et un enjeu. L'aléa, dans ce contexte, désigne un événement physique dont l'occurrence est possible : une canicule, un ouragan, la montée du niveau de la mer, etc. Un des effets du changement climatique est d'augmenter l'amplitude et la fréquence des aléas. L'enjeu est lié à ce que l'on a à perdre, c'est-à-dire ce qui a de la valeur et qui peut être affecté par la réalisation de l'aléa. 
 
 %% Rappel du sujet
-Nous nous intéressons au rôle des fonctions de dommage dans la formation de ces décisions politiques. 
+Nous nous intéressons à la manière dont les fonctions de dommage permettent de modéliser ces risques, et ainsi de les incorporer dans des décisions de politique publiques. 
 
 
 
@@ -27,7 +27,7 @@ Comment les fonctions de dommage des modèles intégrés permettent-elles de pre
 
 
 %% Annonce du plan 
-Ce chapitre est construit en trois parties. Dans une première partie, nous nous intéresserons aux impacts du changement climatique, en les classant en trois types : les effets de tendance, qui sont linéaires ; les effets ponctuels et catastrophiques ; et les effets de seuil, ou tipping points. Nous aborderons dans une deuxième partie la manière dont les institutions internationales se sont organisées pour faire face à ces risques, et comment ces questions articulent des composantes scientifiques et politiques. Enfin, dans une troisième partie, nous détaillerons certains des outils qui ont été développés pour répondre à ces enjeux : les modèles intégrés, leurs fonctions de dommage et le coût social du carbone. 
+Ce chapitre est construit en trois parties. Dans une première partie, nous nous intéresserons aux impacts du changement climatique, en les classant en trois types : les effets de tendance, qui sont linéaires ; les effets ponctuels et catastrophiques ; et les effets de seuil, ou tipping points. Nous aborderons dans une deuxième partie la manière dont les institutions internationales se sont organisées pour faire face à ces risques, et comment ces questions articulent des composantes scientifiques et politiques. Enfin, dans une troisième partie, nous détaillerons certains des outils qui ont été développés pour répondre à ces enjeux : les modèles intégrés, leurs fonctions de dommage et le coût social du carbone. Il s'agit d'une partie de contextualisation, qui vise surtout à contextualiser le reste du mémoire. 
 
 
 
@@ -90,7 +90,7 @@ Enfin, les tipping points consistent en une altération profonde et durable du f
 
 Au-delà de la définition classique du tipping point, l'Université des Nations Unies propose, dans son rapport sur les risques interconnectés, une nouvelle définition des risques interconnectés. Un \textit{risk tipping point}, ou point de bascule des risques, désigne \textit{l'instant où un système socioécologique ne peut plus absorber le risque et réaliser ses fonctions}. Après le passage de ce point de bascule, la possibilité d'un impact catastrophique augmente substantiellement. Six risques sont identifiés comme particulièrement représentatif des effets systémiques d'un driver sur tous les autres : l'accélération de l'extinction de la biodiversité, la réduction de l'eau de surface disponible, la fonte des glaciers, les débris spatiaux, la chaleur trop importante, et un futur qui n'est plus assurable. Parmi ces points de bascule, quatre sont  reliés à l'augmentation de la température atmosphérique ou océanique, et quatre à l'augmentation de la concentration en gaz à effet de serre dans l'atmosphère. \cite{united_nations_university_-_institute_for_environment_and_human_security_unu-ehs_interconnected_2023}
 
-Ce concept est intéressant pour deux raisons : d'abord, il illustre la complexité des systèmes physiques et sociaux, et la complexité de leur interaction. Ensuite, il montre que la prise en compte d'un impact par le moyen d'un seul mécanisme risque de sous-estimer cet impact, car cela ne permet pas de prendre en compte les réactions en chaines et les interactions entre les différents impacts. 
+Ce concept est intéressant pour deux raisons : d'abord, il illustre la complexité des systèmes physiques et sociaux, et la complexité de leur interaction. Ensuite, il montre que la prise en compte d'un impact par le moyen d'un seul mécanisme risque de sous-estimer cet impact, car cela ne permet pas de prendre en compte les réactions en chaines et les interactions entre les différents impacts. Il étend ainsi la notion de tipping point, principalement utilisé pour caractériser des aléas, dans une lecture de risque, en interaction avec des enjeux. 
 
 \section{Prendre des décisions dans l'incertain : le rapprochement de la science et du pouvoir}
 \label{sect/1/2}
@@ -128,11 +128,11 @@ Une troisième phase voit ces différentes institutions se formaliser. La recher
 
 \subsection{Le cadre général : CCNUCC et COP}
 \label{sect:1.2.2}
-Faire un retour de l'histoire des COP, de la CCNUCC 
 
-\subsubsection{Composition et fonctionnement de la CCNUCC}
 
-\subsubsection{En pratique : les COP}
+La Convention Cadre des Nations Unies sur le Changement Climatique (CCNUCC, ou en anglais UNFCCC), est la convention qui régit le fonctionnement des négociations internationales autour des questions climatiques. Son rôle est d'instaurer un cadre de discussion, des instances et des rendez-vous réguliers. \\
+
+Les rendez-vous réguliers sont principalement les Conference Of Parties (COP), où se réunissent les parties à la Convention. En réalité, ces événements abritent simultanément les COP (Convention), les CMA (pour l'accord de Paris) et les CMP (pour le protocole de Kyoto). Au sein de ces conférences, les parties se regroupent en groupes de négociations, dont les intérêts et les vues sont plus proches. La figure \ref{fig:COP} montre la complexité de la composition des groupes, qui est le reflet des différences en termes de perception, d'enjeu et attentes relatifs aux sujets climatiques. \\
 
 \begin{figure}
     \centering
@@ -141,16 +141,40 @@ Faire un retour de l'histoire des COP, de la CCNUCC
     \label{fig:COP}
 \end{figure}
 
+Une instance est particulièrement intéressante dans notre cas : le Subsidiary Body on Science and Technical Advice (SBSTA). Il a un rôle de tampon entre le GIEC, instance scientifique chargé de rapporter de la manière la plus fidèle et neutre possible l'ensemble des connaissances disponibles sur le changement climatique, et les parties à la Convention. Son rôle est donc à la fois scientifique et politique, et rompt avec la volonté de neutralité du GIEC. Ainsi que le présentent \cite{aykut_gouverner_nodate}, elle \emph{examine les questions scientifiques et techniques, assume l’expression politique des controverses apparues au sein des COP sur ces dernières et fait le lien entre le GIEC et les gouvernements}. Ce rôle est différent et complémentaire de celui du GIEC : il s'agit de formuler un \emph{avis}, et donc d'être plus prescriptif, tandis que le GIEC revendique de ne pas être prescriptif.  \\
+
+
+
+
 \subsection{La synthèse des connaissances actuelles : le GIEC}
 \label{sect:1.2.3}
+
+Fondé en 1990, le GIEC a un mandat très clair : faire, de la manière la plus complète et rigoureuse possible, la synthèse de toutes les connaissances relatives à l'évolution du climat, en identifiant le degré de certitude de chacune de ses connaissances. Ses destinataires sont doubles : d'une part, les scientifiques eux-même, à qui il permet d'avoir une meilleure vue d'ensemble d'un champ extrememnt vaste et grandissant. D'autre part, aux décideurs politiques, leur permettant d'avoir accès de manière contextualisé à une information scientifique fiable. \\
+
+Ainsi, le maître-mot est d'avoir une recherche qui soit \emph{policy-relevant}, mais pas \emph{policy-prescriptive} : le but est que les rapports donnent les informations nécessaires à la réalisation de politiques climatiques, sans pour autant se prononcer sur la nature ou la pertinence de ces politiques. \\
+
+Le groupe est divisé en trois groupes de travail (Working Group - WG)  : le WG1 traite de la dimension physique du changement climatique; le WG2 traite des impacts du changement climatique et de l'adaptation, c'est-à-dire la manière de réduire les impacts du changement climatique; le WG3 traite de l'atténuation, c'est-à-dire de la manière de limiter le changement climatique lui-même. 
+
 
 \subsection{Loss and damages : dommages, responsabilité et évaluation}
 \label{sect:1.2.4}
 
+TODO
+
 \section{Les outils : de la modélisation intégrée}
 \label{sect:1.3}
 
-Un des outils phare développé pour comprendre le changement climatique sont les \gls{iam}.
+Les \Gls{iam} sont au coeur de l'évaluation des relations entre le climat et l'économie. Le GIEC en donne la définition suivante : \emph{{simplified representations of complex physical and social systems, focusing on the interaction between economy, society and the environment}\footnote{Représentations simplifiées de systèmes sociaux ou physiques complexes, centrés sur l'interaction entre économie, société et environnement.}}\\
+
+Comme le souligne \cite{cointe_organising_2019}, le terme de modèle intégré désigne des choses variées. Plusieurs points caractérisent néanmoins ces modèles : ils ont une finalité de politique publique (\emph{policy-relevance}); ils sont interdisciplinaires; produisent des scénarios similaires; s'appellent spontanément modèles intégrés (IAMs); servent à évaluer les options de politique climatique. \\
+
+La caractéristique principale des modèles intégrés est donc d'être un outil d'aide à la décision. 
+
+On distingue généralement deux types de modèles : les modèles d'optimisation et les modèles de simulation.  
+Nordhaus \cite{nordhaus_dice_2013} propose de les classer en deux catégories. D'une part, les modèles d'optimisation (\emph{policy optimization}). Il s'agit de modèles d'optimisation : ils cherchent à minimiser une variable sous contrainte d'autres variables. Concrètement, un ensemble d'équation contraint le système. Par exemple, la surface agricole est limitée par la surface disponible; le nombre de voitures électriques est limité par les réserves de lithium, etc. Ces contraintes dessinent un ensemble de mondes possibles, qui sont autant de choix disponibles et de chemins à suivre. Le modèle choisit alors un de ces chemins, qui est celui qui aura minimisé la fonction objectif (par exemple, minimisé le coût total du changement climatique, c'est à dire la somme des dommages et des investissements d'adapataion). D'autre part, les modèles d'évaluation (\emph{policy evaluation}). Ces modèles évaluent les états successifs du système, à partir d'un état initial et sur la base de relations entre les différentes variables. Ils ne permettent pas d'optimiser une issue économique ou environnementale, mais permettent de connaître l'état de chaque variable à tout moment. 
+Le GIEC garde la même distinction,  \cite{intergovernmental_panel_on_climate_change_ipcc_annex_2023}, entre d'une part des modèles intégrés d'analyse coût-bénéfice (\emph{cost-benefit IAMs}), et d'autre part des \emph{process-based IAMs}.
+
+
 
 \begin{figure}
     \centering
@@ -159,6 +183,31 @@ Un des outils phare développé pour comprendre le changement climatique sont le
     \label{fig:ipcc-pathways}
 \end{figure}
 
+De nombreuses limitations sont souvent évoquées sur les modèles intégrés. 
+
+D'abord, la transparence.
+
+\begin{quote}
+    Unfortunately, many climate-economics models suffer from a lack of transparency, in terms of both their policy relevance and their credibility. Building a model of the climate and the economy inevitably involves numerous judgment calls; debatable judgments and untestable hypotheses turn out to be of great importance in determining the policy recommendations of climate-economics models, and should be visible for debate. \cite{stanton_inside_2009}
+\end{quote}
+
+Ensuite, la monétarisation : 
+
+\begin{quote}
+    The difficulty in fully representing the extent of climate damages in monetary terms may be the most important and challenging limitation of IAMs and it is mostly directed to costbenefit IAMs. \cite{intergovernmental_panel_on_climate_change_ipcc_annex_2023}
+\end{quote}
+
+La capacité à modéliser des phénomènes non-linéaires ou non physique interroge : pour le GIEC, \emph{there are concerns that IAMs are missing important dynamics}, ou plus précisement, 
+
+\begin{quote}
+    there are concerns that IAMs are describing transformative change on the level of energy and land use, but are largely silent about the underlying socio-cultural transitions that could imply restructuring of society and institutions
+\end{quote}
+
+Enfin, le cadrage des modèles implique de nombreux choix de modélisation fortements normatifs : 
+
+\begin{quote}
+    IAM analysis could focus on only a subset of relevant futures and thus push society in certain directions without sufficient scrutiny
+\end{quote}
 
 \subsection{Les modèles intégrés, ou comment cartographier les dynamiques du monde}
 \label{sect:1.3.1}
@@ -185,7 +234,7 @@ Les valeurs du SCC sont calculées par le groupe de travail inter-agences sur le
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{figures/scc.png}
-    \legende{Distribution du Coût Social du Carbone selon les simulations et le taux d'actualisation (en \$/T $CO_2$)}{Le groupe de travail inter-agences pour le coût social du carbone réalise de nombreuses simulations à partir des modèles FUND, DICE et PAGE. Chaque simulation abouti à une estimation du SCC, dont les distributions sont représentées ici. Elles sont séparées par taux d'actualisation, c'est à dire la valeur que perdent les dommages chaque année. Plus cette valeur est importante, plus la préférence pour le présent est importante, et moins les dégâts futurs sont reflétés dans le SCC. On voit que ces valeurs varient considérablement selon le choix du taux d'actualisation. D'après \cite{national_academy_of_sciences_valuing_2017}}
+    \legende{Distribution du Coût Social du Carbone selon le taux d'actualisation (en \$/T $CO_2$)}{Le groupe de travail inter-agences pour le coût social du carbone réalise de nombreuses simulations à partir des modèles FUND, DICE et PAGE. Chaque simulation abouti à une estimation du SCC, dont les distributions sont représentées ici. Elles sont séparées par taux d'actualisation, c'est à dire la valeur que perdent les dommages chaque année. Plus cette valeur est importante, plus la préférence pour le présent est importante, et moins les dégâts futurs sont reflétés dans le SCC. On voit que ces valeurs varient considérablement selon le choix du taux d'actualisation. D'après \cite{national_academy_of_sciences_valuing_2017}}
     \label{fig:scc}
 \end{figure}
 
