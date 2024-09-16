@@ -163,7 +163,7 @@ DICE veut dire XXX et constitue une des premières tentatives de modéliser les 
 
 \subsubsection{FUND} 
 
-A l'inverse, FUND présente un niveau de désagrégation assez avancé. Il y a de nombreuses fonctions de dommage, qui sont utilisées les unes dans les autres. Leur forme générale est d'obtenir un niveau de dommage à partir d'une elasticité entre un phénomène et un autre. 
+A l'inverse, FUND présente un niveau de désagrégation assez avancé. Il y a de nombreuses fonctions de dommage, qui sont utilisées les unes dans les autres. Leur forme générale est d'obtenir un niveau de dommage à partir d'une élasticité entre un phénomène et un autre. \\
 
 Par exemple, l'impact du changement climatique sur l'agriculture est construit par la somme de trois canaux : d'une part, l'impact du niveau de changement climatique; d'autre part, la vitesse de ce changement (représenté en \ref{eq:fund_A2}); enfin, l'augmentation de la fertilisation des plantes. 
 
@@ -218,6 +218,14 @@ Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de tempé
 \end{figure}
 
 
+Le choix de la forme de la fonction (ou des formes des fonctions lorsqu'il y en a plusieurs) est donc très incertain. S'aider de données empiriques ne résout qu'une partie du problème. Il est probable que ces relations changent grandement dans des conditions différentes, et il est dès lors impossible d'extrapoler les données actuelles. 
+
+\subsection{Les paramètres : quel niveau de complexité faut-il, et que prendre en compte ?}
+
+Une seconde difficulté réside dans le choix des paramètres à représenter. 
+
+La figure \ref{fig:sankey} représente les liens que font les fonctions de dommages entre leurs paramètres et leurs résultats. Elle est tirée du tableau des fonctions de dommage, dont la construction est détaillée plus haut. Ce tableau contient toutes les fonctions de dommages recensées, ainsi que les paramétres entrants (inputs) et sortant (outputs) de la fonction de dommage. Par exemple, l'input de l'équation \ref{eq:DEFINE} est la température, et l'output est le niveau de dommage en proportion du PIB. La figure représente chaque relation $ \text{input} \mapsto \text{output} $. Il est possible qu'une fonction relie plusieurs inputs à un output, auquel cas elle est représentée par plusieurs traits. L'épaisseur des traits est proportionnelle au nombre de relations.
+
 
 \begin{figure}
     \centering
@@ -226,12 +234,12 @@ Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de tempé
     \label{fig:ACP}
 \end{figure}
 
-\subsection{Les paramètres : quel niveau de complexité faut-il, et que prendre en compte ?}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{figures/sankey.png}
     \legende{Sankey diagram des différentes fonctions}{Les modèles ne prennent pas en compte tous les mêmes données en entrées, et elles ne permettent pas d'expliquer les mêmes phénomènes.}
+    \label{fig:sankey}
 \end{figure}
 
 \subsection{La calibration : un \textit{"tiens"} vaut-il deux \textit{"tu l'auras"} ?}
@@ -240,11 +248,35 @@ Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de tempé
 
 \subsection{Le taux d'actualisation : la querelle Nordhaus / Stern}
 
+La controverse qui oppose William Nordhaus et Nicolas Stern est un exemple classique des enjeux éthiques et normatifs induit par la modélisation intégrée. Il est bien expliquée dans \cite{guigourez_10_2023}, sur lequel on va s'appuyer pour rappeler ici les enjeux de cette querelle. \\
+
+William Nordhaus est un économiste des Etats-Unis. Au début des années 1990, il met au point le modèle DICE, qui est une des premiers à modéliser l'interaction climat - économie. Ce modèle sera ensuite mis à jour régulièrement, et sera suivi de RICE, un modèle plus régionalisé. Il obtient le Prix dit Nobel d'Economie en 2018 pour ses l'intégration du changement climatique dans l'analyse macro-économique que long terme\cite{yale}. Adepte de la théorie des choix publics, il pense que l'inaction climatique vient d'une mauvaise appréciation des coûts futurs du changement climatique, et qu'une analyse coût-bénéfice permet de suivre des trajectoires climatiques plus optimales. 
+Sir Nicolas Stern a été vice-président senior de la Banque Mondiale de 2000 à 2003. Peu après, le gouvernement britannique lui commande un rapport sur les effets du changement climatique sur l'économie. \\
+
+Les deux auteurs utilisent des modèles intégrés : Nordhaus utilise DICE, et Stern utilise PAGE. Les deux modèles sont similaires en termes d'hypothèses et de fonctionnement. Ces modèles sont des modèles d'optimisation, qui visent à donner un coût optimal à une tonne de carbone. Ils sont d'ailleurs utilisés pour calculer le coût social du carbone (voir figure \ref{fig:scc}). Pour pouvoir comparer le coût de politiques publiques aujourd'hui, aux gains ultérieurs (c'est-à-dire aux dommages futurs évités), il faut pouvoir comparer ces deux grandeurs. \\
+
+Cependant, on considère que la valeur de l'argent dans le futur est plus faible qu'aujourd'hui. De nombreux facteurs permettent d'arriver à cette conclusion : le futur est incertain, et il est donc possible que ces événements ne se réalisent pas; ou alors que les générations futures soient capable de mieux y faire face; ou tout simplement, nous préférons nos générations aux générations ultérieures. C'est une formalisation de l'adage : \emph{un tiens vaut deux tu l'auras}. La question est donc de savoir \emph{à quel point} les dommages futurs sont moins importants que ceux d'aujourd'hui, ou encore combien de \emph{tu l'auras} un \emph{tiens} vaut-il ? \\
+
+Formellement, on retient la structure suivante : 
+
+\begin{equation}
+    r_t = \delta + \eta g_t 
+    \label{eq:disc_rate}
+\end{equation}
+
+où $r_t$ représente le taux d'actualisation de la consommation à l'instant $t$, $\delta$ représente la préférence pure pour le présent, $\eta$ l'élasticité marginale de l'utilité en fonction de la consommation, c'est-à-dire à quel point les agents peuvent adapter leurs préférences,  et $g_t$ le taux de croissance de la consommation. \\
+
+Cette formulation permet d'intégrer la préférence pure pour le présent, appelée aussi taux d'actualisation de l'utilité, dans la fonction de consommation. C'est ainsi qu'elle est implémentée dans DICE et PAGE. À partir d'ici, nous nous intéresserons uniquement à $\delta$, que nous appellerons taux d'actualisation. \\
+
+Nordhaus utilise comme paramètres $\delta = 1.5\%$ et $\eta=2$, tandis que Stern utilise $\delta=0.1\%$ et $\eta=1$. Ainsi, Stern considère que l'on doit prendre en compte les dommages causés aux générations futures (presque) comme s'ils survenaient maintenant; tandis que Nordhaus considère qu'il faut les prendre en compte en retirant 1,5\% de leur valeur chaque année. \\
+
+À partir de ces simples hypothèses, et en utilisant des similaires, les auteurs obtiennent des résultats drastiquement différents. Stern suggère des investissements massifs et rapides, tandis que Nordhaus promeut de faibles investissements aujourd'hui, pour n'investir que plus tard. 
+
 \cite{guigourez_10_2023} => description de la querelle
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{act}
+    \includegraphics[width=\linewidth]{results/actualisation.png}
     \legende{Valeur actualisée selon le temps et le taux d'actualisation}{Graphique qui représente la valeur d'une unité monétaire dans le temps, actualisée au présent, selon le taux d'actualisation. En jaune, celui choisi par Nordhaus, et en bleu celui choisi par Stern. Clé de lecture : avec un taux d'actualisation de 3\%, 100\$ de dommage en 2080 ne valent que 18\$ en 2020, alors que 100\$ de 2040 valent 56\$. }
     \label{fig:discount-rate}
 \end{figure}
