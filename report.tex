@@ -21,7 +21,30 @@
 \pgfplotsset{compat=1.7}
 \usepackage{subcaption} % Pour les sous-figures
 \usepackage{lscape}
-\usepackage{adjustbox}
+%\usepackage{adjustbox}
+
+% changer les quotes :
+\usepackage{etoolbox}
+
+% Redéfinir l'environnement quote
+%\renewenvironment{quote}{\begin{displayquote}}{\end{displayquote}}
+
+% Pour pouvoir ajouter des fragments de code
+\usepackage{listings}
+
+\lstset{
+  language=Python,         % Choisir le langage de programmation (Python ici, mais tu peux changer pour R, C++, etc.)
+  basicstyle=\ttfamily,    % Style de base du texte (typewriter pour le code)
+  keywordstyle=\color{blue},  % Couleur des mots-clés
+  commentstyle=\color{gray},  % Couleur des commentaires
+  stringstyle=\color{red},    % Couleur des chaînes de caractères
+  numbers=left,            % Numérotation des lignes à gauche
+  numberstyle=\tiny,       % Taille de la police pour les numéros de ligne
+  stepnumber=1,            % Fréquence des numéros de ligne
+  breaklines=true,         % Autoriser les retours à la ligne dans le code
+  frame=single,            % Encadrer le code
+}
+
 
 
 

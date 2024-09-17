@@ -1,4 +1,4 @@
-\chapter{Éthique de la modélisation intégrée}
+\chapter{Éthique de la modélisation des dommages}
 \label{chapter:ethique}
 \newrefsegment
 
@@ -7,9 +7,27 @@
 
 \chapterabstract{Les choix de modélisation des fonctions de dommage sont lourds de conséquences sur le message que véhiculent les résultats de ces modèles. Ces résultats alimentent le débat public sur les questions climatiques. Vu les enjeux sociaux et sociétaux qui sont à l'oeuvre, la pratique de la modélisation implique des questions éthiques importantes. Quelles sont-elles, et comment sont-elles prises en compte ? Cette partie est plus conceptuelles et épistémiques, et cherche à identifer des points d'attention de la modélisation.}
 
-\begin{quote}
+
+Les modèles intégrés sont dans une position ambivalente : outils techniques complexes et abstraits, ils sont pourtant utilisés par des utilisateurs variés pour produire des décisions très concrètes. Cette tension est particulièrement claire dans le cas des fonctions de dommage. Comme nous avons pu le voir dans la partie précédente, les résultats qu'elles produisent sont très sensibles aux différentes hypothèses normatives sur lesquelles elles sont construites. Ainsi, la modélisation apparait empreinte de questions éthiques essentielles. 
+
+Dans cette partie, nous reviendrons sur plusieurs points de tension, que nous éclairerons à l'aide de textes épistémologiques. 
+
+Notre question de recherche principale sera la suivante : \textit{comment les systèmes normatifs des chercheurs transparaissent-ils dans les modèles ?}
+
+Nous suivrons trois objectifs. D'abord, présenter des outils épistémologiques qui permettent d'éclairer ces questions. Ensuite, de présenter des points particuliers des modèles qui nous semblent porteurs d'enjeux éthiques, d'une manière qui se veut le plus proche possible du fonctionnement concret du modèle. Enfin, de croiser les deux approches pour proposer une lecture pratique de l'éthique de la modélisation des dommages. 
+
+Dans un premier temps, nous présenterons le cadre conceptuel de Tuana, qui permet de décomposer en trois sphères les enjeux éthiques liés à la recherche. Nous discuterons ensuite de l'idée selon laquelle la modélisation des dommages impose une grille de lecture particulière, socialement, épistémologiquement et historiquement située, et cadre ainsi le débat sur l'action climatique. Enfin, nous aborderons la question de la responsabilité des chercheurs quand au produits de leur recherche, notamment à travers le concept de doute normativement inapproprié. 
+
+
+
+
+
+
+
+
+\begin{displayquote}
     Dépolitiser le réel c'est le repolitiser au profit de l'oppresseur
-\end{quote}
+\end{displayquote}
 
 
 \begin{table}
@@ -28,9 +46,6 @@
 \cite{schienke_intrinsic_2011} => sur l'éthique intrinsèque dans les IAMs
 \cite{weitzman_modeling_2009} => sur les événements non-linéaires
 
-\begin{tcolorbox}
-    Voir Gouverner le climat !!
-\end{tcolorbox}
 
 
 \section{Les trois niveaux de l'éthique et la responsabilité du modélisateur}
@@ -42,9 +57,9 @@ Elle s'appuie notamment sur \cite{jonas_principe_2008} et \cite{vast machine}, a
 
 Comme nous l'avons vu précédemment, le processus de modélisation est avant tout un processus de sélection de ce qui est représenté et ce qui ne l'est pas, et de décision de la manière de le représenter. Comme nous le verrons dans le chapitre \ref{chapter:socio}, l'imperfection et la partialité des modèles est souvent assumée, voire revendiquée par les équipes de modélisation. Elle s'accompagne souvent d'une tentative de dé-responsabilisation de l'équipe de modélisation. Celle-ci prend généralement la forme suivante : 
 
-\begin{quote}
+\begin{displayquote}
     Les résultats des modèles sont valables uniquement sous les conditions (nombreuses et irréalistes) dans lesquelles il a été conçu. On ne peut donc pas extrapoler les résultats, ou faire dire au modèle autre chose que ce qu'il veut dire. 
-\end{quote}
+\end{displayquote}
 Pourtant, les résultats des modèles sont utilisés de manière large, notamment pour prendre des décisions de politique publique, y compris par des personnes n'ayant pas de compétence spécifique en modélisation, ni de connaissance particulière des modèles utilisés pour produire les connaissances qu'elles utilisent. Il y a donc un paradoxe : d'une part, l'idéal d'une compréhension fine des hypothèses de la modélisation, qui permet d'être conscient des choix de modélisation et de leurs implications. Cet idéal protège la responsabilité du modélisateur : en effet, les hypothèses ayant été clairement formulées, l'utilisateur final devient responsable de sa propre interprétation. Celle-ci se fait en accord avec les hypothèses énoncées, que l'utilisateur final fait sienne. D'autre part, il est difficile de comprendre un modèle pour plusieurs raisons : technique (les logiciels ne sont pas/plus accessibles), légales (le code source n'est pas accessible librement), capacitaires (les codes sources sont difficiles à interpréter, surtout si on n'est pas familier du langage utilisé), théoriques (les modèles intégrés font appel à des concepts issus de nombreuses disciplines). Cette difficulté à comprendre les modèles font que les résultats sont \textit{de facto} souvent interprétés dans l'état dans lequel ils sont délivrés, sans la contextualisation permise par le code. Dès lors, le choix des hypothèses est invisibilisé, et la responsabilité du modélisateur peut s'étendre jusqu'à l'interprétation du modèle, voire jusqu'aux conséquences de cette interprétation. \\
 
 Pour éclairer ce paradoxe, nous allons nous intéresser aux dimensions éthiques de la modélisation. Pour cela, nous allons nous appuyer sur les travaux de Tuana, qui a cherché à développer un cadre conceptuel de l'éthique dans la recherche, et qu'elle a adapté spécifiquement au cas de la modélisation intégrée. \\
@@ -54,7 +69,7 @@ Elle développe trois dimensions éthiques de la recherche scientifique : l'éth
 \begin{figure}
     \centering
 
-    \includegraphics[width=1\linewidth]{venn_ethics.png}
+    \includegraphics[width=0.6\linewidth]{venn_ethics.png}
     \legende{Les trois dimensions de l'éthique dans la recherche.}{\cite{tuana_climate_2019} décrit trois dimensions éthiques dans la recherche : l'éthique procédurale consiste en le respect des normes établies et reconnues dans la communauté. C'est en général ce à quoi on fait référence quand on parle de \textit{bonne science}. L'éthique extrinsèque désigne les questions éthiques qui sont liées aux utilisations des productions scientifiques. Enfin, l'éthique intrinsèque désigne les questions qui sont incluses dans le mode de production de la connaissance (en l'occurence, le modèle). }
     \label{fig:diag-venn}
 \end{figure}
@@ -62,11 +77,11 @@ Elle développe trois dimensions éthiques de la recherche scientifique : l'éth
 
 \subsection{L'éthique procédurale}
 
-L'\Gls{procedural ethics} désigne ce qui est couramment regroupé sous le terme de \textit{bonne science}, ou \textit{good science}. Il s'agit de produire de la connaissance en respectant les attentes de la communauté scientifique en termes de honneteté, de sincérité. Tuana \cite{tuana_leading_2010}  la définit comme ceci : 
+L'\Gls{procedural ethics} désigne ce qui est couramment regroupé sous le terme de \textit{bonne science}, ou \textit{good science}. Il s'agit de produire de la connaissance en respectant les attentes de la communauté scientifique en termes d'honneteté, de sincérité et de rigueur. Tuana \cite{tuana_leading_2010}  la définit comme ceci : 
 
-\begin{quote}
+\begin{displayquote}
 Ethical aspects of the process of conducting scientific research, such as: falsification, fabrication, and plagiarism; care for subjects (human and non-human animal); responsible authorship issues; analysis of and care for data.
-\end{quote}
+\end{displayquote}
 La plupart des travaux de modélisation s'inscrivent pleinement dans cette démarche, et sont en phase avec les attentes et bonnes pratiques de la communauté : 
 
 \begin{itemize}
@@ -75,17 +90,39 @@ La plupart des travaux de modélisation s'inscrivent pleinement dans cette déma
     \item sincérité des résultats : les résultats sont reproductibles facilement
 \end{itemize}
 
-\begin{tcolorbox}
-    Mais remarques de Keen sur Nordhaus
-\end{tcolorbox}
+Pourtant, de nombreuses critiques viennent compromettre ce constat. Par exemple, le GIEC remarque qu'il faudrait des explications plus détaillées sur le fonctionnement interne des modèles. 
+
+
+\begin{displayquote}
+    Coucou c'est moi
+\end{displayquote}
+\begin{displayquote}
+Transparency is needed to reveal conditionality of results on specific choices in terms of assumptions (e.g., discount rates) and model architecture. More detailed explanations of underlying model dynamics would be critical to increase the understanding of what drives results (Bistline et al. 2020; Butnar et al. 2020; Robertson 2020). » ([“Mitigation Pathways Compatible with Long-term Goals”, 2023, p. 304]
+\end{displayquote}
+Un bon exemple est la documentation de FUND. Celle-ci est disponible en ligne, sur le site \href{http://www.fund-model.org/}{fund-model.org/}. Elle est détaillée; toutes les équations et leurs variables y sont décrites; les paramètres en entrée sont également disponibles. De plus, le code source complet, dans un langage open source (julia) est disponible sur github. Il y a donc un véritable effort de transparence et d'ouverture. 
+
+% Pourtant, et comme le remarquent les auteurs de ce modèle, \emph{les modèles sont souvent inutiles dans des mains inexpérimentées}.
+Malgré ces efforts importants, il reste difficile de 1/ observer le modèle et en interpréter la conception 2/ le faire tourner pour le réimplémenter.  Par exemple, les paramètres changent de nom, ou ne désignent plus les mêmes choses sans que cela soit indiqué.
+
+Le paramètre $T$, par exemple, désigne successivement \emph{ global mean temperature (in degree centigrade)} et \emph{global mean temperature above pre-industrial (in degree Celsius) at time t}. Il est plus cohérent avec les equations de considérer qu'il s'agit de la même variable; pourtant, les noms portent à confusion : dans un cas il s'agit d'une valeur mesuré, dans l'autre de l'écart de cette valeur avec la période pré-industrielle. 
+
+Les tables de paramètres sont disponibles aussi, ce qui est beaucoup. Néanmoins, elles sont disponibles sous deux formes peu exploitables. La première est sous une forme de distribution de ces paramètres. Celle-ci a l'avantage de bien comprendre comment ces paramètres sont produits. Néanmoins, sans graine aléatoire, on ne peut pas reproduire à l'identique le fonctionnement du modèle, et ainsi s'assurer que les effets observés ne sont pas simplement liés à un tirage différent. De plus, les distributions sont données en fragments de code Julia, ce qui limite les exports dans d'autres formats. L'autre forme est en texte sur le site. Cette forme présente l'avantage d'être très facilement lisible par des humains. Néanmoins, il est très difficile d'extraire ces données dans un format compatible avec les outils de modélisation, tels que Python ou VENSIM. Dans notre cas, il a donc fallu réfléchir à un programme permettant de convertir le Markdown en format de données CSV, ce qui est à la fois compliqué et source d'erreurs potentielles. \\
+
+Cet exemple nous offre quelques enseignements. D'abord, la tranpsarence est très difficile. Les modèles sont complexes, avec souvent de nombreuses variables et équations, d'autant plus de paramètres et de sources. Ouvrir de manière convenable un modèle est une action couteuse, qui recquière un investissement en temps et en ressource important, alors même que peu de gens sont demandeurs de l'accès aux modèles. Ensuite, qu'elle n'est pas suffisante : avoir accès aux paramètres ne suffit pas à en comprendre les effets sur le modèle. 
+
+Ainsi, le respect des normes scientifiques en termes d'ouverture, de rigueur et de transparence est souvent mis en avant. Dans le cadre de la partie expérimentale de notre travail, nous avons pu constater que des efforts importants sont consentis par les équipes pour mettre à la disposition du plus grand nombre le plus de ressources possibles.  Il y a donc là une première tension, entre une transparence qui n'est jamais suffisante, mais qui est pourtant demandée, tout en étant en réalité peu utilisées (nous en reparlerons dans le chapitre \ref{chapter:socio}. 
+
+%\begin{tcolorbox}
+  %  Mais remarques de Keen sur Nordhaus
+%\end{tcolorbox}
 
 \subsection{L'éthique intrinsèque}
 
 L'\Gls{intrinsic ethics} va plus loin dans l'exigence. Il s'agit de la dimension éthique qui est directement intégrée dans le processus de recherche : il ne s'agit plus de la forme de la recherche, mais du fond de la recherche. 
 
-\begin{quote}
+\begin{displayquote}
 Ethical issues and values that are embedded in or otherwise internal to the production of scientific research and analysis. These involve ethical issues arising from, for example: the choice of certain equations, constants, and variables; analysis of data; handling of error, and degree of confidence in projections.
-\end{quote}
+\end{displayquote}
 Comme le souligne Tuana, la bonne prise en compte de ces questionnements nécessite d'avoir un accompagnement épistémologique au sein des équipes de recherche, c'est-à-dire de prendre en compte ces enjeux comme partie intégrante du développement du projet : \emph{the domain of intrinsic ethics will not be fully successful unless it includes the expertise of philosophers of science. It is only when this domain becomes a focus of our field, that the range of relevant issues and their ethical and epistemic significance will be fully appreciated.} 
 
 \begin{tcolorbox}
@@ -95,6 +132,13 @@ Comme le souligne Tuana, la bonne prise en compte de ces questionnements nécess
         \item 
     \end{itemize}
 \end{tcolorbox}
+
+=> exemple 1 : choix du taux d'actualisation (faire une référence à la querelle Nordhaus / Stern)
+=> explication 1 : le taux d'actualisation fait intervenir des conceptions éthiques importantes
+
+\begin{displayquote}
+    Modelling over many decades, regions and possible outcomes demands that we make distributional and [ethical]([[Ethique]]) judgements systematically and explicitly. Attaching little weight to the future, simply because it is in the future (‘[pure time discounting]([[discount rate]])’), would produce low estimates of cost – but if you care little for the future you will not wish to take action on climate change. » ([“Economic modelling of climate change impacts”, 2007, p. 143](zotero://select/library/items/L2NNDHEN))
+\end{displayquote}
 
 Un exemple d'éthique intrinsèque est le découpage par région. Les modèles se focalisent sur certaines régions plus que d'autres, sont calibrés sur certaines régions (où il y a par ailleurs des données plus nombreuses et de meilleure qualité), et sont donc bien plus pertinents pour décrire les phénomènes dans certaines régions plus que dans d'autres. 
 
@@ -117,15 +161,16 @@ Un exemple d'éthique intrinsèque est le découpage par région. Les modèles s
     \label{fig:trois_cartes}
 \end{figure} 
 
-
+=> exemple 2 : la granularité spatiale
+=> révèle une cadrage / centrage du modélisateur 
 
 \subsection{L'éthique extrinsèque}
 
 Enfin, l'\Gls{extrinsic ethics} désigne les questionnements autour des effets de la production scientifique sur la société. C'est une sphère beaucoup plus large, puisqu'elle sort du domaine du laboratoire et de la communauté scientifique, pour mesurer les effets sur les sociétés. 
 
-\begin{quote}
+\begin{displayquote}
 Ethical issues that are external to the production of scientific research. These arise, for example, when considering the impact of scientific research on society; e.g., the effects of technological innovations on social ends such as health and well-being, whether pressing social and economic issues are likely to be addressed and if so, who benefits, and the role of science in policy-making. This domain of ethics also includes ethical concerns arising from the impact of society upon science, for example the impact of funding on research trajectories or the ways in which wide-spread societal biases can impact research trajectories, as they arguably did with eugenics research. In the latter case, there are often links between the domains of extrinsic and intrinsic ethics.
-\end{quote}
+\end{displayquote}
 Ce questionnement s'inscrit dans une réflexion plus large du rapport entre la production scientifique et son application dans la société. 
 
 \begin{tcolorbox}
@@ -138,6 +183,16 @@ Ce questionnement s'inscrit dans une réflexion plus large du rapport entre la p
 \end{tcolorbox}
 
 
+\begin{displayquote}
+    « Hence, the modeling community prefers to discuss controversial modeling issues such as flux adjustments among themselves and to ‘reserve criticism for internal dealings within their own peer community’ (Ref 145, p. 30) because acknowledging uncertainty is seen to make the credibility of climate science in the policy process vulnerable to the attacks of climate skeptics. » ([Beck et Krueger, 2016, p. 638
+\end{displayquote}
+
+\begin{displayquote}
+    Douglas97,99 argues that extrinsic ethics (and other non-epistemic consequences of scientific choices) create a specific responsibility for researchers who work on policy-relevant issues with an uncertain evidence base. » ([Beck et Krueger, 2016, p. 633]
+\end{displayquote}
+\begin{displayquote}
+     By contrast, the extrinsic ethical consequence of the decision may be the implementation of suboptimal policies with possibly significant societal consequences.9 » ([Beck et Krueger, 2016, p. 633]
+\end{displayquote}
  Ces considérations sur l'éthique extrinsèque prendront plus de sens dans la section suivante, on l'on développera l'idée que la modélisation participe activement au cadrage du débat public, et donc aux choix de futurs possibles. 
 
 \section{Construire / dessiner les futurs possibles}
@@ -165,9 +220,9 @@ Helene Longino va plus loin dans sa critique de la science neutre en s'inscrivan
 
 D'abord, elle clame que les dérives du progrès technique sont les inévitables conséquences de la production scientifique. 
 
-\begin{quote}
+\begin{displayquote}
     One is that the dystopic applications of modern science—the domination of political life by thermonuclear weapons, new particle beam weapons, and other monsters of annihilation; the control of human potentiality through genetic engineering; the proliferation of toxic wastes from science-based technologies; the displacement of human labor by automation—are not a misuse of socially neutral science but the inevitable result of bourgeois science.
-\end{quote}
+\end{displayquote}
 
 « there are concerns that IAMs are describing transformative change on the level of energy and land use, but are largely silent about the underlying socio-cultural transitions that could imply restructuring of society and institutions » (\href{zotero://select/library/items/2SDDNUUF}{“Annex III: Scenarios and Modelling Methods”, 2023, p. 1862}) (\href{zotero://open-pdf/library/items/CHVFSLLH?page=22&annotation=JY4VBIZY}{pdf})
 
@@ -182,15 +237,15 @@ D'abord, elle clame que les dérives du progrès technique sont les inévitables
     \label{fig:reductionnisme}
 \end{figure}
 
-\begin{quote}
+\begin{displayquote}
     
-\end{quote}
+\end{displayquote}
 
 L'autrice continue sa critique en formulant un rejet du réductionnisme, c'est-à-dire à la croyance selon laquelle une notion peut être réduite en d'autres notions plus fondamentales. Elle appelle à une conception plus systémique des des relations causales. 
 
-\begin{quote}
+\begin{displayquote}
     The spirit, therefore, of these analyses might be better served by seeing them as urging a reconception of objects of inquiry in particular fields — specifically as urging their colleagues to abandon questions presupposing unidirectional or linear causal relations and to understand objects as constituted partly of the parts of which they are wholes and partly of the wholes of which they are parts. If this shift could be accomplished on internalist grounds, there would be less struggle over its acceptance.
-\end{quote}
+\end{displayquote}
 
 Ce point touche tout à fait les modèles, et particulièrement les fonctions de dommage. Les modèles sont une forme de réductionnisme, puisque l'on représente des phénomènes complexes à travers des fonctions plus simples. Il s'agit donc d'une critique récurrente, mais dont il convient de faire attention. \\
 
@@ -203,14 +258,14 @@ Une autre difficulté rencontrée par les modèles est la représentation des al
 
 Ces critiques rejoignent celles formulées par Aykut et Dahan. 
 
-\begin{quote}
+\begin{displayquote}
     Au cours des années 1990, les pays en développement ne sont convaincus ni de la gravité du risque climatique ni du fait que ce problème les concerne. Ils contestent la prééminence de son traitement « physique » qui privilégie trop, selon eux, le global par rapport au local. Ils critiquent le point de vue de la modélisation numérique globale ou, du moins, le transfert de sa méthodologie au niveau politique ; transfert qui, disent-ils :  
     \begin{itemize}
         \item effacerait le passé (or, le Nord s’est industrialisé, équipé et il a pollué, pas le Sud)
 	    \item naturalise rait le présent (en particulier, la référence à l’année 1990 dans le protocole de Kyoto est jugée inacceptable, le présent n’étant pas un acquis, mais devant être interrogé),
 	   \item et globaliserait le futur (le CO 2 se globalise sans doute, pas les humains).
     \end{itemize}
-\end{quote}
+\end{displayquote}
 
 Si cette critique concerne principalement les modèles physiques tels que les modèles de circulation générale, ils peuvent être apportés également aux modèles intégrés. En effet, dans les modèles d'optimisation, où le coût total est minimisé, l'origine des émissions ou le lieu des dommages n'importe pas. 
 
@@ -222,19 +277,25 @@ Les fonctions de dommage ne peuvent représenter qu'un nombre limité de phénom
 
 \cite{aykut_gouverner_nodate} donnent cette définition du cadrage (ou \emph{framing} en anglais) : c'est un concept qui  \emph{renvoie à la la formulation d’un problème socio-technique dans les discours savants et publics, aux liens établis avec d’autres questions et aux mesures envisagées pour traiter le problème (solutions technologiques ou politiques, approches globales ou locales, etc.), souvent sous-jacentes à son évaluation}. Ils donnent différents éléments permettant de caractériser le cadrage du régime climatique. Le premier est sa globalité, c'est à dire l'idée selon laquelle le changement climatique est un problème global, avec des sources globales et des réponses globales. Cette idée prend sa source dans les modèles climatiques, qui, en représentant le climat comme une réalité globale et sans frontières, tendent à effacer les différences locales de responsabilité ou de vulnérabilité. Le cadrage du débat climatique par les sciences du climats se fait par trois canaux principaux : 
 
-\begin{quote}
+
+
+\begin{displayquote}
 \begin{itemize}
     \item la **concentration sur les modèles globaux de l’atmosphère** comme outil incontournable des projections climatiques, y compris pour les prévisions régionales obtenues par descente en échelle (downscaling) des modèles globaux, a contribué à globaliser les problèmes, à désigner l’arène mondiale/globale comme l’échelle unique de traitement du risque climatique ;
 	\item le **réductionnisme physico-chimique des sciences du climat** tend à mettre en avant les caractéristiques universelles des GES et à les séparer de leur signification sociale locale. Les molécules de méthane des rizières ou celles de gaz carbonique des voitures jouent un rôle identique dans la mise en équation de l’effet de serre. C’est ce que Demeritt (2001) a qualifié de déterminisme environnemental tacite ;
 	\item la **focalisation dans les modélisations sur les « évolutions probables »** a longtemps contribué – contrairement à ce que les critiques récurrentes de « l’alarmisme » des rapports scientifiques suggèrent – à une marginalisation des scénarios du pire et de l’éventualité de changements brusques, ou tipping points. Shackley et Wynne (1996) constatent, dans une étude sur le traitement des incertitudes dans l’expertise climatique globale, une « mise à l’écart des extrêmes » (tuning out of extremes).
 \end{itemize}
-\end{quote}
+\end{displayquote}
 
 Ce cadrage est accentué par les modèles intégrés, en ne permettant le débat que sur les concepts et à partir des hypothèses modélisées. Comme le souligne le GIEC, les modèles intégrés limitent les horizons possibles aux horizons imaginés par les modélisateurs : 
 
-\begin{quote}
+\begin{displayquote}
     IAM analysis could focus on only a subset of relevant futures and thus push society in certain directions without sufficient scrutiny. \cite{intergovernmental_panel_on_climate_change_ipcc_annex_2023}
-\end{quote}
+\end{displayquote}
+
+\begin{displayquote}
+    - « The vast majority of IAM pathways do not consider climate impacts (Schultes et al. 2021). Equity hinges upon ethical and normative choices. As most IAM pathways follow th » ([“Mitigation Pathways Compatible with Long-term Goals”, 2023, p. 304](zotero://select/library/items/38PUG9F2)
+\end{displayquote}
 
 \cite{cointe_ar6_2024} complète cette remarque en ajoutant que le \emph{corridor} des possibles devient de plus en plus étroit, et limite certaines alternatives, comme des scénarios sans croissance, post-croissance ou de décroissance. 
 
@@ -242,6 +303,14 @@ Plus spécifiquement, les fonctions de dommage peuvent contribuer à cadrer le d
 
 La monétarisation (voir section \ref{monetarisation}) implique une dichotomie claire entre ce qui est monétaire et ce qui ne l'est pas. Elle ne permet de modéliser que les phénomènes monétaires, et reflète ainsi une importance démesurée des indicateurs économiques classique par rapport à d'autres composantes, tels que le bien-être, la santé ou la biodiversité. Prendre en compte ses différents éléments implique dès lors de les monétariser, ce qui n'est pas sans question. 
 De plus, ces modèles vont favoriser des solutions qui s'inscrivent dans le système financier, sans pouvoir proposer d'alternatives. Ainsi, les solutions proposées seront systématiquement des taxes, des coûts du carbone ou d'autres types d'instruments financiers.
+
+
+=> lien direct avec l'approche avec la science : 
+
+\begin{displayquote}
+    Funtowicz and Ravetz question whether policy-relevant issues can be addressed using conventional scientific techniques ‘when facts are uncertain, values in dispute, stakes high, and decisions urgent.’ (Ref 37, p. 744) In this situation, they claim, a post-normal science that explicitly acknowledges the interweaving of knowledge and ethics is required. » ([Beck et Krueger, 2016, p. 630]
+\end{displayquote}
+
 
 \subsection{Trouver un niveau optimal de changement climatique, une approche fondamentalement normative}
 
@@ -259,9 +328,9 @@ D'une part, parce qu'en affectant aux dommages une valeur, ils leur confèrent u
 
 D'autre part, parce qu'en contraignant les solutions et les mesures à des valeurs monétaires, ils en font le seul cadre d'analyse possible des effets du changement climatique. En effet, ces modèles valorisent la place d'outils monétaires, qui sont ainsi les seuls à pouvoir être implémentés : taxe carbone, mécanismes de marché, etc. Ainsi, comme le dit \cite{mercure_modelling_2019}, \emph{the finding that an optimal resource allocation is not achieved due to frictions and market failures, ultimately reflects a normative philosophy of science}. 
 
-\begin{quote}
+\begin{displayquote}
     This discussion implies that we can interpret optimization models as a device for estimating the equilibrium of a market economy. As such, it does not necessarily have a normative interpretation. Rather, the maximization is an algorithm for finding the outcome of efficient competitive markets.
-\end{quote}
+\end{displayquote}
 
 \begin{tcolorbox}
     parler du fait que l'optimisation c'est forcément très normatif. 
@@ -282,6 +351,9 @@ D'autre part, parce qu'en contraignant les solutions et les mesures à des valeu
 
 \end{itemize}
 
+\begin{displayquote}
+    First, including direct impacts on the environment and human health (sometimes called ‘non-market’ impacts) increases our estimate of the total cost of climate change on this path from 5\% to 11\% of global per-capita consumption. There are difficult analytical and ethical issues of measurement here. The methods used in this model are fairly conservative in the value they assign to these impacts.  ([Stern, 2007, p. 10]
+\end{displayquote}
 
 Enfin, l'approche néomarxiste fait la promotion d'une science plus émancipatoire, et moins élitiste. Longino évoque notamment les travaux de Hilary Rose et Steven Rose, qui décrivent une science plus émancipatoire, qui aurait \emph{dépassé le clivage entre l'objet et le sujet, entre le rationnel et l'emotionnel, et qui ne serait plus dominée par une rationalité instrumentale. Elle serait caractérisée par des relations sociales démocratiques, c'est-à-dire l'abandon de l'élitisme, et ses théories incorporeraient une vue dialectique de la nature}.
 
@@ -305,29 +377,29 @@ Helène Longino définit deux types de valeurs. D'une part, les \emph{constituti
 
 Se pose dès lors la question du rapport entre ces deux niveaux de valeurs. Dans quelle mesure les valeurs contextuelles influencent les valeurs constitutives, c'est-à-dire dans quelle mesure les normes sociales d'un contexte donné vont influencer la production scientifique ? Et dans quelle mesure les valeurs constitutives influencent les valeurs contextuelles, c'est-à-dire dans quelle mesure la production scientifique influence les normes sociales ? Cette question est celle de l'autonomie de la pratique scientifique du contexte personnel, social et culturel, c'est-à-dire précisément la question de la neutralité de la science. Elle répond de manière très claire à cette question : non seulement les deux interagissent fortement, mais cette interaction est au cœur de la pratique scientifique : 
 
-\begin{quote}
+\begin{displayquote}
     I will argue not only thatscientific practices and content on the one hand and social needs and values on the other are in dynamic interaction but that the logical and cognitive structuresofscientific inquiry.require such interaction. \textit{p. 5}
-\end{quote}
+\end{displayquote}
 
 L'autonomie de la production scientifique vis-à-vis des valeurs sociales est donc un mythe. Cependant, et contrairement à ce qui est généralement admis, cela ne remet pas en cause l'intégrité de la recherche. 
 
-\begin{quote}
+\begin{displayquote}
     Autonomy and integrity are separable attributes, and I shall consider them in sequence.
-\end{quote}
+\end{displayquote}
 
 La question de la neutralité de la science est régulièrement abordée en épistémologie. Une autrice a particulièrement abordé ce sujet, en montrant que la science est avant tout une pratique sociale, qui s'inscrit dans des dynamiques et un contexte particulier. Il s'agit d'Hélène Longino, dans \emph{Science as social knowledgde} \cite{longino_science_1990}. Elle développe plusieurs points qui vont être intéressants dans la perspectives des modèles. \\
 
 D'abord, elle développe l'idée que la science n'est pas pure ou dénuée de valeur; au contraire, c'est une base solide pour construire des valeurs ensuite. Il ne s'agit pas de lutter pour une science sans biais ou sans valeur; mais plutot d'inclure ces valeurs au coeur du projet scientifique. 
 
-\begin{quote}
+\begin{displayquote}
     Instead of remaining passive with respect to the data and what the data suggest, we can, therefore, acknowledge our ability to affect the course of knowledge and fashion or favor research programs that are consistent with the values and commitments we express in the rest of our lives. From this perspective the idea of a value-free science is not just empty but pernicious. \textit{page 191}
-\end{quote}
+\end{displayquote}
 
 Elle va ensuite plus loin, en indiquant qu'il y a un choix fort à réaliser, entre s'accorder avec les systèmes normatifs traditionnels, ou s'accorder avec son propre système de valeurs. Le système normatif, qui est forcément inclu dans le processus scientifique, résulte dès lors d'un choix conscient (y compris s'il implique de rester dans le système de valeur traditionnel ou dominant). 
 
-\begin{quote}
+\begin{displayquote}
     In particular we can choose between being accountable to the traditional establishment or to our political comrades \textit{p 191}
-\end{quote}
+\end{displayquote}
 
 Le contexte de la modélisation est particulièrement intéressant de ce point de vue. En effet, comme nous l'avons montré plus haut, les hypothèses sont omniprésentes, et réflètent une conception du monde. Il y a donc un choix réel. Contrairement à ce que certains modélisateurs affirment, il ne s'agit pas d'une réalité objective ou neutre, mais bien d'une sélection hautement normaitve. \\
 
@@ -338,6 +410,10 @@ Le contexte de la modélisation est particulièrement intéressant de ce point d
 
 \subsection{La responsabilité}
 
+\begin{displayquote}
+    « But the belief that nonepistemic motivations necessarily result in NID is mistaken. As many have argued, all science, or nearly all science, is in fact unavoidably motivated by some nonepistemic aims » ([Melo-Martín et Intemann, 2018, p. 35]
+\end{displayquote}
+=> renvoit à la notion d'éthique intrinsèque
 
 
 

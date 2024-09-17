@@ -10,11 +10,23 @@
 
 \cite{errickson_equity_2021} => il peut y avoir une plus grande variation du SCC selon l'équité que selon l'incertitude climatique
 
-Nous avons vu dans le chapitre précédent que les modèles varient dans leurs choix de représentations des dommages. De plus, ces différents choix semblent tous valables à leur manière : les phénomènes représentés sont incertains, et cette variabilité représente surtout l'incertitude qui entoure ces phénomènes. Pourtant, ce sont bien les mêmes phénomènes; il ne devrait donc pas y avoir de différence entre les modèles. Ces différences sont donc apportées exclusivement par les choix de modélisation; or, elles peuvent être importantes, et donner des conclusions radicalement différentes, donnant lieu à des interprétations opposées. La querelle entre Nordhaus et Stern, évoquée plus haut, en est un exempe éloquent. On définit ici la notion de paramètre éthique : elle désigne les paramètres qui n'ont pas vocation à représenter un phénomène physique ou social observable, mais plutot à représenter une valeur morale. Le taux d'actualisation, par exemple, entre tout à fait dans cette définition. En effet, il représente l'importance accordée à l'équité inter-générationnelle. bien qu'il y ait eu des tentatives d'observer empiriquement cette valeur, notamment en s'intéressant au taux de préférence pure pour le présent dans les prêts de long terme, il semble difficile de penser que cette valeur soit valable a plus long terme ou dans d'autres contexte. Plutot, il apparait que ce paramètre reflète un système normatif, et relève de ce fait plutot du choix moral que du choix technique. Se pose alors la question suivante : quelle part de la variation du niveau total de dommage est-elle expliquée par ces paramètres éthiques. Dans cette partie, on développe un protocole expérimental qui vise à mesurer le niveau de dommage produit par différents modèles, différentes fonctions de dommages et surtout différents niveau pour ces paramètres éthiques. On régresse ensuite les données obtenues pour mesurer quantitativement la part de la variation qui est expliquée par ces fameux paramètres. 
+Nous avons vu dans le chapitre précédent que les modèles varient dans leurs choix de représentations des dommages. De plus, ces différents choix semblent tous valables à leur manière : les phénomènes représentés sont incertains, et cette variabilité représente surtout l'incertitude qui entoure ces phénomènes. Pourtant, ce sont bien les mêmes phénomènes; il ne devrait donc pas y avoir de différence entre les modèles. Ces différences sont donc apportées exclusivement par les choix de modélisation; or, elles peuvent être importantes, et donner des conclusions radicalement différentes, donnant lieu à des interprétations opposées. La querelle entre Nordhaus et Stern, évoquée plus haut, en est un exempe éloquent. 
+
+Il est donc intéressant de voir dans quelle mesure ces variations influencent le comportement du modèle. En effet, si elles sont peu importantes comparées à d'autres facteurs, elles ne compromettent pas le message du modèle. En revanche, si elle joue un rôle central dans le fonctionnement de celui-ci, alors il convient de leur accorder une place majeure, tant dans l'analyse des résultats que dans la conception. 
+
+On cherche donc à mesurer quantitativement les effets de ces variables sur les résultats du modèle pour répondre à la question suivante : les variations induites par les choix éthiques sont-elles du même ordre de grandeur que les variations issues de variables physiques ou de choix de modélisation ? 
+
+
+
+On définit ici la notion de paramètre éthique : elle désigne les paramètres qui n'ont pas vocation à représenter un phénomène physique ou social observable, mais plutôt à représenter une valeur morale. Le taux d'actualisation, par exemple, entre tout à fait dans cette définition. En effet, il représente l'importance accordée à l'équité intergénérationnelle. bien qu'il y ait eu des tentatives d'observer empiriquement cette valeur, notamment en s'intéressant au taux de préférence pure pour le présent dans les prêts de long terme, il semble difficile de penser que cette valeur soit valable à plus long terme ou dans d'autres contextes. Plutot, il apparait que ce paramètre reflète un système normatif, et relève de ce fait plutôt du choix moral que du choix technique. Se pose alors la question suivante : quelle part de la variation du niveau total de dommage est-elle expliquée par ces paramètres éthiques.  On s'intéressera ici à une autre dimension éthique, qui est celle de l'équité spatiale. Pour ce faire, on construit un pondérateur géographique, qui pondère le niveau de dommage par région selon le niveau de revenu.
+
+Dans cette partie, on développe un protocole expérimental qui vise à mesurer le niveau de dommage produit par différents modèles, différentes fonctions de dommages et des variations du pondérateur géographique. On régresse ensuite les données obtenues pour mesurer quantitativement la part de la variation qui est expliquée par ces différents paramètres. 
 
 \section{Cadre conceptuel}
 
-Le cadre conceptuel général de cette expérience est celui de la modélisation intégré. Il s'inscrit en cela dans la lignée des réflexions développées dans le chapitre \ref{chapter:introduction}. Il semble néanmoins nécessaire de préciser quelques points. \\
+Le cadre conceptuel général de cette expérience est celui de la modélisation intégrée. Il s'inscrit en cela dans la lignée des réflexions développées dans le chapitre \ref{chapter:introduction}. Il semble néanmoins nécessaire de préciser quelques points. \\
+
+\subsection{Choix du modèle}
 
 D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons choisi d'utiliser le modèle WILIAM, pour plusieurs raisons. 
 
@@ -28,11 +40,13 @@ D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons chois
 
 % \section{Présentation des données}
 
-\section{Variables descriptives}
 
 \section{Méthode}
 
-\subsection{Construction du coefficient éthique}
+\subsection{Données}
+
+\subsubsection{Variables descriptives}
+
 
 \begin{methodbox}[Modélisation des fonctions de dommage dans WILIAM]
 
@@ -198,7 +212,7 @@ On récupère les résultats et on procéde à des analyses économétriques sur
     \label{fig:methodo-simu}
 \end{figure}
 
-\section{Limites et contraintes}
+\subsection{Limites et contraintes}
 
 Plusieurs limitations doivent être soulignées. 
 
@@ -210,19 +224,27 @@ Plusieurs limitations doivent être soulignées.
 
 \section{Résultats}
 
-\begin{landscape}
-    \input{results/regression_1}
-\end{landscape}
 
-
-\input{results/regression_global}
 
 
 
 \subsection{Inégalités temporelles}
 
 
-\subsection{Inégalités spatiales}
+\subsection{Inégalités spatiales} 
+
+\begin{landscape}
+    \input{results/regression_1}
+\end{landscape}
+
+
+\begin{table}\resizebox{\textwidth}{!}{
+    \centering
+     \input{results/regression_global}
+    \legende{Résultats des régressions aggrégées par pays}{}
+    \label{tab:reg_glob}
+}\end{table}
+
 
 \begin{figure}
     \centering
@@ -249,3 +271,19 @@ Plusieurs limitations doivent être soulignées.
 
 
 \section{Discussion}
+
+\subsection{Interprétation des résultats}
+
+%Que signifient vos résultats par rapport à vos hypothèses ? Quelles conclusions pouvez-vous en tirer ? 
+
+\subsection{Comparaison avec la littérature}
+% Comment vos résultats s'intègrent-ils dans le contexte de la littérature existante ? Confirment-ils ou remettent-ils en question les résultats antérieurs ? 
+
+\subsection{Implications pratiques}
+% Quels sont les impacts ou les applications potentielles de vos résultats dans le domaine étudié ? 
+
+\subsection{Limites}
+%Quelles sont les limitations de votre étude ? Cela peut concerner des problèmes méthodologiques, des échantillons insuffisants, etc 
+
+\subsection{Perspectives futures}
+% Quelles recherches supplémentaires pourraient être nécessaires pour approfondir vos découvertes ou explorer des questions connexes ?
