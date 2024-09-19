@@ -94,11 +94,10 @@ Pourtant, de nombreuses critiques viennent compromettre ce constat. Par exemple,
 
 
 \begin{displayquote}
-    Coucou c'est moi
-\end{displayquote}
-\begin{displayquote}
 Transparency is needed to reveal conditionality of results on specific choices in terms of assumptions (e.g., discount rates) and model architecture. More detailed explanations of underlying model dynamics would be critical to increase the understanding of what drives results (Bistline et al. 2020; Butnar et al. 2020; Robertson 2020). » ([“Mitigation Pathways Compatible with Long-term Goals”, 2023, p. 304]
 \end{displayquote}
+
+
 Un bon exemple est la documentation de FUND. Celle-ci est disponible en ligne, sur le site \href{http://www.fund-model.org/}{fund-model.org/}. Elle est détaillée; toutes les équations et leurs variables y sont décrites; les paramètres en entrée sont également disponibles. De plus, le code source complet, dans un langage open source (julia) est disponible sur github. Il y a donc un véritable effort de transparence et d'ouverture. 
 
 % Pourtant, et comme le remarquent les auteurs de ce modèle, \emph{les modèles sont souvent inutiles dans des mains inexpérimentées}.
@@ -136,11 +135,16 @@ Comme le souligne Tuana, la bonne prise en compte de ces questionnements nécess
 => exemple 1 : choix du taux d'actualisation (faire une référence à la querelle Nordhaus / Stern)
 => explication 1 : le taux d'actualisation fait intervenir des conceptions éthiques importantes
 
-\begin{displayquote}
-    Modelling over many decades, regions and possible outcomes demands that we make distributional and [ethical]([[Ethique]]) judgements systematically and explicitly. Attaching little weight to the future, simply because it is in the future (‘[pure time discounting]([[discount rate]])’), would produce low estimates of cost – but if you care little for the future you will not wish to take action on climate change. » ([“Economic modelling of climate change impacts”, 2007, p. 143](zotero://select/library/items/L2NNDHEN))
-\end{displayquote}
+Un exemple de considération d'éthique intrinsèque est le choix du taux d'actualisation. Comme nous l'avons évoqué plus haut, ce paramètre détermine la préférence accordée aux générations actuelles par rapport aux générations futures. Stern présente cette interrogation en ces termes : 
 
-Un exemple d'éthique intrinsèque est le découpage par région. Les modèles se focalisent sur certaines régions plus que d'autres, sont calibrés sur certaines régions (où il y a par ailleurs des données plus nombreuses et de meilleure qualité), et sont donc bien plus pertinents pour décrire les phénomènes dans certaines régions plus que dans d'autres. 
+\begin{displayquote}
+Modelling over many decades, regions and possible outcomes demands that we make distributional and ethical judgements systematically and explicitly. Attaching little weight to the future, simply because it is in the future (‘pure time discounting’), would produce low estimates of cost – but if you care little for the future you will not wish to take action on climate change. » ([“Economic modelling of climate change impacts”, 2007, p. 143]
+\end{displayquote}
+Il y a dans le choix de la valeur du taux d'actualisation un jugement éthique qui est central, d'une part parce qu'il répond à un dilemme important, et d'autre part parce qu'il influence grandement les résultats du modèle. 
+
+Cet exemple est régulièrement abordé dans la littérature. On peut prendre aussi d'autres exemples plus proches de l'approche qui a été développée plus haut, notamment autour des questions d'équité spatiale. 
+
+D'abord, le découpage par région. Les modèles se focalisent sur certaines régions plus que d'autres, sont calibrés sur certaines régions (où il y a par ailleurs des données plus nombreuses et de meilleure qualité), et sont donc bien plus pertinents pour décrire les phénomènes dans certaines régions plus que dans d'autres.  
 
 \begin{figure}[htbp]
     \centering
@@ -161,8 +165,21 @@ Un exemple d'éthique intrinsèque est le découpage par région. Les modèles s
     \label{fig:trois_cartes}
 \end{figure} 
 
-=> exemple 2 : la granularité spatiale
-=> révèle une cadrage / centrage du modélisateur 
+La figure \ref{fig:trois_cartes} montre les différences de régions entre le modèle WILIAM (qui accueille notre expérience) et le modèle FUND. Dans les deux cas, le découpage fait des régions très hétérogènes, qui regroupent elles-mêmes des zones aux caractéristiques différentes. 
+
+Ce double choix de découpage et de granularité est \emph{une} manière \emph{particulière} de décrire le monde, qui résulte d'un contexte social et culturel. Il ne s'agit pas ici de dire qu'il s'agit d'un \emph{mauvais} choix : en effet, ces choix se justifient, et sont d'ailleurs justifié par les équipes de modélisation. WILIAM est un modèle issu du projet LOCOMOTION, financé par l'Union Européenne pour éclairer les décisions de la Commission Europénne \cite{locomotion-h2020_locomotion-h2020wiliam_model_vensim_2024}. Il donc pertinent qu'il soit centré sur les pays de l'Union Européenne. De la même manière, FUND est particulièrement utilisé par les administrations des Etats-Unis. Il ne s'agit pas non plus de dire que le fait qu'il y ait un choix soit en soit en problème. Bien au contraire, le fait de faire des choix est au coeur de la pratique de la modélisation, et est d'ailleurs ce qui en fait la force. Il s'agit plutôt de mettre en évidence le fait que ces conceptions sont porteuses de valeurs, et qu'elles constituent en cela un enjeu d'éthique intrinsèque. Il faut donc qu'elles soient claires et variées au sein du bouquet de modèles disponibles. 
+
+Un troisième exemple, toujours lié à la question de l'équité spatiale, est celui du pondérateur géographique. L'absence d'un tel pondérateur est, du point de vue du fonctionnement du modèle, équivalente au fait d'avoir un coefficient de 1. Aussi, en en donnant une valeur explicite de 1, puis en faisant varier cette valeur, nous avons cherché à faire apparaitre explicitement dans le modèle ce que nous considérons être une position éthique importante. 
+
+Celle-ci est particulièrement visible dans FUND. L'expression de la valeur d'une vie statistique, dont nous nous sommes inspirés pour produire le pondérateur, est justifiée comme ceci : 
+
+\begin{quote}
+    This calibration results in a best guess value of a statistical life that is 200 times per capita income (Cline, 1992). 
+\end{quote}
+Le choix de la valeur est calibré pour représenter 200 fois le revenu par habitant de la région où il est calculé. La valeur d'une vie est donc : 1/ différente dans chaque région; 2/ proportionnelle au niveau de revenus. Cette approche témoigne de choix éthiques qui ne sont pas négligeables. 
+
+De la même manière, le choix de ne pas pondérer les dommages créés des hiérarchies entre les régions. Des dommages réalisés dans une région 5 fois plus pauvre (au sens du PIB) compteront 5 fois moins que les autres, à dommage égal. Il y a un alignement de la valeur des choses sur leur valeur monétaire. 
+
 
 \subsection{L'éthique extrinsèque}
 
@@ -171,37 +188,28 @@ Enfin, l'\Gls{extrinsic ethics} désigne les questionnements autour des effets d
 \begin{displayquote}
 Ethical issues that are external to the production of scientific research. These arise, for example, when considering the impact of scientific research on society; e.g., the effects of technological innovations on social ends such as health and well-being, whether pressing social and economic issues are likely to be addressed and if so, who benefits, and the role of science in policy-making. This domain of ethics also includes ethical concerns arising from the impact of society upon science, for example the impact of funding on research trajectories or the ways in which wide-spread societal biases can impact research trajectories, as they arguably did with eugenics research. In the latter case, there are often links between the domains of extrinsic and intrinsic ethics.
 \end{displayquote}
-Ce questionnement s'inscrit dans une réflexion plus large du rapport entre la production scientifique et son application dans la société. 
+Ce questionnement s'inscrit dans une réflexion plus large du rapport entre la production scientifique et son application dans la société.  Une conséquence directe est celle qui est liée au cadrage. Comme le montre le GIEC, le cadrage des questions abordées par les modèles intégrés pousse la société dans une direction particulière : 
 
-\begin{tcolorbox}
-\begin{itemize}
-    \item 
-    \item [[cadrage]], forcément normatif « IAM analysis could focus on only a subset of relevant futures and thus push society in certain directions without sufficient scrutiny » (\href{zotero://select/library/items/2SDDNUUF}{“Annex III: Scenarios and Modelling Methods”, 2023, p. 1862}) (\href{zotero://open-pdf/library/items/CHVFSLLH?page=22&annotation=4MBM5B9Q}{pdf})
+\begin{displayquote}
+     IAM analysis could focus on only a subset of relevant futures and thus push society in certain directions without sufficient scrutiny 
+\end{displayquote}
+En reprenant l'exemple de l'équité spatiale, les modèles peuvent pousser la société vers un monde où les inégalités de revenu (et leur interaction avec les dommages climatiques) ne sont pas une question (et donc, ni un enjeu ni un problème), voire où elles font partie intégrante d'un monde \emph{optimal}. La notion même de \emph{coût social du carbone} ou de \emph{niveau optimal de changement climatique} intègrent ainsi un niveau \emph{optimal} d'inégalités. En appuyant les politiques publiques et les prises de décisions, ces considérations éthiques dépassent largement le cadre de la science et de ses revues à comité de lecture, où tout un chacun apprécie à leur juste valeur les hypothèses et limites. Au contraire, elles s'invitent discrètement mais totalement à la table des négociations. 
 
-\end{itemize}
-
-\end{tcolorbox}
-
-
+La limite entre l'éthique intrinsèque et extrinsèque peut être tenue, et affaiblit par l'image de certitude que peut vouloir donner la communauté scientifique à l'extérieur. 
 \begin{displayquote}
     « Hence, the modeling community prefers to discuss controversial modeling issues such as flux adjustments among themselves and to ‘reserve criticism for internal dealings within their own peer community’ (Ref 145, p. 30) because acknowledging uncertainty is seen to make the credibility of climate science in the policy process vulnerable to the attacks of climate skeptics. » ([Beck et Krueger, 2016, p. 638
 \end{displayquote}
+Ce mode de fonctionnement renforce la portée extrinsèque des choix éthiques. En effet, ceux-ci étant masqué, volontairement ou non, aux yeux extérieurs à la communauté, ils sont inscrits pleinement par la manière dont la communauté les montre. 
 
-\begin{displayquote}
-    Douglas97,99 argues that extrinsic ethics (and other non-epistemic consequences of scientific choices) create a specific responsibility for researchers who work on policy-relevant issues with an uncertain evidence base. » ([Beck et Krueger, 2016, p. 633]
-\end{displayquote}
-\begin{displayquote}
-     By contrast, the extrinsic ethical consequence of the decision may be the implementation of suboptimal policies with possibly significant societal consequences.9 » ([Beck et Krueger, 2016, p. 633]
-\end{displayquote}
  Ces considérations sur l'éthique extrinsèque prendront plus de sens dans la section suivante, on l'on développera l'idée que la modélisation participe activement au cadrage du débat public, et donc aux choix de futurs possibles. 
 
 \section{Construire / dessiner les futurs possibles}
 
 Cette section montre que le savoir produit par la science est situé dans le temps et dans l'espace. Ainsi, il n'est plus positif, mais bien normatif, en ceci qu'il décrit un univers des possibles. 
 
-Un exemple de à quel point le framing peut impacter la connaissance est la classification des pays. Dans le SPM de l'AR5, les parties n'ont pas pu s'accorder sur un type de classification des pays à adopter ; finalement toutes les figures et textes associés ont été rejetées par les gouvernements. On pourrait ici penser que présenter une information ou une autre n'a pas d'importance, tant que celle-ci a été produite dans les normes scientifiques en vigueur. Pourtant, cet exemple montre que les gouvernements considèrent que le choix d'une classification porte en soi un message trop important ; reconnaissant alors l'absence de neutralité du contenu scientifique \cite{edenhofer_mapmakers_2014}. 
+Un exemple de à quel point le framing peut impacter la connaissance est la classification des pays. Dans le SPM de l'AR5, les parties n'ont pas pu s'accorder sur un type de classification des pays à adopter ; finalement toutes les figures et les textes associés ont été rejetées par les gouvernements. On pourrait ici penser que présenter une information ou une autre n'a pas d'importance, tant que celle-ci a été produite dans les normes scientifiques en vigueur. Pourtant, cet exemple montre que les gouvernements considèrent que le choix d'une classification porte en soi un message trop important ; reconnaissant alors l'absence de neutralité du contenu scientifique \cite{edenhofer_mapmakers_2014}. 
 
-Les modèles intégrés sont utilisés comme base scientifique pour les négociations climatiques. Ils permettent notamment de décrire l'espace des possibles, c'est-à-dire l'ensemble des chemins qui peuvent être pris par les sociétés. Cette relation entre le modèle et la prise de décision est décrite par une image très parlante dans \cite{edenhofer_mapmakers_2014}, où les modélisateurs sont décrits comme des cartographes, et les décideurs comme des navigateurs. Dès lors, le rôle des modélisateurs-cartographe est de décrire l'espace possible, l'ensemble des zones qui sont navigables ; et, si possible, les conditions de navigation que l'on peut rencontrer dans ces zones.  En regard de ces nouvelles connaissances, les décideurs-navigateurs doivent décider du cap à suivre aujourd'hui selon la zone de navigation voulue pour demain. Cette distinction très nette entre décideurs et modélisateurs n'est pas sans limitations. L'une d'entre elle est le cadrage, c'est à dire la manière dont le débat public est façonné par le cadre qu'on lui donne.  Plusieurs choses influencent ce cadrage. Nous verrons d'abord que le prisme technique et énergétique aggrégé de la plupart des modèles représente ce genre de contraintes, sans questionner les modèles sous-jacents. Nous verrons ensuite que le choix des variables, et notamment la monétarisation des dommages fait que de nombreuses dynamiques ne sont soit pas prises en compte, soit prises en compte d'une manière que l'on peut questionner. Enfin, nous, aborderons l'idée que la connaissance est socialement construite, en se basant notamment sur les écrits de Helène Ongino, pour questionner le caractère universel des résultats des modèles. 
+Les modèles intégrés sont utilisés comme base scientifique pour les négociations climatiques. Ils permettent notamment de décrire l'espace des possibles, c'est-à-dire l'ensemble des chemins qui peuvent être pris par les sociétés. Cette relation entre le modèle et la prise de décision est décrite par une image très parlante dans \cite{edenhofer_mapmakers_2014}, où les modélisateurs sont décrits comme des cartographes, et les décideurs comme des navigateurs. Dès lors, le rôle des modélisateurs-cartographe est de décrire l'espace possible, l'ensemble des zones qui sont navigables ; et, si possible, les conditions de navigation que l'on peut rencontrer dans ces zones.  En regard de ces nouvelles connaissances, les décideurs-navigateurs doivent décider du cap à suivre aujourd'hui selon la zone de navigation voulue pour demain. Cette distinction très nette entre décideurs et modélisateurs n'est pas sans limitations. L'une d'entre elle est le cadrage, c'est à dire la manière dont le débat public est façonné par le cadre qu'on lui donne.  Plusieurs choses influencent ce cadrage. Nous verrons d'abord que le prisme technique et énergétique aggrégé de la plupart des modèles représente ce genre de contraintes, sans questionner les modèles sous-jacents. Nous verrons ensuite que le choix des variables, et notamment la monétarisation des dommages fait que de nombreuses dynamiques ne sont soit pas prises en compte, soit prises en compte d'une manière que l'on peut questionner. Enfin, nous, aborderons l'idée que la connaissance est socialement construite, en se basant notamment sur les écrits de Helène Longino, pour questionner le caractère universel des résultats des modèles. 
 
 \subsection{Un monde homogène, technique et neutre ?}
 
@@ -210,18 +218,12 @@ Les relations entre modélisateurs et décideurs s'inscrivent dans ce que \cite{
 Il y a dès lors une \emph{séparation radicale entre science et politique : à la science, les faits, les connaissances ; à la politique, les décisions, les valeurs, les croyances}. 
 
 
-
-
-
-
-=> il n'y a pas de modèle qui décompose les dommages par groupe sociaux
-
 Helene Longino va plus loin dans sa critique de la science neutre en s'inscrivant dans une perspective d'épistémologie néo-marxiste. Elle met en avant trois points principaux : les conséquences du progrès technique, qui découle de la science, les travers du réductionnisme, et la possibilité d'une science plus émancipatrice. Cette approche remet les enjeux de rapport de force au cœur de l'épistémologie, et permet d'avoir une lecture politique de la production scientifique. \\
 
-D'abord, elle clame que les dérives du progrès technique sont les inévitables conséquences de la production scientifique. 
+D'abord, elle clame que les dérives du progrès technique sont les inévitables conséquences de la production scientifique.
 
 \begin{displayquote}
-    One is that the dystopic applications of modern science—the domination of political life by thermonuclear weapons, new particle beam weapons, and other monsters of annihilation; the control of human potentiality through genetic engineering; the proliferation of toxic wastes from science-based technologies; the displacement of human labor by automation—are not a misuse of socially neutral science but the inevitable result of bourgeois science.
+    One is that the dystopic applications of modern science — the domination of political life by thermonuclear weapons, new particle beam weapons, and other monsters of annihilation; the control of human potentiality through genetic engineering; the proliferation of toxic wastes from science-based technologies; the displacement of human labor by automation — are not a misuse of socially neutral science but the inevitable result of bourgeois science.
 \end{displayquote}
 
 « there are concerns that IAMs are describing transformative change on the level of energy and land use, but are largely silent about the underlying socio-cultural transitions that could imply restructuring of society and institutions » (\href{zotero://select/library/items/2SDDNUUF}{“Annex III: Scenarios and Modelling Methods”, 2023, p. 1862}) (\href{zotero://open-pdf/library/items/CHVFSLLH?page=22&annotation=JY4VBIZY}{pdf})
@@ -241,33 +243,30 @@ D'abord, elle clame que les dérives du progrès technique sont les inévitables
     
 \end{displayquote}
 
-L'autrice continue sa critique en formulant un rejet du réductionnisme, c'est-à-dire à la croyance selon laquelle une notion peut être réduite en d'autres notions plus fondamentales. Elle appelle à une conception plus systémique des des relations causales. 
+L'autrice continue sa critique en formulant un rejet du réductionnisme, c'est-à-dire à la croyance selon laquelle une notion peut être réduite en d'autres notions plus fondamentales. Elle appelle à une conception plus systémique des relations causales. 
 
 \begin{displayquote}
     The spirit, therefore, of these analyses might be better served by seeing them as urging a reconception of objects of inquiry in particular fields — specifically as urging their colleagues to abandon questions presupposing unidirectional or linear causal relations and to understand objects as constituted partly of the parts of which they are wholes and partly of the wholes of which they are parts. If this shift could be accomplished on internalist grounds, there would be less struggle over its acceptance.
 \end{displayquote}
 
-Ce point touche tout à fait les modèles, et particulièrement les fonctions de dommage. Les modèles sont une forme de réductionnisme, puisque l'on représente des phénomènes complexes à travers des fonctions plus simples. Il s'agit donc d'une critique récurrente, mais dont il convient de faire attention. \\
+Ce point touche tout à fait les modèles, et particulièrement les fonctions de dommage. Les modèles sont une forme de réductionnisme, puisque l'on représente des phénomènes complexes à travers des fonctions plus simples. Cependant, le fait même de modéliser par des outils de simulation ou d'optimisation impose un réductionnisme, puisqu'il faut réduire les phénomènes complexes et entremêlés à des relations causales directes. Ainsi, cette critique vaut autant dans le cas de modèles très simplificateurs comme DICE, que plus complexes comme FUND.   \\
 
 
-Une autre difficulté rencontrée par les modèles est la représentation des altérités et des différences. Les modèles tendent à décrire un monde homogène et neutralisé. En effet, les régions sont similaires; elles ont certe des paramétrisation différentes, mais les mécanismes décrits sont les mêmes. On gomme par là les différences culturelles et institutionnelles entre les différentes régions du monde. \\
+Une autre difficulté rencontrée par les modèles est la représentation des altérités et des différences. Les modèles tendent à décrire un monde homogène et neutralisé. En effet, les régions sont similaires; elles ont certe des paramétrisations différentes, mais les mécanismes décrits sont les mêmes. On gomme par là les différences culturelles et institutionnelles entre les différentes régions du monde. \\
 
-\begin{tcolorbox}
-    Partie sur Aykut et Dahan
-\end{tcolorbox}
-
-Ces critiques rejoignent celles formulées par Aykut et Dahan. 
+Ces critiques rejoignent celles formulées par Aykut et Dahan : 
 
 \begin{displayquote}
     Au cours des années 1990, les pays en développement ne sont convaincus ni de la gravité du risque climatique ni du fait que ce problème les concerne. Ils contestent la prééminence de son traitement « physique » qui privilégie trop, selon eux, le global par rapport au local. Ils critiquent le point de vue de la modélisation numérique globale ou, du moins, le transfert de sa méthodologie au niveau politique ; transfert qui, disent-ils :  
     \begin{itemize}
         \item effacerait le passé (or, le Nord s’est industrialisé, équipé et il a pollué, pas le Sud)
-	    \item naturalise rait le présent (en particulier, la référence à l’année 1990 dans le protocole de Kyoto est jugée inacceptable, le présent n’étant pas un acquis, mais devant être interrogé),
+	    \item naturaliserait le présent (en particulier, la référence à l’année 1990 dans le protocole de Kyoto est jugée inacceptable, le présent n’étant pas un acquis, mais devant être interrogé),
 	   \item et globaliserait le futur (le CO 2 se globalise sans doute, pas les humains).
     \end{itemize}
 \end{displayquote}
+On voit cette homogénéité plus particulièrement lorsqu'elle est questionnée. Le modèle NICE est construit sur le modèle DICE, en prenant en compte des distinctions entre les groupes sociaux, matérialisés par les déciles de revenu \cite{dennig_inequality_2015}. Les résultats obtenus sont différents de ceux du modèle DICE original; surtout, ils montrent en négatif comment DICE efface ces différences pour en représenter un monde neutre. 
 
-Si cette critique concerne principalement les modèles physiques tels que les modèles de circulation générale, ils peuvent être apportés également aux modèles intégrés. En effet, dans les modèles d'optimisation, où le coût total est minimisé, l'origine des émissions ou le lieu des dommages n'importe pas. 
+Si cette critique concerne principalement les modèles physiques tels que les modèles de circulation générale, ils peuvent être apportés également aux modèles intégrés. En effet, dans les modèles d'optimisation, où le coût total est minimisé, l'origine des émissions ou le lieu des dommages n'importe pas.  
 
 
 \subsection{Le cadrage : dans la lumière ou dans l'ombre du projecteur}
@@ -275,7 +274,7 @@ Si cette critique concerne principalement les modèles physiques tels que les mo
 
 Les fonctions de dommage ne peuvent représenter qu'un nombre limité de phénomènes. Par cela, elles cadrent ce que les modèles considèrent comme dommages; si les modèles sont repris dans le débat public ou dans le régime climatique, elles cadrent même la perception possible des impacts du changement climatique. \\
 
-\cite{aykut_gouverner_nodate} donnent cette définition du cadrage (ou \emph{framing} en anglais) : c'est un concept qui  \emph{renvoie à la la formulation d’un problème socio-technique dans les discours savants et publics, aux liens établis avec d’autres questions et aux mesures envisagées pour traiter le problème (solutions technologiques ou politiques, approches globales ou locales, etc.), souvent sous-jacentes à son évaluation}. Ils donnent différents éléments permettant de caractériser le cadrage du régime climatique. Le premier est sa globalité, c'est à dire l'idée selon laquelle le changement climatique est un problème global, avec des sources globales et des réponses globales. Cette idée prend sa source dans les modèles climatiques, qui, en représentant le climat comme une réalité globale et sans frontières, tendent à effacer les différences locales de responsabilité ou de vulnérabilité. Le cadrage du débat climatique par les sciences du climats se fait par trois canaux principaux : 
+\cite{aykut_gouverner_nodate} donnent cette définition du cadrage (ou \emph{framing} en anglais) : c'est un concept qui  \emph{renvoie à la formulation d’un problème socio-technique dans les discours savants et publics, aux liens établis avec d’autres questions et aux mesures envisagées pour traiter le problème (solutions technologiques ou politiques, approches globales ou locales, etc.), souvent sous-jacentes à son évaluation}. Ils donnent différents éléments permettant de caractériser le cadrage du régime climatique. Le premier est sa globalité, c'est à dire l'idée selon laquelle le changement climatique est un problème global, avec des sources globales et des réponses globales. Cette idée prend sa source dans les modèles climatiques, qui, en représentant le climat comme une réalité globale et sans frontières, tendent à effacer les différences locales de responsabilité ou de vulnérabilité. Le cadrage du débat climatique par les sciences du climats se fait par trois canaux principaux : 
 
 
 
@@ -285,6 +284,8 @@ Les fonctions de dommage ne peuvent représenter qu'un nombre limité de phénom
 	\item le **réductionnisme physico-chimique des sciences du climat** tend à mettre en avant les caractéristiques universelles des GES et à les séparer de leur signification sociale locale. Les molécules de méthane des rizières ou celles de gaz carbonique des voitures jouent un rôle identique dans la mise en équation de l’effet de serre. C’est ce que Demeritt (2001) a qualifié de déterminisme environnemental tacite ;
 	\item la **focalisation dans les modélisations sur les « évolutions probables »** a longtemps contribué – contrairement à ce que les critiques récurrentes de « l’alarmisme » des rapports scientifiques suggèrent – à une marginalisation des scénarios du pire et de l’éventualité de changements brusques, ou tipping points. Shackley et Wynne (1996) constatent, dans une étude sur le traitement des incertitudes dans l’expertise climatique globale, une « mise à l’écart des extrêmes » (tuning out of extremes).
 \end{itemize}
+
+in \cite{aykut_gouverner_nodate}
 \end{displayquote}
 
 Ce cadrage est accentué par les modèles intégrés, en ne permettant le débat que sur les concepts et à partir des hypothèses modélisées. Comme le souligne le GIEC, les modèles intégrés limitent les horizons possibles aux horizons imaginés par les modélisateurs : 
@@ -413,6 +414,15 @@ Le contexte de la modélisation est particulièrement intéressant de ce point d
 \begin{displayquote}
     « But the belief that nonepistemic motivations necessarily result in NID is mistaken. As many have argued, all science, or nearly all science, is in fact unavoidably motivated by some nonepistemic aims » ([Melo-Martín et Intemann, 2018, p. 35]
 \end{displayquote}
+
+
+\begin{displayquote}
+    Douglas97,99 argues that extrinsic ethics (and other non-epistemic consequences of scientific choices) create a specific responsibility for researchers who work on policy-relevant issues with an uncertain evidence base. » ([Beck et Krueger, 2016, p. 633]
+\end{displayquote}
+\begin{displayquote}
+     By contrast, the extrinsic ethical consequence of the decision may be the implementation of suboptimal policies with possibly significant societal consequences.9 » ([Beck et Krueger, 2016, p. 633]
+\end{displayquote}
+
 => renvoit à la notion d'éthique intrinsèque
 
 
