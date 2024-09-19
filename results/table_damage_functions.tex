@@ -45,15 +45,15 @@ FUND v.3.8 & MM.2 & Value of a year of morbidity & $V M_{t,r}=\beta\left(\frac{y
 \hline
 FUND v.3.8 & A.2 & Agriculture impact of the rate of climate change & $A_{t,r}^{r}=\alpha_{r}\left(\frac{\Delta T_{t}}{0.04}\right)^{\beta}+\left(1-\frac{1}{\rho}\right)A_{t-1,r}^{r}$ & Time,Region,Change in regional mean temperature,Parameter for impact of climate change on economic welfare ,Non-linearity parameter,Speed of adaptation parameter \\
 \hline
-FUND v.3.8 & TOT & Total damage & $nan$ & nan \\
+FUND v.3.8 & TOT & Total damage & $$ & nan \\
 \hline
 \multicolumn{5}{c}{\textbf{Inverse cubic}} \\
 \hline
-DSK & TOT & Total damage & $nan$ & nan \\
+DSK & TOT & Total damage & $$ & nan \\
 \hline
 \multicolumn{5}{c}{\textbf{Inverse quadratic}} \\
 \hline
-Define & TOT & Total damage & $nan$ & nan \\
+Define & TOT & Total damage & $$ & nan \\
 \hline
 Giraud Stock-Flow model & 3.5 & Damage function & $D = 1 - \frac{1}{1 + \pi_1 T + \pi_2 T^2} $ & Global mean temperature  \\
 \hline
@@ -91,7 +91,7 @@ FUND v.3.8 & A.4 & Agriculture impact of fertilisation & $A_{t,r}^{f}=\nu_{r}\ln
 \hline
 \multicolumn{5}{c}{\textbf{Probabilistic}} \\
 \hline
-WITNESS & TOT & Total damage & $nan$ & nan \\
+WITNESS & TOT & Total damage & $$ & nan \\
 \hline
 \multicolumn{5}{c}{\textbf{Quadratic}} \\
 \hline
@@ -103,124 +103,8 @@ DICE 2023 & 5 & Damage function & $\begin{array}{l l}{{\ }}&{{\displaystyle=\psi
 \hline
 FUND v.3.8 & HC.2 & Human health : regional cardiovascular mortality & $D_{t,r}^{c}=\alpha_{r}^{c}T_{t}^{2}+\beta_{r}^{c}T_{t}^{2}$ & Region,Time,Change in regional mean temperature \\
 \hline
-DICE 2023 & TOT & Total damage & $nan$ & nan \\
+DICE 2023 & TOT & Total damage & $$ & nan \\
 \hline
 FUND v.3.8 & A.3 & Agriculture impact of the level of climate change & $A_{t,r}^{l}\,=\,\delta_{r}^{l}T_{t}\,+\,\delta_{r}^{2}T_{t}^{2}$ & Time,Region,Change in regional mean temperature,Parameter related to warming of 2.5°C ,Parameter related to warming of 3.2°C  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-FUND v.3.8 & A.1 & Total agriculture impact & $A_{t,r}=A_{t,r}^{r}+A_{t,r}^{l}+A_{t,r}^{f}$ & Damage in agricultural production,Damage in agricultural production level ,Damage in agricultural production due to CO2 fertilisation \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-FUND v.3.8 & HC.3 & Human health : heat-related mortality & $U_{t,r}=\frac{\alpha\sqrt{y_{t,r}}+\beta\sqrt{P D_{t,r}}}{1+\alpha\sqrt{y_{t,r}}+\beta\sqrt{P D_{t,r}}}$ & Gross domestic product per capita,Population density ,Time,Region \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 22 & Tolerable rate of change & $T R_{d,r}=\ T R_{d,0}\cdot\ T M_{r}$ &  Tolerable rate of change , Tolerable regional multiplier  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 23 & Tolerable plateau & $T P_{d,r}\underline{{{\Sigma}}}\underline{{{\Sigma}}}\underline{{{P}}}_{d,0}\cdot\ I=0\L_{r}$ &  Tolerable plateau , Tolerable regional multiplier  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 24 & Adjusted tolerable plateau & $A^{\prime}T P_{i,d,r}\underline{{{\bf\Lambda}}}\underline{{{\bf\Lambda}}}\underline{{{\bf\Lambda}}}\underline{{{\Lambda}}}\underline{{{\Lambda}}}\lambda\alpha^{\prime}\underline{{{\cal\Psi}}}_{i,d,r}$ & Plateau nonegative factors characteristic to an adaptive policy, Tolerable plateau  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 25 & Adjusted tolerable rate & $A I I\!R_{i,d,r}\underline{{{\longrightarrow}}}\ D\mathsf{)}_{d,r}\i\!\!\slash\k\mathsf{P}_{1,d,r}$ &  Tolerable rate of change ,Slope nonegative factors characteristic to an adaptive policy \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 26 & Adjusted tolerable level & ${\cal L}_{i,d,r}\,=\,\mathrm{In}\mathrm{ax}\left[0,R T_{i,r}\,-\,A\,T L_{i,d,r}\right]$ &  Adjusted tolerable plateau , Adjusted tolerable rate , Adjusted tolerable level ,GDP in region r at time t  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 26 & Impact & $A T L_{i,d,r}=\operatorname*{min}\left[A T P_{i,d,t},A T L_{i-1,d,r}+A T R_{d,r}\cdot(Y_{i}-Y_{i-1})\right]\frac{array}{a,d,r}{a,r}=\sum_{i=1}^{M}\frac{a}{a,r}>0^{2}.$ & Regional mean temperature in degrees Celsius , Adjusted tolerable level  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 27 & Impact of a discontinuity & $I D I S_{i}=\operatorname*{max}[0,\,G R T_{i}-\,T D I S]$ & Global mean temperature ,Temperature discontinuity \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 29 & Weighting of the impacts & $\bar{W}_{d,r}\implies\bar{W}_{d,0}\cdot\frac{W F_{r}}{100}$ &  Weights for monetizing impacts , Regional multiplier weights \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 31 & Weigthed impacts & $W I_{i,d,r}=\left(\frac{I_{i,d,r}}{2.5}\right)^{P O W}\cdot W_{d,r}\cdot\left(1-\frac{I M P_{i,d,r}}{100}\right)\cdot G D P_{i,r}$ &  Power function exponent , Weights for monetizing impacts , Regional impact of global warming ,GDP in region r at time t ,Adaptative policy \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 32 & Certainty equivalent of the risk & $W I D I S_{i,r}=I D I S_{i}\cdot(\frac{P D I S}{100})\cdot\,W D I S_{r}\cdot G D P_{i,r}$ &  Discontinuity weight , Discontinuity impact ,GDP in region r at time t  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 33 & Total weighted impact & $W I T_{i,r}\stackrel{_{\textstyle>}}{=}\sum_{d}W I_{i,d,r}+W I D I J J_{i,r}$ &  Weighted impact , Weighted impact of discontinuity  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 38 & Adjusted damage & $\ A\,L\!\!\!\!\slash\,\L_{i,r}\,\longrightarrow\,\ W\!\!\!\!\slash\,J\L^{*}\!\!\!\!\slash\,A\to\nabla\!\!\!\slash\,\L_{i}\,\longrightarrow\,\L^{*}\,\L_{}\,k\,\L_{}\,\L^{}\,\Psi=\,\L^{*}\Psi_{i}\,\L^{}\,$ &  Total weighted impact ,GDP in region r at time t  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-PAGE02 & 39 & Discounted damages & $D D=\sum_{i,r}(A D_{i,r})\cdot\prod_{k=1}^{i}\left(1+d r_{k,r}\cdot\frac{r i c}{100}\right)^{-(Y_{k}-Y_{k-1})}$ &  Adjusted damages ,Discount rate for impacts \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Productivity of land in forestry & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Fish stock & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Water cooling and run-off & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Run-off & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Energy demand & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Tourism & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Extreme events & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Sea-level rise & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-GRACE & 3.1 & Health & $d X=\alpha d T^{2}+\beta d T+\gamma d P$ & Global mean temperature , Rate of change in precipitation  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-WITNESS & nan & Dice-like damage & $nan$ & Global mean temperature  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-WITNESS & nan & Tipping point damage & $nan$ & Global mean temperature  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-DSK & A.128 & Climate shock & $\text{SHOCKS}~t \sim Beta(\theta_{s1,t}, \theta_{s2,t})$ & Beta 1,Beta 2 \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-DSK & A.129 & Beta 1 parameter & $\theta_{s1,t} = \theta_{s1,0} (1 + \ln \left( \frac{T_{empt-1}}{T_{empt0}} \right))^{\Upsilon_{s3}}$ & Global mean temperature  \\
-\hline
-\multicolumn{5}{c}{\textbf{nan}} \\
-\hline
-DSK & A.129 & Beta 2 parameter & $\theta_{s2,t} = \theta_{s2,0} \left( \frac{T_{empt0}}{T_{empt-1}} \right)^{\Upsilon_{s4}} $ & Global mean temperature  \\
 \hline
 \end{longtable}
