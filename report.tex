@@ -14,13 +14,22 @@
 
 \usepackage{cleveref}
 \usepackage[francais]{babel}
+
+% Pour avoir des citations sympas 
 \usepackage{csquotes}
+%\SetBlockEnvironment{displayquote}
+%\SetBlockEnvironmentText{\itshape}
+
+%\usepackage{epigraph}
+
+
 \usepackage{amsmath}
 \usepackage{overpic}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.7}
 \usepackage{subcaption} % Pour les sous-figures
 \usepackage{lscape}
+\usepackage{enumitem}
 %\usepackage{adjustbox}
 
 % changer les quotes :
@@ -244,6 +253,8 @@
 \printbibliography[heading=subbibliography,segment=5,title={Ethique de la modélisation intégrée}]
 \printbibliography[heading=subbibliography,segment=6,title={Interpréter le modèle dans le monde réel}]
 \end{multicols}
+
+\input{appendix/grille_entretien}
 
 %\chapter{Liste des figures}
 \listoffigures
