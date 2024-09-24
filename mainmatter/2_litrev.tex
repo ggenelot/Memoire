@@ -151,15 +151,24 @@ On présente ici rapidement des modèles, leurs caractéristiques générales et
 
 \subsubsection{DICE}
 
-DICE veut dire XXX et constitue une des premières tentatives de modéliser les relations entre l'économie et le climat. Il comporte une fonction de dommage, extremement simplifiée. 
+DICE veut dire \emph{Dynamic Integrated model of Climate and the  Economy} et constitue une des premières tentatives de modéliser les relations entre l'économie et le climat. Il comporte une fonction de dommage, extrêmement simplifiée. 
 
 \begin{equation}
 \begin{array}{ll}
-    & \displaystyle  \Delta = \psi_{1}T_{AT}(t) + \psi_{2}[T_{AT}(t)]^{2} \\
+     \displaystyle  \Delta  & = \psi_{1}T_{AT}(t) + \psi_{2}[T_{AT}(t)]^{2} \\
     & = [0.0]T_{AT}(t) + [0.003467][T_{AT}(t)]^{2}
 \end{array}
 \label{eq:df_dice2023}
 \end{equation}
+
+Avec : 
+\begin{itemize}
+    \item $\Delta$ le niveau de dommage, en pourcentage du PIB
+    \item $T_{AT}$ le niveau de réchauffement climatique, en degré celsius
+    \item $\psi_1, \psi_2$ des paramètres permettant de calibrer la fonction
+\end{itemize}
+
+Celle-ci est calibrée de manière à correspondre à des estimations issues du sixième rapport du GIEC et d'autres sources. Ils donnent un dommage de 1.62 \% du PIB pour un réchauffement de 3$\textdegree$C par rapport au niveau préindustriel \cite{barrage_policies_2023, nordhaus_dice_2013}. 
 
 \subsubsection{FUND} 
 
@@ -172,38 +181,103 @@ Par exemple, l'impact du changement climatique sur l'agriculture est construit p
     \label{eq:fund_A2}
 \end{equation}
 
-D'autres impacts sont aussi représentés, tels que l'impact du niveau des eaux sur le littoral, les écosystèmes, les domages liés aux cyclones tropicaux et extra-tropicaux, etc. , et ce par différents biais : des dommages directs (monétaires), et la monétarisation de perte de vie ou de perte de temps de vie. 
+D'autres impacts sont aussi représentés, tels que l'impact du niveau des eaux sur le littoral, les écosystèmes, les dommages liés aux cyclones tropicaux et extra-tropicaux, etc., et ce par différents biais : des dommages directs (monétaires), et la monétarisation de perte de vie ou de perte de temps de vie. 
 
+On peut citer par exemple cette fonction (HV) qui permet d'estimer le nombre de morts additionnelles issus des maladies transmissibles  :  
 \begin{equation}
     D_{t,r}^{\nu}=D_{1990,r}^{\nu}Q_{r}^{\nu}\left(T_{t}-T_{1990}\right)^{\beta}\left(\frac{y_{t,r}}{y_{1990,r}}\right)^{\gamma}
     \label{eq:fund_HV}
 \end{equation}
+avec : 
+\begin{itemize}
+    \item $D^v_{t,r}$ est l'augmentation de la mortalité due à la maladie $v$, dans la région $r$ à l'instant $t$ 
+    \item $D^v_{1990,r}$ la mortalité due à la maladie $v$ dans la région $r$ en 1990
+    \item $t$ l'année
+    \item $r$ la région
+    \item $v$ la maladie
+    \item $\alpha$ un paramètre issu de dires d'expert (\emph{"expert guess"})
+    \item $y_{t,r}$ le revenu par habitant dans la région $r$ à l'instant $t$ 
+    \item $T_t$ la température moyenne à l'instant $t$
+    \item $\beta = 1.0$ un paramètre représentant la linéarité de la mortalité selon la température (c'est-à-dire la manière dont la mortalité évolue selon la température)
+    \item $\gamma = -2.65$ un paramètre représentant l'élasticité-revenu de la mortalité (c'est-à-dire la manière dont la mortalité évolue selon le niveau de revenu)  
+\end{itemize}
 
+On peut aussi évoquer la valeur d'une vie statistique, qui permet de d'associer une valeur monétaire à un décès : 
 \begin{equation}
     V S L_{t,r}=\alpha\left(\frac{y_{t,r}}{y_{0}}\right)^{\gamma}
     \label{eq:VSL}
 \end{equation}
+Avec : 
+\begin{itemize}
+    \item $VSL_{t,r}$ la valeur d'une vie statistique à l'instant $t$ dans la région $r$
+    \item $\alpha = 4992523$ un paramètre
+    \item $y_{t,r}$ le niveau de revenu par habitant dans la région $r$ à l'instant $t$ 
+    \item $y_0 = 24963$ une constante de normalisation
+    \item $\epsilon = 1$ l'élasticité-revenu de la valeur d'une vie statistique (c'est-à-dire la manière dont la valeur d'une vie statistique évolue selon le niveau de revenu)
+\end{itemize}
+
+Cette équation est calibrée pour qu'une vie statistique soit égale à 200 fois le revenu par habitant \cite{anthoff_fund_nodate}. 
 
 \subsubsection{Autres formes quadratiques}
 
-Les formes quadratiques issues de DICE/RICE ont été grandement critiquées (voir section \ref{ss:forme}), et d'autres formes quadratiques sont apparues. C'est le cas notamment dans DEFINE (\ref{eq:DEFINE}), dont on peut trouver une forme très similaire dans le Giraud Stock-Flow consistent model. Il s'agit d'équations qui, comme DICE, sont extrememnt simplifiées et aggrégée, mais la forme de la relation est différente. 
+Les formes quadratiques issues de DICE/RICE ont été grandement critiquées (voir section \ref{ss:forme}), et d'autres formes quadratiques sont apparues. C'est le cas notamment dans DEFINE (\ref{eq:DEFINE}), dont on peut trouver une forme très similaire dans le Giraud Stock-Flow consistent model. Il s'agit d'équations qui, comme DICE, sont extrememnt simplifiées et agrégée, mais la forme de la relation est différente. 
 
 \begin{equation}
-    \Delta T = 1 - \frac{1}{1 + \eta_1 TAT + \eta_2 TAT^2 + \eta_3 TAT}
+    D_T = 1 - \frac{1}{1 + \eta_1 T_{AT} + \eta_2 T_{AT}^2 + \eta_3 T_{AT}^{6.754}}
     \label{eq:DEFINE}
 \end{equation}
+où : 
+
+\begin{itemize}
+    \item $D_T$ est le niveau de dommage pour une température de $T$
+    \item $T_{AT}$ le réchauffement
+    \item $\eta_1, \eta_2, \eta_3$ des paramètres
+\end{itemize}
+
+Dans le modèle WITNESS \cite{noauthor_witness_nodate}, le parti pris a été de modéliser deux types d'impacts. D'une part, les impacts que nous avons qualifiés ici de tendanciels, et d'autre part les événements catastrophiques et les tipping points. Ce modèle a donc deux fonctions de dommage. La première est une réplique de la fonction de dommage classique de DICE, et la seconde représente les évenements extremes (voir equation \ref{eq:WITNESS}). Elle permet de simuler une accélération du niveau de dommage une fois un tipping point passé. 
+
+\begin{equation}
+    D_t=\left(\frac{T_{t A T}}{20.46}\right)^2+\left(\frac{T_{t A T}}{6.081}\right)^{6.754}
+    \label{eq:WITNESS}
+\end{equation}
+où 
+\begin{itemize}
+    \item $D_t$ est le niveau de dommage en proportion du PIB
+    \item $T_{tAT}$ est l'augmentation de la température atmosphérique
+\end{itemize}
 
 \subsubsection{Autres formes non quadratiques}
 
+D'autres formes de fonction de dommage existent. On peut citer par exemple celle du Dystopian Schumpeter meets Keynes model (DSK) : 
 
+\begin{equation}
+    \text{shock}^s_t \sim Beta(\theta_{s1,t}, \theta_{s2,t})
+    \label{eq:DSK1}
+\end{equation}
 
+Avec : 
+
+\begin{equation}
+   \theta_{1,t}^s = \theta_{1,0}^s (1 + \ln \left( \frac{Temp_{t-1}}{Temp_0} \right))^{\Upsilon_{3}^s}
+    \label{eq:DSK2}
+\end{equation}
+
+et 
+
+\begin{equation}
+   \theta_{2,t}^s = \theta_{2,0}^s \left( \frac{Temp_0}{Temp_{t-1}} \right)^{\Upsilon_{4}^s} 
+    \label{eq:DSK2}
+\end{equation}
+
+Voir \cite{reissl_dsk-sfc_2024} pour une description plus complète. 
+ 
 \section{Trois questions centrales}
 
 
 \subsection{La forme : comment représenter un phénomène qui n'existe pas encore ?}
 \label{ss:forme}
 
-La première difficulté quant à la représentation des impacts du changement climatique est le choix de la forme de la fonction de dommage. En effet, les phénomènes à l'origine des dommages climatiques sont à la fois incertains et récents. D'abord, les phénomènes physiques, dont on a du mal à avoir une représentation fiable et précise (voir notamment la section \ref{fig:tipping-point} sur les tipping points). Ensuite, et peut être plus encore, l'interaction entre ces évenements et les sociétés humaines est extremement difficile à comprendre, et donc à modéliser. Exercice de simplification, la modélisation nécessite pourtant d'extraire des lois générales de phénomènes particuliers, pour pouvoir établir des relations entre eux. \\
+La première difficulté quant à la représentation des impacts du changement climatique est le choix de la forme de la fonction de dommage. En effet, les phénomènes à l'origine des dommages climatiques sont à la fois incertains et récents. D'abord, les phénomènes physiques, dont on a du mal à avoir une représentation fiable et précise (voir notamment la section \ref{fig:tipping-point} sur les tipping points). Ensuite, et peut-être plus encore, l'interaction entre ces événements et les sociétés humaines est extremement difficile à comprendre, et donc à modéliser. Exercice de simplification, la modélisation nécessite pourtant d'extraire des lois générales de phénomènes particuliers, pour pouvoir établir des relations entre eux. \\
 
 Ainsi, il est déjà très difficile de choisir une forme fonctionnelle qui soit adaptée. On peut contrer cet argument en avançant que la pratique de la modélisation doit assumer cette simplification. De ce point de vue, un modèle ne vise pas à reproduire la réalité ou des mécanismes réels, mais seulement à fournir un cadre explicatif suffisant pour rendre intelligible des choses qui ne l'étaient pas avant. \\
 
@@ -216,7 +290,7 @@ Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de tempé
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{results/shape.png}
-\legende{Niveau de dommage en fonction de l'augmentation de température}{Différentes formes fonctionnelles peuvent avoir un pouvoir explicatif important sur l'intervalle $[+0; +1.2]$, sur lequel on dispose de données empiriques, tout en divergeant grandement pour des valeurs plus haute de changement de température. Une fonction de dommage correctement calibrée pour des phénomènes observés n'est pas forcément calibrée pour les phénomènes futurs.}
+\legende{Niveau de dommage en fonction de l'augmentation de température}{Différentes formes fonctionnelles peuvent avoir un pouvoir explicatif important sur l'intervalle $[+0; +1.2]$, sur lequel on dispose de données empiriques, tout en divergeant grandement pour des valeurs plus haute de changement de température. Une fonction de dommage correctement calibrée pour des phénomènes observés n'est pas forcément calibrée pour les phénomènes futurs. Il s'agit d'une représentation schématique.}
 \end{figure}
 
 
@@ -240,7 +314,7 @@ La figure \ref{fig:sankey} représente les liens que font les fonctions de domma
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{figures/sankey.png}
-    %\legende{Sankey diagram des différentes fonctions}{Les modèles ne prennent pas en compte tous les mêmes données en entrées, et elles ne permettent pas d'expliquer les mêmes phénomènes.}
+    \legende{Sankey diagram des différentes fonctions}{Les modèles ne prennent pas en compte tous les mêmes données en entrées, et elles ne permettent pas d'expliquer les mêmes phénomènes. Production par les auteurs.}
     \label{fig:sankey}
 \end{figure}
 
@@ -303,5 +377,6 @@ D'autre part, on peut argumenter que la représentation de ces dommages donne un
     \legende{Double progression du niveau de dommage}{Le niveau de dommage suit une double progression. D'une part, il augmente avec le temps (qui est lui même très lié au niveau de réchauffement); d'autre part, il augmente avec le modèle : certains modèles donnent des niveaux de dommage plus importants que d'autres.}
     \label{fig:carte-progressive}
 \end{figure}
+TODO 
 
 
