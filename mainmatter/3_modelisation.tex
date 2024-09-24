@@ -10,7 +10,7 @@
 
 \cite{errickson_equity_2021} => il peut y avoir une plus grande variation du SCC selon l'équité que selon l'incertitude climatique
 
-Nous avons vu dans le chapitre précédent que les modèles varient dans leurs choix de représentations des dommages. De plus, ces différents choix semblent tous valables à leur manière : les phénomènes représentés sont incertains, et cette variabilité représente surtout l'incertitude qui entoure ces phénomènes. Pourtant, ce sont bien les mêmes phénomènes; il ne devrait donc pas y avoir de différence entre les modèles. Ces différences sont donc apportées exclusivement par les choix de modélisation; or, elles peuvent être importantes, et donner des conclusions radicalement différentes, donnant lieu à des interprétations opposées. La querelle entre Nordhaus et Stern, évoquée plus haut, en est un exempe éloquent. 
+Nous avons vu dans le chapitre précédent que les modèles varient dans leurs choix de représentations des dommages. De plus, ces différents choix semblent tous valables à leur manière : les phénomènes représentés sont incertains, et cette variabilité représente surtout l'incertitude qui entoure ces phénomènes. Pourtant, ce sont bien les mêmes phénomènes; il ne devrait donc pas y avoir de différence entre les modèles. Ces différences sont donc apportées exclusivement par les choix de modélisation; or, elles peuvent être importantes, et donner des conclusions radicalement différentes, donnant lieu à des interprétations opposées. La querelle entre Nordhaus et Stern, évoquée plus haut, en est un exemple éloquent. 
 
 Il est donc intéressant de voir dans quelle mesure ces variations influencent le comportement du modèle. En effet, si elles sont peu importantes comparées à d'autres facteurs, elles ne compromettent pas le message du modèle. En revanche, si elle joue un rôle central dans le fonctionnement de celui-ci, alors il convient de leur accorder une place majeure, tant dans l'analyse des résultats que dans la conception. 
 
@@ -18,7 +18,7 @@ On cherche donc à mesurer quantitativement les effets de ces variables sur les 
 
 
 
-On définit ici la notion de paramètre éthique : elle désigne les paramètres qui n'ont pas vocation à représenter un phénomène physique ou social observable, mais plutôt à représenter une valeur morale. Le taux d'actualisation, par exemple, entre tout à fait dans cette définition. En effet, il représente l'importance accordée à l'équité intergénérationnelle. bien qu'il y ait eu des tentatives d'observer empiriquement cette valeur, notamment en s'intéressant au taux de préférence pure pour le présent dans les prêts de long terme, il semble difficile de penser que cette valeur soit valable à plus long terme ou dans d'autres contextes. Plutot, il apparait que ce paramètre reflète un système normatif, et relève de ce fait plutôt du choix moral que du choix technique. Se pose alors la question suivante : quelle part de la variation du niveau total de dommage est-elle expliquée par ces paramètres éthiques.  On s'intéressera ici à une autre dimension éthique, qui est celle de l'équité spatiale. Pour ce faire, on construit un pondérateur géographique, qui pondère le niveau de dommage par région selon le niveau de revenu.
+On définit ici la notion de paramètre éthique : elle désigne les paramètres qui n'ont pas vocation à représenter un phénomène physique ou social observable, mais plutôt à représenter une valeur morale. Le taux d'actualisation, par exemple, entre tout à fait dans cette définition. En effet, il représente l'importance accordée à l'équité intergénérationnelle. bien qu'il y ait eu des tentatives d'observer empiriquement cette valeur, notamment en s'intéressant au taux de préférence pure pour le présent dans les prêts de long terme, il semble difficile de penser que cette valeur soit valable à plus long terme ou dans d'autres contextes. Plutôt, il apparait que ce paramètre reflète un système normatif, et relève de ce fait plutôt du choix moral que du choix technique. Se pose alors la question suivante : quelle part de la variation du niveau total de dommage est-elle expliquée par ces paramètres éthiques.  On s'intéressera ici à une autre dimension éthique, qui est celle de l'équité spatiale. Pour ce faire, on construit un pondérateur géographique, qui pondère le niveau de dommage par région selon le niveau de revenu.
 
 Dans cette partie, on développe un protocole expérimental qui vise à mesurer le niveau de dommage produit par différents modèles, différentes fonctions de dommages et des variations du pondérateur géographique. On régresse ensuite les données obtenues pour mesurer quantitativement la part de la variation qui est expliquée par ces différents paramètres. 
 
@@ -30,11 +30,11 @@ Le cadre conceptuel général de cette expérience est celui de la modélisation
 
 D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons choisi d'utiliser le modèle WILIAM, pour plusieurs raisons. 
 
-\paragraph{Modèle Open-source}WILIAM est un modèle Open-Source, ce qui signifie que l'ensemble du code source est disponible en ligne, avec une licence permettant une utilisation, diffusion et modification du programme sans limites. C'est nécessaire puisqu'on a ainsi accès à tous le code source, ce qui permet de travailler sur une base solide; on peut également le modifier librement, ce qui est au coeur de l'expérience; enfin, on peut le diffuser librement aussi, ce qui est fait à travers le dépôt GitHub et le blog. Par ailleurs, bien que ce ne soit pas en soi une garantie de qualité, l'utilisation de l'open source permet d'améliorer la robustesse et la transparence des modèles, puisque chacun peut voir les hypothèses, proposer des modifications, et corriger des erreurs. 
+\paragraph{Modèle Open-source} WILIAM est un modèle Open-Source, ce qui signifie que l'ensemble du code source est disponible en ligne, avec une licence permettant une utilisation, diffusion et modification du programme sans limites. C'est nécessaire puisqu'on a ainsi accès à tout le code source, ce qui permet de travailler sur une base solide; on peut également le modifier librement, ce qui est au cœur de l'expérience; enfin, on peut le diffuser librement aussi, ce qui est fait à travers le dépôt GitHub et le blog. Par ailleurs, bien que ce ne soit pas en soi une garantie de qualité, l'utilisation de l'open source permet d'améliorer la robustesse et la transparence des modèles, puisque chacun peut voir les hypothèses, proposer des modifications, et corriger des erreurs. 
 
 \paragraph{Application aux politiques publiques} WILIAM est issu du projet LOCOMOTION, financé par la Commission Européenne. Il répond à une demande de celle-ci de s'équiper d'un nouveau modèle. Ainsi, WILIAM est un modèle qui vise à répondre à des questions de politique publique. 
 
-\paragraph{Modèle complexe} WILIAM est un modèle particulièrement complexe : il compte près de 4000 variables. Cela le rend particulièrement vulnérable aux problématiques de transparence et de complexité excessive que nous développerons plus tard. Néanmoins, cela nous permet d'avoir un modèle le plus comple possible. Cela permet d'intégrer les fonctions de dommage facilement, car les variables sont déjà existantes. 
+\paragraph{Modèle complexe} WILIAM est un modèle particulièrement complexe : il compte près de 4 000 variables. Cela le rend particulièrement vulnérable aux problématiques de transparence et de complexité excessive que nous développerons plus tard. Néanmoins, cela nous permet d'avoir un modèle le plus complet possible. Cela permet d'intégrer les fonctions de dommage facilement, car les variables sont déjà existantes. 
 
 \paragraph{Modèle de simulation} WILIAM est un modèle de simulation. Cette caractéristique est importante car elle permet de voir les valeurs de chaque paramètre à tout moment, mais aussi de représenter des paramètres non monétaires. De plus, ça le rend moins sensible aux critiques de normativité inhérente aux modèles d'optimisation \ref{}. 
 
@@ -50,7 +50,7 @@ D'abord, le choix du modèle. Pour réaliser cette expérience, nous avons chois
 
 \begin{methodbox}[Modélisation des fonctions de dommage dans WILIAM]
 
-Pour modéliser les fonctions de dommage dans WILIAM, on commence par créer un nouveau repo sur github, dans lequel on télécharge le code source de WILIAM. On s'assure que tout est fonctionnel, et que le modèle tourne bien. La visualisation du modèle se fait grâce au logiciel VENSIM. \\
+Pour modéliser les fonctions de dommage dans WILIAM, on commence par créer un nouveau repo sur GitHub, dans lequel on télécharge le code source de WILIAM. On s'assure que tout est fonctionnel, et que le modèle tourne bien. La visualisation du modèle se fait grâce au logiciel VENSIM. \\
 
 On rassemble les sources de données disponibles des modèles : code source, documentation et / ou publications qui y font référence. Ces sources n'offrent pas le même niveau d'information. Par exemple, les modèles dont on ne trouve pas le code source mais uniquement des publications sont plus difficiles à modéliser car il manque souvent des informations cruciales, telles que les valeurs obtenues pour les paramètres. \\
 
@@ -60,9 +60,9 @@ Une fois la définition de la fonction identifiée, on les modélise à l'aide d
 
 \begin{methodbox}[Conversion des paramètres selon les bonnes zones géographiques]
 
-    Le modèle WILIAM comporte 35 régions. En revanche, les autres modèles n'ont pas nécessairement le même découpage géographique. Deux cas se distinguent : soit le modèle est agrégé au niveau mondial; on peut alors utiliser les fonctions de dommage région par région, sans besoin de les changer. Soit le modèle possède des régions, et il faut alors convertir les régions du modèle A en régions de WILIAM pour avoir la bonne paramètrisation. Ce deuxième cas de figure est particulièrement vrai dans le cas du modèle FUND, qui a des régions très différentes de celles de WILIAM, et qui repose beaucoup sur de la paramétrisation. Il faut donc convertir les paramètres des régions de FUND en régions de WILIAM. 
+    Le modèle WILIAM comporte 35 régions. En revanche, les autres modèles n'ont pas nécessairement le même découpage géographique. Deux cas se distinguent : soit le modèle est agrégé au niveau mondial; on peut alors utiliser les fonctions de dommage région par région, sans besoin de les changer. Soit le modèle possède des régions, et il faut alors convertir les régions du modèle A en régions de WILIAM pour avoir la bonne paramétrisation. Ce deuxième cas de figure est particulièrement vrai dans le cas du modèle FUND, qui a des régions très différentes de celles de WILIAM, et qui repose beaucoup sur de la paramétrisation. Il faut donc convertir les paramètres des régions de FUND en régions de WILIAM. 
 
-    Par ailleurs, il est à noter que si la documentation de FUND est très complète et accessible en ligne, les tables de paramètre ne sont pas disponible dans un format facilement lisible tel que CSV. La méthode retenue a été de lire la page de la documentation (en Markdown), et de la découper table par table puis valeur par valeur à l'aide d'un script python, qui permet ensuite d'enregistrer ces données dans un format lisible par VENSIM. Ces opérations sont longues et peuvent être source de nombreuses erreurs. Ainsi, le non-partage des données dans un format standard est un vrai frein à la reproductibilité. \\
+    Par ailleurs, il est à noter que si la documentation de FUND est très complète et accessible en ligne, les tables de paramètre ne sont pas disponibles dans un format facilement lisible tel que CSV. La méthode retenue a été de lire la page de la documentation (en Markdown), et de la découper table par table, puis valeur par valeur à l'aide d'un script python, qui permet ensuite d'enregistrer ces données dans un format lisible par VENSIM. Ces opérations sont longues et peuvent être source de nombreuses erreurs. Ainsi, le non-partage des données dans un format standard est un vrai frein à la reproductibilité. \\
     
     On utilise alors un script Python qui désagrège les zones de FUND en pays, et qui associe à chaque pays sa zone dans WILIAM. 
     
@@ -72,7 +72,7 @@ La plupart des fonctions de dommage dépendent du niveau de revenu par habitant,
 
 La deuxième manière est que la fonction de dommage intègre directement le niveau de revenu dans le calcul du niveau de dommage. Selon le signe de l'équation, cette méthode peut renforcer les effets dans les pays les plus pauvres, ou au contraire les augmenter. 
 
-On peut finalement citer une technique permettant de monétiser des impacts non-monétaires, tels que des morts ou des années d'invalidité. La technique utilisée est assez classique en économie : il s'agit de calculer la valeur d'une vie statistique, ou \emph{value of a statistical life} (VSL). Cette méthode part de l'hypothèse que la valeur de la vie dans un lieu donnée correspond à un certain multiple du niveau de revenu par habitant dans ce lieu. On peut prendre en exemple la VSL du modèle FUND, qui prend la forme suivante : 
+On peut finalement citer une technique permettant de monétiser des impacts non monétaires, tels que des morts ou des années d'invalidité. La technique utilisée est assez classique en économie : il s'agit de calculer la valeur d'une vie statistique, ou \emph{value of a statistical life} (VSL). Cette méthode part de l'hypothèse que la valeur de la vie dans un lieu donnée correspond à un certain multiple du niveau de revenu par habitant dans ce lieu. On peut prendre en exemple la VSL du modèle FUND, qui prend la forme suivante : 
 
 \begin{equation}
     VSL_{t, r} = \alpha (\frac{y_{t,r}}{y_0})^\epsilon
@@ -80,7 +80,7 @@ On peut finalement citer une technique permettant de monétiser des impacts non-
 où $t$ désigne l'année, $r$ désigne la région, $\alpha$ et $\epsilon$ des paramètres permettant de calibrer la fonction, $y_{t,r}$ le revenu par habitant dans la région $t$ à l'instant $r$, et $y_0$ un revenu de référence.  \\
 
 Ce choix de modélisation pose de nombreuses questions. 
-D'abord, d'un point de vue pragmatique. Les pays les plus pauvres sont susceptibles d'être les pays les plus impactés par le changement climatique, d'une part par une exposition plus grande à des phénomènes extremes, et d'autre part par une situation de pauvreté préexistante qui fragilise la résilience. 
+D'abord, d'un point de vue pragmatique. Les pays les plus pauvres sont susceptibles d'être les pays les plus impactés par le changement climatique, d'une part par une exposition plus grande à des phénomènes extrêmes, et d'autre part par une situation de pauvreté préexistante qui fragilise la résilience. 
 Ensuite, pour des raisons morales. Le principe de responsabilité commune mais différenciée sur le changement climatique, qui préside le régime climatique depuis sa formation, instaure une distinction claire entre les pays des Nords, qui ont bénéficié de l'émission de carbone pendant des décennies pour leur développement, et les pays des Suds, dont le poids historique est relativement limité. On pourrait penser qu'il est souhaitable de pénaliser grandement les impacts du changement climatique dans les pays des Suds, du fait de cette responsabilité moindre. 
 Enfin,  on peut aussi envisager une perspective de justice sociale pour traiter de ce sujet. On peut par exemple imaginer que les dommages sur les plus pauvres, touchant des populations déjà fragiles, sont particulièrement impactants. Il pourrait être dès lors notre responsabilité de limiter ces impacts, à la manière du Maximin de Rawls. 
 
@@ -93,17 +93,17 @@ Nous observons la forme de la valeur d'une vie statistique, développée dans FU
 
 \begin{itemize}
     \item il s'agit d'une pratique courante
-    \item elle représente un phénomène dont on pourrait penser qu'il ait la même valeur partout (en l'occurence, la mort)
+    \item elle représente un phénomène dont on pourrait penser qu'il ait la même valeur partout (en l'occurrence, la mort)
 \end{itemize}
 
-Cette expression permet de comparer un même phénomène (la mort), dans des contextes où le revenu est différent. Elle est donc adaptée pour représenter un même phénomène (un niveau de dommage, au sens physique) dans un système de comptabilité différent (en l'occurence monétaire). 
+Cette expression permet de comparer un même phénomène (la mort), dans des contextes dans lesquels le revenu est différent. Elle est donc adaptée pour représenter un même phénomène (un niveau de dommage, au sens physique) dans un système de comptabilité différent (en l'occurrence monétaire). 
 
 Nous l'adaptons ainsi : 
 
 \begin{itemize}
     \item les variations du coefficient $\alpha$ permettent de faire varier le sens et l'intensité de la relation entre niveau de revenu et niveau de dommage comptabilisé
     \item les variations de $y_0$ permettent de faire varier la limite entre les pays considérés comme riches et les pays considérés comme pauvres
-    \item les variations de $\epsilon$ permettent de faire varier la convexité de la relation, c'est à dire à quelle point les valeurs pour les différents pays vont être différentes. 
+    \item les variations de $\epsilon$ permettent de faire varier la convexité de la relation, c'est-à-dire à quelle point les valeurs pour les différents pays vont être différentes. 
 \end{itemize}
 
 \vspace{2cm}
@@ -154,7 +154,7 @@ On a d'abord une régression simple du niveau de dommage selon la température :
 \text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \epsilon
 \end{align}
 
-Cette première étape nous permet de comparer les résultats de nos modèles plus complexe avec un modèle plus simple, pour s'assurer que prendre en compte les autres facteurs apporte effectivement un pouvoir explicatif complémentaire.  \\
+Cette première étape nous permet de comparer les résultats de nos modèles plus complexes avec un modèle plus simple, pour s'assurer que prendre en compte les autres facteurs apporte effectivement un pouvoir explicatif complémentaire.  \\
 
 On ajoute ensuite le coefficient éthique, sans tenir compte à ce stade de la forme de l'équation ni contrôler par la région. 
 
@@ -179,7 +179,7 @@ Finalement, le modèle le plus complet prend en compte à la fois la températur
 \begin{align}
 \text{Niveau de dommage} = & \ \beta_0  + \beta_1 \cdot \text{temperature}  + \beta_2 \cdot \text{coefficient ethique} + \beta_3 \cdot \text{région} + \beta_4 \cdot \text{équation} + \epsilon
 \end{align}
-\paragraph{Evaluation de l'estimateur} \cite{wooldridge_introductory_2016} propose 5 critères pour un bon estimateur. D'abord, on doit écrire notre modèle économétrique sous la forme d'une combinaison linéaire des variables explicatives. C'est bien le cas ici (voir équation \ref{eq:modele} Ensuite, l'échantillon doit être aléatoire. Dans notre cas, nous avons fait varier de manière aléatoire les paramètre du modèle; on observe néanmoins des schémas dans la distribution des valeurs des niveaux de dommage; il est donc possible que cet échantillon ne soit pas tout à fait aléatoire. Cela s'expliquerait par exemple par des différences systématiques liées à la région (on observe d'ailleurs que lorsque l'on contrôle par la région, cet effet disparait).  Il faut ensuite avoir une variation des échantillons, ce qui est notre cas. Puis, il faut que l'espérance conditionnelle des termes d'erreur soit nulle. On observe bien cela ici. En revanche, les tests d'homoscédasticité montrent qu'il y a de l'hétéroscédasticité.  Ces différentes analyses sont développées sur le site \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_modelling/regprep.html}.
+\paragraph{Évaluation de l'estimateur} \cite{wooldridge_introductory_2016} propose cinq critères pour un bon estimateur. D'abord, on doit écrire notre modèle économétrique sous la forme d'une combinaison linéaire des variables explicatives. C'est bien le cas ici (voir équation \ref{eq:modele}). Ensuite, l'échantillon doit être aléatoire. Dans notre cas, nous avons fait varier de manière aléatoire les paramètre du modèle; on observe néanmoins des schémas dans la distribution des valeurs des niveaux de dommage; il est donc possible que cet échantillon ne soit pas tout à fait aléatoire. Cela s'expliquerait par exemple par des différences systématiques liées à la région (on observe d'ailleurs que lorsque l'on contrôle par la région, cet effet disparait).  Il faut ensuite avoir une variation des échantillons, ce qui est notre cas. Puis, il faut que l'espérance conditionnelle des termes d'erreur soit nulle. On observe bien cela ici. En revanche, les tests d'homoscédasticité montrent qu'il y a de l'hétéroscédasticité.  Ces différentes analyses sont développées sur le site \blog{https://damage-functions-modeling.readthedocs.io/en/latest/3_modelling/regprep.html}.
 
 \begin{figure}
     \centering
@@ -211,9 +211,9 @@ On récupère les résultats et on procéde à des analyses économétriques sur
 
 Plusieurs limitations doivent être soulignées. 
 
-\paragraph{Transposition dans un autre modèle} D'abord, on utilise les fonctions de dommage de différents modèles dans le modèle WILIAM. Cela permet d'avoir les même conditions pour toutes les fonctions de dommage. Ceci étant dit, les fonctions ne sont plus dans leur milieu d'origine. Ceci pose deux problème. D'abord, les fonctions peuvent avoir été calibrées pour fonctionner correctement dans certaines conditions de fonctionnement de température, et pas au delà; et ces conditions peuvent ne pas être atteinte dans WILIAM. Cela est notamment vrai pour toutes les variables qui nécessitent une calibration, par exemple celles où la population entre en jeux. Une population différente peut aboutir à une fonction de dommage qui est différente. Ensuite, il y a un grand risque d'erreur de transcription. En effet, les variables peuvent avoir les mêmes noms mais ne pas désigner la même chose précisement ou ne pas être calculée de la même manière; ou encore, la documentation d'origine peut ne pas être claire sur les caractéristiques précises d'une variable (notamment, le niveau de désagrégation). On peut néanmoins considérer que ce n'est pas une limitation très forte. En effet, nous nous intéressons ici à la \emph{relation} entre les hypothèses et le niveau de dommage, et pas au niveau de dommage \emph{en soi}. Ainsi, une mauvaise calibration risque de donner des valeurs trop faibles ou trop élèvées, mais n'a pas d'effet sur la relation en soi. Par ailleurs, ces fonctions sont justement présentées comme des relations liant les phénomènes climatiques à un niveau de dommage. Si changer de modèle affecte grandement la validité de la relation, alors on peut interroger la validité de la relation dans son ensemnle. 
+\paragraph{Transposition dans un autre modèle} D'abord, on utilise les fonctions de dommage de différents modèles dans le modèle WILIAM. Cela permet d'avoir les mêmes conditions pour toutes les fonctions de dommage. Ceci étant dit, les fonctions ne sont plus dans leur milieu d'origine. Ceci pose deux problèmes. D'abord, les fonctions peuvent avoir été calibrées pour fonctionner correctement dans certaines conditions de fonctionnement de température, et pas au-delà; et ces conditions peuvent ne pas être atteintes dans WILIAM. Cela est notamment vrai pour toutes les variables qui nécessitent une calibration, par exemple celles où la population entre en jeux. Une population différente peut aboutir à une fonction de dommage qui est différente. Ensuite, il y a un grand risque d'erreur de transcription. En effet, les variables peuvent avoir les mêmes noms mais ne pas désigner la même chose précisement ou ne pas être calculée de la même manière; ou encore, la documentation d'origine peut ne pas être claire sur les caractéristiques précises d'une variable (notamment, le niveau de désagrégation). On peut néanmoins considérer que ce n'est pas une limitation très forte. En effet, nous nous intéressons ici à la \emph{relation} entre les hypothèses et le niveau de dommage, et pas au niveau de dommage \emph{en soi}. Ainsi, une mauvaise calibration risque de donner des valeurs trop faibles ou trop élevées, mais n'a pas d'effet sur la relation en soi. Par ailleurs, ces fonctions sont justement présentées comme des relations liant les phénomènes climatiques à un niveau de dommage. Si changer de modèle affecte grandement la validité de la relation, alors on peut interroger la validité de la relation dans son ensemble. 
 
-\paragraph{Collinéarité} Le problème majeur de cette technique est que les données analysées ont été produites dans la perspective de cette analyse. Ainsi, il est possible que le résultat de l'analyse  reflète que les hypothèses et les variations qui ont été volontairement ajoutées au modèle. En particulier, le niveau de dommage dépend beaucoup de la valeur du coefficient d'éthique spatial, qui est lui même construit pour l'expérience. 
+\paragraph{Colinéarité} Le problème majeur de cette technique est que les données analysées ont été produites dans la perspective de cette analyse. Ainsi, il est possible que le résultat de l'analyse  reflète que les hypothèses et les variations qui ont été volontairement ajoutées au modèle. En particulier, le niveau de dommage dépend beaucoup de la valeur du coefficient d'éthique spatial, qui est lui-même construit pour l'expérience. 
 
 
 
@@ -224,11 +224,17 @@ Plusieurs limitations doivent être soulignées.
 \begin{table}
     \centering
      \resizebox{\textwidth}{!}{\input{results/regression_1}}
-     \label{tab:reg_1}
+     \label{tab:reg_region}
      \legende{Régressions par région}{Résultats des régressions du logarithme du niveau total de dommages, zone par zone, en fonction du changement de température, du pondérateur géographique, et de la forme de la fonction de dommage. Chaque colonne correspond à une analyse, chaque ligne à une variable. La variable expliquée est le log du niveau de dommage de chaque pays. Clé de lecture : le fait d'avoir une fonction de dommage de la forme DICE diminue le niveau de log\_dommage de 19.6\% par rapport à la fonction de DEFINE, toute autre chose étant égale par ailleurs.}
 \end{table}
 
-Les résultats du premier jeu de régression linéaires sont présentées dans la table \ref{tab:reg_1}. Cinq variables y sont présentées : le niveau de changement de température par rapport à la période préindustrielle (en degré Celsius); la valeur du pondérateur géographique, passée au log; la présence ou non de dummy régionales, qui permettent de contrôler par zone; et enfin des dummy qui indique si la fonction de dommage est de la forme DICE ou WITNESS. Ces deux dernières valeurs sont à comparer à la valeur 'par défaut', qui est celle de DEFINE. \\
+Les résultats du premier jeu de régression linéaires sont présentées dans la table \ref{tab:reg_region}. Cinq variables y sont présentées : le niveau de changement de température par rapport à la période préindustrielle (en degré Celsius); la valeur du pondérateur géographique, passée au log; la présence ou non de dummy régionales, qui permettent de contrôler par zone; et enfin des dummy qui indique si la fonction de dommage est de la forme DICE ou WITNESS. Ces deux dernières valeurs sont à comparer à la valeur 'par défaut', qui est celle de DEFINE. \\
+
+\blockquote{Le changement climatique est un défi majeur qui nécessite une action immédiate pour atténuer ses effets.} 
+
+\displayquote[Gabriel]{Le changement climatique est un défi majeur qui nécessite une action immédiate pour atténuer ses effets.}
+
+
 
 Tous les coefficients sont significatifs au seuil de 0.01. Ceci reflète le fait que les variables sont construites, et donc expliquées grandement par les variables explicatives prises en compte. 
 
@@ -238,7 +244,7 @@ La première régression est selon le changement de température uniquement. Ell
 
 En ajoutant le pondérateur géographique et la forme des fonctions de dommage dans le modèle, on augmente le pouvoir explicatif pour obtenir un $R^2$ de 0.49. C'est plus, mais moins que ce que l'on attendrait. \\
 
-A l'inverse, si on a la température, le pondérateur géographique et les dummy régionales, on obtient un $R^2$ de 0.95, ce qui est beaucoup plus important. On obtient une valeur similaire pour la relation log-dommage / température. Cependant, l'écart-type des valeurs est plus petit, signifiant que ce coefficient est plus fiable. On a une relation d'environ 1 pour la relation log-damage / log-coef. C'est tout à fait cohérent avec la manière dont a été construite la variable $damage$. Cela veut dire qu'une augmentation de 1\% de la valeur de ce coefficient résulte en une augmentation de 1\% du niveau absolu de dommage. \\
+À l'inverse, si on a la température, le pondérateur géographique et les dummy régionales, on obtient un $R^2$ de 0.95, ce qui est beaucoup plus important. On obtient une valeur similaire pour la relation log-dommage / température. Cependant, l'écart-type des valeurs est plus petit, signifiant que ce coefficient est plus fiable. On a une relation d'environ 1 pour la relation log-damage / log-coef. C'est tout à fait cohérent avec la manière dont a été construite la variable $damage$. Cela veut dire qu'une augmentation de 1\% de la valeur de ce coefficient résulte en une augmentation de 1\% du niveau absolu de dommage. \\
 
 
 Enfin, en prenant en compte toutes les variables explicatives, on obtient un $R^2$ de 0.96. Cela veut dire que 96\% des variations de log\_damage sont expliquées par les variables explicatives prise en compte dans le modèle. On peut ainsi dire qu'il n'y a pas ou peu d'autres facteurs qui expliquerait des variations du niveau de dommage. Par ailleurs, le fait qu'ajouter des dummy régionales augmente tant le pouvoir explicatif du modèle laisse penser que parmi les facteurs influençant le niveau de dommage, certains, même non captés explicitement par notre modèle, sont étroitement liés à la région. Ils peuvent être de différents ordres (par exemple, le PIB). Les coefficients pour l'augmentation de température et pour le pondérateur géographique sont similaires aux autres modèles. On obtient également des valeurs pour les formes des fonctions de dommage. Ainsi, avoir une forme de DICE diminue le niveau de dommage absolu de 17.8\% ($1 - e^{-0.196}= 1 - 0.822 = 0.178$) par rapport à une fonction de dommage de la forme DEFINE. De la même manière, une fonction de dommage de la forme WITNESS correspond à une augmentation du niveau absolu de dommage de 42\% ($ e^{0.35} = 1.42$). \\
@@ -252,7 +258,7 @@ Enfin, en prenant en compte toutes les variables explicatives, on obtient un $R^
     \label{tab:reg_glob}
 \end{table}
 
-La table \ref{tab:reg_glob} présente les résultats d'un deuxième jeu de régressions. Ici, nous avons regroupé le résultats par année et par run de simulation. En d'autres termes, ce sont les mêmes résultats que la table \ref{tab:reg_1}, mais les valeurs sont la somme de tous les dommages mondiaux au niveau global, et plus par région. Cette approche permet de décomposer le pondérateur géographique en deux : l'exposant et la constante de normalisation. Par ailleurs, cette échelle permet d'être plus proche des conditions dans lesquelles sont calculés des valeurs agrégées des impacts du changement climatique, telles que le Coût Social du Carbone. Les résultats des trois modèles ont des $R^2$ importants ($>0.8$), ce qui refléte le fait que les différences régionales disparaissent dans l'aggrégation au niveau mondial. \\
+La table \ref{tab:reg_glob} présente les résultats d'un deuxième jeu de régressions. Ici, nous avons regroupé les résultats par année et par run de simulation. En d'autres termes, ce sont les mêmes résultats que la table \ref{tab:reg_1}, mais les valeurs sont la somme de tous les dommages mondiaux au niveau global, et plus par région. Cette approche permet de décomposer le pondérateur géographique en deux : l'exposant et la constante de normalisation. Par ailleurs, cette échelle permet d'être plus proche des conditions dans lesquelles sont calculés des valeurs agrégées des impacts du changement climatique, telles que le Coût Social du Carbone. Les résultats des trois modèles ont des $R^2$ importants ($>0.8$), ce qui reflète le fait que les différences régionales disparaissent dans l'agrégation au niveau mondial. \\
 
 On obtient des résultats similaires entre les trois modèles, avec des $R^2$ qui augmentent légèrement à mesure qu'on ajoute des variables explicatives. Nous nous concentrons ici sur les résultats du modèle 3. La relation entre l'augmentation de température et le niveau de dommage est plus importante encore que dans les régressions précédentes, puisqu'elle est de 4.11. On obtient des valeurs très similaires pour l'effet des fonctions de dommage. Une variation de l'exposant du pondérateur géographique de 1\% explique une variation de 18,8\% du niveau total de dommage. De la même manière, une augmentation de la constante de normalisation de 1\% correspond à une diminution de 68\% du niveau de dommage total. 
 
@@ -307,34 +313,53 @@ total. Cette constante est calibrée selon une loi uniforme sur l'intervalle 100
     \centering
     
     % Première sous-figure
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{image1.png} % Remplace "image1.png" par le nom de ton fichier d'image
-        \caption{Première sous-figure}
-        \label{fig:sous-figure1}
-    \end{subfigure}
-    \hfill % Espace entre les deux sous-figures
-    
-    % Deuxième sous-figure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{image2.png} % Remplace "image2.png" par le nom de ton fichier d'image
-        \caption{Deuxième sous-figure}
-        \label{fig:sous-figure2}
+        \includegraphics[width=\textwidth]{results/exponent.png} % Remplace "image1.png" par le nom de ton fichier d'image
+        \caption{Valeur du pondérateur selon l'exposant}
+        \label{fig:expo}
     \end{subfigure}
     
-    \caption{Figure principale contenant deux sous-figures côte à côte}
-    \label{fig:figure_principale}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{results/norm_constant.png} % Remplace "image2.png" par le nom de ton fichier d'image
+        \caption{Valeur du pondérateur selon la constante}
+        \label{fig:const}
+    \end{subfigure}
+
+    \legende{Valeur du pondérateur selon la valeur de l'exposant et de la constante de normalisation}{L'axe des ordonnées représente la valeur du pondérateur géographique. Ces deux figures permettent de se représenter l'effet des variations des deux paramètres (exposant à gauche, constante de normalisation à droite) sur la valeur du pondérateur géographique. A gauche, on fixe une constante de normalisation à 25000, et faison varier l'exposant suivant une loi normale (la valeur de l'exposant est représentée par la couleur : plus c'est violet, plus la valeur est élevée). A droite, on fixe l'exposant à 1, et on fait varier la constante de normalisation en suivant une loi uniforme sur $[10000, 50000]$. En pratique, les deux sont affectés aléatoirement à chaque \emph{run}. Clé de lecture : chaque ligne correspond à un fonction permettant d'avoir le pondérateur géographique. Elle correspond à un tirage particulier du couple $(\text{exposant}, \text{constante})$. Afin d'obtenir le pondérateur géographique d'une région, il faut choisir une courbe, lire le revenu par habitant en abscisse, puis lire la valeur du pondérateur géographique sur l'axe des ordonnées. Pour avoir celle d'une autre région dans les même conditions, il faut renouveller l'opération en utilisant la même courbe. }
+    \label{fig:ponderateur_selon}
 \end{figure}
 
 \subsection{Comparaison avec la littérature}
-% Comment vos résultats s'intègrent-ils dans le contexte de la littérature existante ? Confirment-ils ou remettent-ils en question les résultats antérieurs ? 
+
+Ces résultats sont en cohérence avec des acquis de la littérature. 
+
+D'abord, on retrouve une relation très importante entre le changement de température et le niveau de dommage. Malgré l'introduction du pondérateur géographique dans le modèle, cette relation reste très significative et d'une amplitude très importante. \\
+
+Nous retrouvons également que le choix du modèle influence grandement le résultat. C'est cohérent avec la littérature, qui montre qu'une partie importante des variations des résultats des modèles provient du choix du modèle lui-même. On peut par exemple citer \cite{gillingham_modeling_2015, gillingham_modeling_2018}, qui montrent cette sensibilité. 
+
+Enfin, nous montrons que les variables éthiques jouent un grand rôle dans le niveau de dommage comptabilisé.
+
+La valeur du taux d'actualisation est une discussion classique de ce sujet. Nous complétons ici la question de l'équité temporelle par l'équité spatiale. 
+
+On retrouve des résultats allant dans le sens de \cite{dennig_inequality_2015}, qui montrent qu'une prise en compte des effets différenciés des impacts du changement climatique selon le niveau de revenu permet d'aboutir à un coût social du carbone très différent. Nous retrouvons ainsi des résultats similaires pour les variations spatiales et interrégionales. 
+
 
 \subsection{Implications pratiques}
-% Quels sont les impacts ou les applications potentielles de vos résultats dans le domaine étudié ? 
 
-\subsection{Limites}
-%Quelles sont les limitations de votre étude ? Cela peut concerner des problèmes méthodologiques, des échantillons insuffisants, etc 
+Ces résultats montrent le rôle crucial qu'ont les hypothèses éthiques dans la détermination du niveau de dommage. Elles appellent à la plus grande prudence s'agissant de déterminer un niveau \emph{optimal} de dommages. Il serait en effet très sensible à la distribution de ceux-ci et à la pondération des dommages selon les régions. Il semble donc que l'utilisation de telles fonctions de dommages nécessite d'une part une discussion permettant d'établir de manière juste (avec toute la difficulté qu'un tel terme suppose) une comptabilité des dommages; d'autre part, une transparence importante de ces hypothèses. Loin d'être un enjeu technique réservé aux seuls spécialistes de la modélisation, ces questions sont des questions éminemment politiques. Nous avons montré ici qu'elles jouent un rôle déterminant dans l'estimation du niveau de dommage. 
+
 
 \subsection{Perspectives futures}
 % Quelles recherches supplémentaires pourraient être nécessaires pour approfondir vos découvertes ou explorer des questions connexes ?
+
+De nombreuses pistes pour de la recherche ultérieure peuvent être citées. \\
+
+D'abord, solidifier les outils. Comme nous l'avons évoqué ou l'évoquerons à de multiples reprises, les modèles sont des outils difficiles à prendre en main, avec des fonctionnements et des documentations protéiformes. Il est donc évident que de nombreuses erreurs de transcription, paramétrisation ou compréhension se soient glissées dans le code. Une première étape serait donc de chercher à augmenter la fiabilité du code source utilisé pour l'expérience. Par exemple, l'implémentation des fonctions de dommage de FUND n'ont pas pu aboutir, car elles donnaient des résultats trop imprécis. On pourrait par exemple contribuer au package PySD, pour permettre d'automatiser la création de documentation à partir du modèle. Un tel outil permettrait d'écrire automatiquement les fonctions de WILIAM selon leurs inputs et leurs outputs, et d'écrire directement de la documentation lisible par des humains. Par exemple, elle permettrait d'écrire des équations \LaTeX à partir du code source, ce qui permettrait de s'assurer que le code source et la documentation sont en adéquation. On pourrait pour cela s'inspirer du fonctionnement de ReadTheDocs. \\
+
+Nous avons cité des études s'intéressant à l'équité générationnelle, à l'équité sociale, et nous nous sommes penchés sur l'équité spatiale. Il pourrait être intéressant d'implémenter simultanément ces différentes approches, pour évaluer leur influence respective sur les résultats du modèle. \\
+
+De plus, nous n'avons implémenté que trois fonctions de dommage. Nous pourrions continuer à implémenter d'autres fonctions, et notamment des fonctions ne prenant pas en compte l'aspect monétaire, mais par exemple prenant en compte l'aspect énergétique ou matériel des dommages. \\
+
+Enfin, il serait intéressant de développer un outil permettant à un utilisateur non expérimenté de varier ses paramètres, afin d'apporter ces questions dans un débat qui dépasse la communauté de la modélisation. 
