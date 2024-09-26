@@ -62,7 +62,7 @@
 \newcommand*{\covertable}[1]{\def\@covertable{#1}}
 
 %% Scale the margins to be slightly smaller than default (.7)
-\geometry{a4paper,hscale=0.75,vscale=0.8}
+\geometry{a4paper, twoside, inner=3cm, outer=2cm}
 
 %% ----------------------------------------------------------------------
 %%    Setting up the fonts
@@ -241,9 +241,16 @@
     %% Construct the cover page with Tikz
     \begin{tikzpicture}[overlay,remember picture]
 
+        
+
         %% Add the cover image
         \node[above=0,inner sep=0] at (current page.south) {%
             \includegraphics[width=\paperwidth]{\@coverimage}};
+        %% Add the grey background under the logos
+            %% Add the grey background with a gradient under the logos
+        \shade[bottom color=white, top color=white!0, opacity=0.5] 
+            ([yshift=0cm]current page.south west) rectangle 
+            ([yshift=5cm]current page.south east);
 
         %% Add the affiliation on the left
         \node[rotate=90,below right=40mm and 3mm] at (current page.west) {%
@@ -251,13 +258,13 @@
 
         %% Add the logo in the bottom left
         \node[above right=15mm] at (current page.south west) {%
-            \includegraphics[height=30mm]{figures/logos/CMA.png}};
+            \includegraphics[height=29mm]{figures/logos/CMA.png}};
 
-        \node[above left=15mm] at (current page.south east) {%
-            \includegraphics[height=30mm]{figures/logos/iedes_alpha.png}};
+        \node[above left=6mm] at (current page.south east) {%
+            \includegraphics[height=42mm]{figures/logos/iedes_alpha.png}};
 
         %% Add the banner with the title, subtitle, subject and author(s)
-        \node[below=2cm,fill=black!55,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
+        \node[below=2cm,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
             \begin{minipage}{0.9\paperwidth}
                 %% Format and add the title
                 \color{title}\raggedright\largetitlestyle\fontsize{50}{50}\selectfont%
