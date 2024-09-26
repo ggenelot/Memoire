@@ -24,8 +24,8 @@ Dans un premier temps, nous présenterons le cadre conceptuel de Tuana, qui perm
 
 
 
-\cite{schienke_intrinsic_2011} => sur l'éthique intrinsèque dans les IAMs
-\cite{weitzman_modeling_2009} => sur les événements non-linéaires
+%\cite{schienke_intrinsic_2011} => sur l'éthique intrinsèque dans les IAMs
+%\cite{weitzman_modeling_2009} => sur les événements non-linéaires
 
 
 
@@ -33,7 +33,7 @@ Dans un premier temps, nous présenterons le cadre conceptuel de Tuana, qui perm
 
 Cette section pose plusieurs questions quant à la place de la technique et de la modélisation dans la cité. 
 
-Elle s'appuie notamment sur \cite{jonas_principe_2008} et \cite{edwards_vast_2013}, ainsi que sur la classification des enjeux éthiques de \cite{tuana_leading_2010}.
+%Elle s'appuie notamment sur \cite{jonas_principe_2008} et \cite{edwards_vast_2013}, ainsi que sur la classification des enjeux éthiques de \cite{tuana_leading_2010}.
 
 
 Comme nous l'avons vu précédemment, le processus de modélisation est avant tout un processus de sélection de ce qui est représenté et ce qui ne l'est pas, et de décision de la manière de le représenter. Comme nous le verrons dans le chapitre \ref{chapter:socio}, l'imperfection et la partialité des modèles est souvent assumée, voire revendiquée par les équipes de modélisation. Elle s'accompagne souvent d'une tentative de dé-responsabilisation de l'équipe de modélisation. Celle-ci prend généralement la forme suivante : 
@@ -125,36 +125,34 @@ D'abord, le découpage par région. Les modèles se focalisent sur certaines ré
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/FUND_regions.png} % Remplacez par le chemin de votre image
+        \includegraphics[width=\linewidth]{results/carte_fund.png} % Remplacez par le chemin de votre image
         \subcaption{FUND}
         \label{fig:carte_fund}
     \end{minipage}%
     \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{figures/WILIAM_regions.png} % Remplacez par le chemin de votre image
+        \includegraphics[width=\linewidth]{results/carte_wiliam.png} % Remplacez par le chemin de votre image
         \subcaption{WILIAM}
         \label{fig:carte_WILIAM}
     \end{minipage}%
-    \legende{Granularité spatiale différente entre les modèles}{}
+    \legende{Granularité spatiale différente entre les modèles}{A gauche, les régions de FUND; à droite les régions dans le modèle WILIAM. Dans WILIAM, la région UE27 est elle même découpée en 27 régions, qui correspondent aux pays de l'UE. Il est intéressant de remarquer que les découpages géographiques différents sont les reflets de perspectives particulière. Dans le cas de WILIAM, il s'agit d'un modèle destiné à alimenter les réflexions de la Commission Européenne. C'est pour cela qu'il est centré autour de l'UE. FUND cherche à produire des résultats globaux. De ce fait, il calcule les dommages dans toutes les zones. On remarquera en particulier que l'Amérique Latine ou que l'Afrique subsaharienne sont des zones, dont on ne distingue pas les pays et les spécificités régionales. }
     \label{fig:trois_cartes}
 \end{figure} 
 
 La figure \ref{fig:trois_cartes} montre les différences de régions entre le modèle WILIAM (qui accueille notre expérience) et le modèle FUND. Dans les deux cas, le découpage fait des régions très hétérogènes, qui regroupent elles-mêmes des zones aux caractéristiques différentes. 
 
-Ce double choix de découpage et de granularité est \emph{une} manière \emph{particulière} de décrire le monde, qui résulte d'un contexte social et culturel. Il ne s'agit pas ici de dire qu'il s'agit d'un \emph{mauvais} choix : en effet, ces choix se justifient, et sont d'ailleurs justifié par les équipes de modélisation. WILIAM est un modèle issu du projet LOCOMOTION, financé par l'Union Européenne pour éclairer les décisions de la Commission Europénne \autocite{locomotion-h2020_locomotion-h2020wiliam_model_vensim_2024}. Il donc pertinent qu'il soit centré sur les pays de l'Union Européenne. De la même manière, FUND est particulièrement utilisé par les administrations des Etats-Unis. Il ne s'agit pas non plus de dire que le fait qu'il y ait un choix soit en soit en problème. Bien au contraire, le fait de faire des choix est au coeur de la pratique de la modélisation, et est d'ailleurs ce qui en fait la force. Il s'agit plutôt de mettre en évidence le fait que ces conceptions sont porteuses de valeurs, et qu'elles constituent en cela un enjeu d'éthique intrinsèque. Il faut donc qu'elles soient claires et variées au sein du bouquet de modèles disponibles. 
+Ce double choix de découpage et de granularité est \emph{une} manière \emph{particulière} de décrire le monde, qui résulte d'un contexte social et culturel. Il ne s'agit pas ici de dire qu'il s'agit d'un \emph{mauvais} choix : en effet, ces choix se justifient, et sont d'ailleurs justifié par les équipes de modélisation. WILIAM est un modèle issu du projet LOCOMOTION, financé par l'Union Européenne pour éclairer les décisions de la Commission Europénne \autocite{locomotion-h2020_locomotion-h2020wiliam_model_vensim_2024}. Il donc pertinent qu'il soit centré sur les pays de l'Union Européenne. De la même manière, FUND est particulièrement utilisé par les administrations des Etats-Unis. Il ne s'agit pas non plus de dire que le fait qu'il y ait un choix soit en soit en problème. Bien au contraire, le fait de faire des choix est au coeur de la pratique de la modélisation, et est d'ailleurs ce qui en fait la force. Il s'agit plutôt de mettre en évidence le fait que ces conceptions sont porteuses de valeurs, et qu'elles constituent en cela un enjeu d'éthique intrinsèque. Il faut donc qu'elles soient claires et variées au sein du bouquet de modèles disponibles.  \\
 
-Un troisième exemple, toujours lié à la question de l'équité spatiale, est celui du pondérateur géographique. L'absence d'un tel pondérateur est, du point de vue du fonctionnement du modèle, équivalente au fait d'avoir un coefficient de 1. Aussi, en en donnant une valeur explicite de 1, puis en faisant varier cette valeur, nous avons cherché à faire apparaitre explicitement dans le modèle ce que nous considérons être une position éthique importante. 
+Un troisième exemple, toujours lié à la question de l'équité spatiale, est celui du pondérateur géographique. L'absence d'un tel pondérateur est, du point de vue du fonctionnement du modèle, équivalente au fait d'avoir un coefficient de 1. Aussi, en en donnant une valeur explicite de 1, puis en faisant varier cette valeur, nous avons cherché à faire apparaitre explicitement dans le modèle ce que nous considérons être une position éthique importante.  \\
 
 Celle-ci est particulièrement visible dans FUND. L'expression de la valeur d'une vie statistique, dont nous nous sommes inspirés pour produire le pondérateur, est justifiée comme ceci : 
 
-\begin{quote}
+\begin{authoredquote}[\autocite{anthoff_fund_nodate}]
     This calibration results in a best guess value of a statistical life that is 200 times per capita income (Cline, 1992). 
-\end{quote}
+\end{authoredquote}
 
-Le choix de la valeur est calibré pour représenter 200 fois le revenu par habitant de la région où il est calculé. La valeur d'une vie est donc : 1/ différente dans chaque région; 2/ proportionnelle au niveau de revenus. Cette approche témoigne de choix éthiques qui ne sont pas négligeables. 
-
-De la même manière, le choix de ne pas pondérer les dommages créés des hiérarchies entre les régions. Des dommages réalisés dans une région 5 fois plus pauvre (au sens du PIB) compteront 5 fois moins que les autres, à dommage égal. Il y a un alignement de la valeur des choses sur leur valeur monétaire. 
+Le choix de la valeur est calibré pour représenter 200 fois le revenu par habitant de la région où il est calculé. La valeur d'une vie est donc : 1/ différente dans chaque région; 2/ proportionnelle au niveau de revenus. Cette approche témoigne de choix éthiques qui ne sont pas négligeables. De la même manière, le choix de ne pas pondérer les dommages créés des hiérarchies entre les régions. Des dommages réalisés dans une région 5 fois plus pauvre (au sens du PIB) compteront 5 fois moins que les autres, à dommage égal. Il y a un alignement de la valeur des choses sur leur valeur monétaire. 
 
 
 \subsection{L'éthique extrinsèque}
@@ -194,7 +192,7 @@ Les modèles intégrés sont utilisés comme base scientifique pour les négocia
 \subsection{Un monde homogène, technique et neutre ?}
 \label{ss:model-lineaire}
 
-Les relations entre modélisateurs et décideurs s'inscrivent dans ce que \textcite{aykut_gouverner_nodate} nomment le modèle linéaire de l'expertise. Il s'agit de l'idée selon laquelle \enquote{a connaissance précède l’application et le consensus scientifique précède l’action politique}. Le fonctionnement du \gls{regime climatique} suit en effet ce modèle : les chercheurs publient, sont évalués par le GIEC, qui est interprété par le SBSTA, avant de devenir des politiques climatiques basées sur un consensus scientifique. L'exemple du coût social du carbone va aussi en ce sens : les modèles sont développés, puis évalués par le groupe inter-agence pour le coût social du carbone, avant d'être utilisé dans l'évaluation des politiques publiques par les agences fédérales. 
+Les relations entre modélisateurs et décideurs s'inscrivent dans ce que \textcite{aykut_gouverner_2015} nomment le modèle linéaire de l'expertise. Il s'agit de l'idée selon laquelle \enquote{a connaissance précède l’application et le consensus scientifique précède l’action politique}. Le fonctionnement du \gls{regime climatique} suit en effet ce modèle : les chercheurs publient, sont évalués par le GIEC, qui est interprété par le SBSTA, avant de devenir des politiques climatiques basées sur un consensus scientifique. L'exemple du coût social du carbone va aussi en ce sens : les modèles sont développés, puis évalués par le groupe inter-agence pour le coût social du carbone, avant d'être utilisé dans l'évaluation des politiques publiques par les agences fédérales. 
 
 Il y a dès lors une \enquote{séparation radicale entre science et politique : à la science, les faits, les connaissances ; à la politique, les décisions, les valeurs, les croyances}. 
 
@@ -234,7 +232,7 @@ Une autre difficulté rencontrée par les modèles est la représentation des al
 
 Ces critiques rejoignent celles formulées par Aykut et Dahan : 
 
-\begin{authoredquote}[\textcite{aykut_gouverner_nodate}, p.19]
+\begin{authoredquote}[\textcite{aykut_gouverner_2015}, p.19]
     Au cours des années 1990, les pays en développement ne sont convaincus ni de la gravité du risque climatique ni du fait que ce problème les concerne. Ils contestent la prééminence de son traitement « physique » qui privilégie trop, selon eux, le global par rapport au local. Ils critiquent le point de vue de la modélisation numérique globale ou, du moins, le transfert de sa méthodologie au niveau politique ; transfert qui, disent-ils :  
     \begin{itemize}
         \item effacerait le passé (or, le Nord s’est industrialisé, équipé et il a pollué, pas le Sud)
@@ -254,11 +252,11 @@ Si cette critique concerne principalement les modèles physiques tels que les mo
 
 Les fonctions de dommage ne peuvent représenter qu'un nombre limité de phénomènes. Par cela, elles cadrent ce que les modèles considèrent comme dommages; si les modèles sont repris dans le débat public ou dans le \gls{regime climatique}, elles cadrent même la perception possible des impacts du changement climatique. \\
 
-\textcite{aykut_gouverner_nodate} donnent cette définition du cadrage (ou \emph{framing} en anglais) : c'est un concept qui  \emph{renvoie à la formulation d’un problème socio-technique dans les discours savants et publics, aux liens établis avec d’autres questions et aux mesures envisagées pour traiter le problème (solutions technologiques ou politiques, approches globales ou locales, etc.), souvent sous-jacentes à son évaluation}. Ils donnent différents éléments permettant de caractériser le cadrage du \gls{regime climatique}. Le premier est sa globalité, c'est à dire l'idée selon laquelle le changement climatique est un problème global, avec des sources globales et des réponses globales. Cette idée prend sa source dans les modèles climatiques, qui, en représentant le climat comme une réalité globale et sans frontières, tendent à effacer les différences locales de responsabilité ou de vulnérabilité. Le cadrage du débat climatique par les sciences du climat se fait par trois canaux principaux : 
+\textcite{aykut_gouverner_2015} donnent cette définition du cadrage (ou \emph{framing} en anglais) : c'est un concept qui  \emph{renvoie à la formulation d’un problème socio-technique dans les discours savants et publics, aux liens établis avec d’autres questions et aux mesures envisagées pour traiter le problème (solutions technologiques ou politiques, approches globales ou locales, etc.), souvent sous-jacentes à son évaluation}. Ils donnent différents éléments permettant de caractériser le cadrage du \gls{regime climatique}. Le premier est sa globalité, c'est à dire l'idée selon laquelle le changement climatique est un problème global, avec des sources globales et des réponses globales. Cette idée prend sa source dans les modèles climatiques, qui, en représentant le climat comme une réalité globale et sans frontières, tendent à effacer les différences locales de responsabilité ou de vulnérabilité. Le cadrage du débat climatique par les sciences du climat se fait par trois canaux principaux : 
 
 
 
-\begin{authoredquote}[\textcite{aykut_gouverner_nodate}, p.19]
+\begin{authoredquote}[\textcite{aykut_gouverner_2015}, p.19]
     \begin{itemize}
     \item la \textbf{concentration sur les modèles globaux de l’atmosphère} comme outil incontournable des projections climatiques, y compris pour les prévisions régionales obtenues par descente en échelle (downscaling) des modèles globaux, a contribué à globaliser les problèmes, à désigner l’arène mondiale/globale comme l’échelle unique de traitement du risque climatique ;
 	\item le \textbf{réductionnisme physico-chimique des sciences du climat} tend à mettre en avant les caractéristiques universelles des GES et à les séparer de leur signification sociale locale. Les molécules de méthane des rizières ou celles de gaz carbonique des voitures jouent un rôle identique dans la mise en équation de l’effet de serre. C’est ce que Demeritt (2001) a qualifié de déterminisme environnemental tacite ;
@@ -367,7 +365,7 @@ Le contexte de la modélisation est particulièrement intéressant de ce point d
 
 
 
-\cite{helgeson_attention_2022} => pote de Tuana qui parle des valeurs
+%\cite{helgeson_attention_2022} => pote de Tuana qui parle des valeurs
 
 \section{Responsabilité et doutes normativement inappropriés}
 
