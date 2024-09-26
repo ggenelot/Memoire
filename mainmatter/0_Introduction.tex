@@ -26,10 +26,10 @@ Longtemps, l'emphase a été mise sur la production de connaissance scientifique
 
 Une des difficultés réside dans l'incertitude qui entoure le changement climatique : d'abord, historiquement, autour de son existence; puis autour de son ampleur; aujourd'hui, autour des canaux par lesquels ces impacts vont se réaliser et leurs interactions avec des structures sociales par essence très complexes. 
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{figures/trajectoire_spm6.png}
-    \legende{Les trajectoires possibles pour atteindre les objectifs de développement durable}{Chaque fléche représente symboliquement un chemin de développement possible. Plus les flèches sont rouges, et plus le développement est loin des Objectifs de développement Durable et vulnérable aux aléas climatiques. Cette figure, issue du rapport de synthèse du GIEC (SPM.6) \cite{lee_ipcc_2023}, montre que les décisions prises aujourd'hui influe les trajectoires possible demain. Elle illustre comment les concepts de trajectoires et de scénarios sont centraux dans le choix du chemin de développement.}
+    \legende{Les trajectoires possibles pour atteindre les objectifs de développement durable}{Chaque fléche représente symboliquement un chemin de développement possible. Plus les flèches sont rouges, et plus le développement est loin des Objectifs de développement Durable et vulnérable aux aléas climatiques. Cette figure, issue du rapport de synthèse du GIEC (SPM.6) \textcite{lee_ipcc_2023}, montre que les décisions prises aujourd'hui influe les trajectoires possible demain. Elle illustre comment les concepts de trajectoires et de scénarios sont centraux dans le choix du chemin de développement.}
     \label{fig:pathways}
 \end{figure}
 
@@ -41,7 +41,7 @@ Pour aborder ce sujet, nous allons mobiliser plusieurs concepts, que nous serons
 
 % Modélisation 
 
-D'abord, celui de modélisation. Il s'agit d'une simplification de la réalité, qui permet de mieux la comprendre. Nous nous intéresserons particulièrement aux modèles intégrés, \textit{représentations simplifiées de systèmes sociaux et physiques complexes, qui se concentrent sur les interactions entre l'économie, la société et l'environnement}. Plus simple que les modèles climatiques, ils représentent à la fois des composantes physiques, économiques et énergétiques. Ils permettent ainsi de considérer simultanément ces sous-systèmes et leurs interactions. 
+D'abord, celui de \gls{modelisation}. Il s'agit d'une simplification de la réalité, qui permet de mieux la comprendre. Nous nous intéresserons particulièrement aux \gls{iam}, \textit{représentations simplifiées de systèmes sociaux et physiques complexes, qui se concentrent sur les interactions entre l'économie, la société et l'environnement}. Plus simple que les modèles climatiques, ils représentent à la fois des composantes physiques, économiques et énergétiques. Ils permettent ainsi de considérer simultanément ces sous-systèmes et leurs interactions. 
 
 % Impact et dommage climatiques
 
@@ -70,41 +70,55 @@ La question de recherche principale est : faut-il représenter les impacts du ch
 
 
 
-Le  chapitre 1 \ref{chapter:introduction} est consacré à une présentation du contexte scientifique et politique dans lequel s'inscrivent les fonctions de dommage. Il présente d'abord les différents risques climatiques, c'est-à-dire les raisons pour lesquelles on s'intéresse au changement climatique. Il poursuit en présentant l'intrication entre les sciences dures et la politique dans les négociations climatiques. Enfin, il présente les outils qui permettent d'éclairer ces décisions, notamment les modèles intégrés et leurs fonctions de dommage. Il sert avant tout à contextualiser l'environnement dans lequel se situe la modélisation intégrée. 
+Le  chapitre \ref{chapter:introduction} est consacré à une présentation du contexte scientifique et politique dans lequel s'inscrivent les \gls{damage function}. Il présente d'abord les différents risques climatiques, c'est-à-dire les raisons pour lesquelles on s'intéresse au changement climatique. Il poursuit en présentant l'intrication entre les sciences dures et la politique dans les négociations climatiques. Enfin, il présente les outils qui permettent d'éclairer ces décisions, notamment les modèles intégrés et leurs fonctions de dommage. Il sert avant tout à contextualiser l'environnement dans lequel se situe la modélisation intégrée. 
 
-Le chapitre 2 présente une revue de littérature sur les fonctions de dommage. Il vise à présenter un état des lieux, qui se veut le plus complet mais non exhaustif, des fonctions de dommages qui sont utilisées (ou non) dans les modèles. Il est suivi d'une analyse de cet état des lieux, en classant les fonctions de dommages selon leur utilisation finale, leur forme ou encore les paramètres qui sont pris en compte. 
+Le chapitre \ref{chapter:litrev} présente une revue de littérature sur les \gls{damage function}. Il vise à présenter un état des lieux, qui se veut le plus complet mais non exhaustif, des fonctions de dommages qui sont utilisées (ou non) dans les modèles. Il est suivi d'une analyse de cet état des lieux, en classant les fonctions de dommages selon leur utilisation finale, leur forme ou encore les paramètres qui sont pris en compte. 
 
-Le chapitre 3 est la partie la plus expérimentale du mémoire. On cherche à quantifier l'effet des choix de modélisation sur le résultat des modèles, c'est-à-dire à quel point ils sont sensibles à leurs hypothèses. Dans un premier temps, on décrit la méthodologie pour pouvoir comparer les différentes fonctions entre elles, puis on réalise de nombreuses simulations avec de légères variations. Ces résultats font ensuite l'objet d'une analyse économétrique, pour quantifier l'effet des variations sur le niveau de dommage final et sa distribution. Cette expérimentation se fait dans le modèle WILIAM, auquel on a ajouté des fonctions reproduisant le comportement des fonctions de dommage d'autres modèles.
+Le chapitre \ref{chapter:modelisation} est la partie la plus expérimentale du mémoire. On cherche à quantifier l'effet des choix de modélisation sur le résultat des modèles, c'est-à-dire à quel point ils sont sensibles à leurs hypothèses. Dans un premier temps, on décrit la méthodologie pour pouvoir comparer les différentes fonctions entre elles, puis on réalise de nombreuses simulations avec de légères variations. Ces résultats font ensuite l'objet d'une analyse économétrique, pour quantifier l'effet des variations sur le niveau de dommage final et sa distribution. Cette expérimentation se fait dans le modèle \Gls{WILIAM}, auquel on a ajouté des fonctions reproduisant le comportement des fonctions de dommage d'autres modèles.
 
-Dans le chapitre 4, on identifie des enjeux éthiques liés à la modélisation intégrée, que l'on tente d'éclairer à travers une approche épistémologique. Des exemples, tels que le choix de la forme de la fonction, des paramètres ou encore des phénomènes représentées sont analysés grâce à des philosophes des sciences tels que Jonas, Longino et d'autres. 
+Dans le chapitre \ref{chapter:ethique}, on identifie des enjeux éthiques liés à la modélisation intégrée, que l'on tente d'éclairer à travers une approche épistémologique. Des exemples, tels que le choix de la forme, de la fonction, des paramètres ou encore des phénomènes représentés, sont analysés grâce à des philosophes des sciences.
 
 
-Le chapitre 5 s'interroge sur la perception de ces enjeux éthiques chez les personnes qui participent au débat public sur les questions climatiques. A travers des entretiens semis-directifs chez une dizaine d'acteurs (scientifiques, techniciens, politiques et société civile), on cherche à établir quelle compréhension des enjeux éthiques transparait dans leur transposition au débat public. 
+Le chapitre \ref{chapter:socio} s'interroge sur la perception de ces enjeux éthiques chez les personnes qui participent au débat public sur les questions climatiques. À travers des entretiens semi-directifs chez une dizaine d'acteurs (scientifiques, techniciens, politiques et société civile), on cherche à établir quelle compréhension des enjeux éthiques transparait dans leur transposition au débat public. 
 
 \begin{tcolorbox}[title=Avertissement]
-    L'ensemble du code source utilisé dans le cadre de ce mémoire est accessible en libre-accès sur \href{https://github.com/ggenelot/damage-functions-modeling}{ce dépôt github}. Par ailleurs, un des fils conducteurs de ce mémoire est de mener une réflexion épistémologique au plus près du modèle, et notamment du code. Cela est notamment rendu possible par \href{https://damage-functions-modeling.readthedocs.io/en/latest/index.html}{ce blog}, qui permet d'intégrer des morceaux de code. Tout au long du mémoire, des passages feront référence à des morceaux de code et/ou à des analyses qui y sont présentées. Il suffit alors de cliquer sur le lien pour y avoir accès. \\
+    L'ensemble du code source utilisé dans le cadre de ce mémoire est accessible en libre accès sur \href{https://github.com/ggenelot/damage-functions-modeling}{ce dépôt github}. Par ailleurs, un des fils conducteurs de ce mémoire est de mener une réflexion épistémologique au plus près du modèle, et notamment du code. Cela est notamment rendu possible par \href{https://damage-functions-modeling.readthedocs.io/en/latest/index.html}{ce blog}, qui permet d'intégrer des morceaux de code. Tout au long du mémoire, des passages feront référence à des morceaux de code et/ou à des analyses qui y sont présentées. Il suffit alors de cliquer sur le lien (voir figure \ref{fig:logo}) pour y avoir accès. Il est également possible de se rendre sur le site en scannant le QR code (voir figure \ref{fig:qrcode}). \\
 
+    \begin{center}
+        \begin{minipage}{0.3\textwidth} % Ajustez la largeur selon vos besoins
+            \centering
+            \includegraphics[width=3cm]{figures/logos/development.png}
+            \captionof{figure}{Logo cliquable permettant d'accéder au site compagnon}
+            \label{fig:logo}
+        \end{minipage}%
+        \hspace{0.05\textwidth} % Espace entre les deux images
+        \begin{minipage}{0.3\textwidth} % Ajustez la largeur du minipage
+            \centering
+            \includegraphics[width=3cm]{illustrations/frame.png} % Ajustez la taille du QR code selon vos besoins
+            \captionof{figure}{QR code vers le site compagnon}
+            \label{fig:qrcode}
+        \end{minipage}
+    \end{center}
 
-    \includegraphics[width=1cm]{figures/logos/development.png}
 
 
     
 \end{tcolorbox}
 
 \begin{tcolorbox}[title=License]
-    Ce travail est distribué sous la licence CC0. 
+    Toute la production originale est distribué sous la licence CC0. Ceci ne comprend pas les images et figures issues d'autres sources, qui appartiennent à leurs auteurs respectifs. De la même manière, le code source de WILIAM appartient à ses développeurs, et la propriété intellectuelle de chaque fonction de dommage revient à ses créateurs. \\
 
-    Autres détenteurs de droits : 
-    \begin{itemize}
-        \item flaticon pour l'icône de livre
-    \end{itemize}
+     \begin{center}
+        \begin{minipage}{0.3\textwidth} % Ajustez la largeur selon vos besoins
+            \centering
+            \includegraphics[width=6cm]{illustrations/ccby.png}
+            \captionof{figure}{Distribué sous licence CC-BY}
+            \label{fig:ccby2}
+        \end{minipage}%
+    \end{center}
+
 \end{tcolorbox}
 
 
 Les annexes proposent des documents complémentaires, notamment un index / glossaire, qui permet de mieux situés les termes les uns par rapport aux autres. 
 
-
-
-\begin{tcolorbox}[title=Accronymes]
-    \Gls{imp} \Gls{attenuation} \Gls{ethique} \Gls{procedural ethics} \Gls{intrinsic ethics} \Gls{extrinsic ethics} \Gls{ipcc} \Gls{giec} \Gls{tippingpoint} \Gls{Risk tipping point} \Gls{iam} \Gls{scenario} \Gls{modele} \Gls{damage function} \Gls{incertitude}
-\end{tcolorbox}
