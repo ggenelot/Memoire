@@ -7,24 +7,21 @@
 
 \chapterabstract{Les fonctions de dommage permettent de modéliser les impacts du changement climatique sur d'autres parties du modèle. Elles peuvent varient par leur existence, forme, calibration ou par les paramètres ou secteurs qu'elles prennent en compte. Pourtant, un changement dans ces fonctions peut radicalement faire changer le fonctionnement d'un modèle, et ainsi les résultats et les conclusions qu'on en tire. Cette partie s'intéresse donc aux différentes fonctions de dommage qui existent dans la littérature.}
 
+
+\newpage
+
+
 %%Accroche
-Les modèles intégrés sont ainsi derrière de nombreuses publications qui informent le débat public : rapports du GIEC, Stern Review, revue du coût social du carbone. Ils ont donc un rôle de premier plan dans la prise de décisions sur les questions climatiques, sur les options qu'ils estiment possibles ainsi que sur les conséquences anticipées de telle ou telle action. Un élément clé de cette modélisation est la prise en compte des impacts climatiques. 
-
-
-%%Définition des termes
-
-%%Rappel du sujet
-Les différentes formes de fonction de dommage dans les modèles intégrés
-
+Les modèles intégrés sont ainsi derrière de nombreuses publications qui informent le débat public : rapports du GIEC, Stern Review, revue du coût social du carbone. Ils ont donc un rôle de premier plan dans la prise de décisions sur les questions climatiques, sur les options qu'ils estiment possibles ainsi que sur les conséquences anticipées de telle ou telle action. Un élément clé de cette modélisation est la prise en compte des impacts climatiques. Nous nous intéressons ici à la diversité des approches de modélisation des dommages, au travers de ces questions : 
 %%Problématique
-Quelles sont les fonctions de dommages utilisées dans les modèles intégrés ? Et, plus précisement, quels modèles utilisent des fonctions de dommage ? Quels phénomènes sont représentés ? Quelles variables entrent en compte, et comment sont-elles paramétrisées ? 
+Quelles sont les fonctions de dommages utilisées dans les modèles intégrés ? Et, plus précisement, quels modèles utilisent des fonctions de dommage ? Quels phénomènes sont représentés ? Quelles variables entrent en compte, et comment sont-elles paramétrisées ? \\
 
 %% Annonce du plan
 Dans une première partie, nous détaillerons la méthodologie utilisée pour obtenir la base de donnée des fonctions de dommage. Dans une seconde partie, nous la décrirons avec différentes statistiques descriptives. Enfin, nous aborderons trois points critiques des fonctions de dommage : leur forme; leurs paramètres; et la calibration. 
 
 \begin{methodbox}[Revue de la littérature]
-Pour obtenir une base de données des différentes fonctions de dommage, nous avons cherché à fusionner plusieurs sources de données. D'abord, l'IAM Consortium publie sur son site internet les documentations de nombreux modèles intégrés, sous la forme d'un wiki. Ces fiches sont rédigées par les équipes des modèles - ce qui permet d'avoir une source primaire sur les informations concernant les modèles - mais sont souvent incomplètes. En revanches, des "cartes", qui détaillent les principales caractéristiques de chaque modèle, sont également disponibles. Ce sont principalement celles-ci qui sont utilisées dans la base de données. Une autre source de données est le fichier des scénarios utilisés par le GIEC. Celui-ci permet d'avoir des informations sur chacun des scénarios soumis pour l'AR6, et d'avoir accès à de nombreuses informations : modèle utilisé, vetted ou non, impacts climatiques pris en compte ou non. A ces différentes sources, on ajoute manuellement des modèles, basée sur une lecture aléatoire de la littérature. Ils comprennenent notablement les modèles utilisés par l'agence interagence du coût social du carbone, ceux cités par Souffron et Jacques, ceux utilisés par les SSP, ainsi que d'autres modèles intégrés trouvés par littérature interposée. 
-Le monde de la modélisation est très vaste, les modèles souvent compliqués à comprendre et parfois peu transparents. Ainsi, il a toujours été préféré de se baser sur des sources explicites. Bien qu'un véritable effort pour chercher à avoir une vision sur le plus de modèles possibles, cette étude ne peut pas être considérée comme un recensement exhaustif des modèles intégrés ni de leurs fonctions de dommage. \\ \gls{latex}
+Pour obtenir une base de données des différentes fonctions de dommage, nous avons cherché à fusionner plusieurs sources de données. D'abord, l'IAM Consortium publie sur son site internet les documentations de nombreux modèles intégrés, sous la forme d'un wiki. Ces fiches sont rédigées par les équipes des modèles - ce qui permet d'avoir une source primaire sur les informations concernant les modèles - mais sont souvent incomplètes. En revanches, des "cartes", qui détaillent les principales caractéristiques de chaque modèle, sont également disponibles. Ce sont principalement celles-ci qui sont utilisées dans la base de données. Une autre source de données est le fichier des scénarios utilisés par le GIEC. Celui-ci permet d'avoir des informations sur chacun des scénarios soumis pour l'AR6, et d'avoir accès à de nombreuses informations : modèle utilisé, vetted ou non, impacts climatiques pris en compte ou non. A ces différentes sources, on ajoute manuellement des modèles, basée sur une lecture aléatoire de la littérature. Ils comprennent notablement les modèles utilisés par l'agence interagence du coût social du carbone, ceux cités par \textcite{souffron_successful_2024}, ceux utilisés par les SSP, ainsi que d'autres modèles intégrés trouvés par littérature interposée. 
+Le monde de la modélisation est très vaste, les modèles souvent compliqués à comprendre et parfois peu transparents. Ainsi, il a toujours été préféré de se baser sur des sources explicites. Bien qu'un véritable effort pour chercher à avoir une vision sur le plus de modèles possibles, cette étude ne peut pas être considérée comme un recensement exhaustif des modèles intégrés ni de leurs fonctions de dommage. \\ 
 
 Une fois cette première liste de modèles obtenue, un premier tri est effectué entre ceux qui intègrent une fonction de dommage et ceux qui n'en intégrent pas. On considére ici les fonctions de dommages explicitement définies telles quelles, bien que d'autres fonctions puissent in fine avoir un comportement similaire. Ainsi, pour certaines, on a une connaissance explicite : par exemple, les fiches de l'IAMC comportent une case sur les impacts modélisés. Pour les autres, on considère qu'elles n'ont pas de fonction de dommage si les termes "damage function" ou "damage" ne sont pas présents dans leur documentation ou les publications associées, et s'il n'est pas fait mention de fonctions de dommage dans d'autres sources. \\
 
@@ -38,12 +35,12 @@ Enfin, une autre table est ajoutée : celle des risques identifiés par le GIEC.
 
 \end{methodbox}
 
-\begin{figure}
-    \centering
+%\begin{figure}
+    %\centering
     %\includegraphics{figures/campus.jpg}
-    \legende{Processus de sélection des modèles.}{Les modèles sont sélectionnées selon plusieurs critères : présence dans une des bases de données (GIEC, SCC, SSP, IAMC) ou dans une review. Ils sont ensuite comparés selon leurs caractéristiques.}
-    \label{fig:méthodo-litrev}
-\end{figure}
+    %\legende{Processus de sélection des modèles.}{Les modèles sont sélectionnées selon plusieurs critères : présence dans une des bases de données (GIEC, SCC, SSP, IAMC) ou dans une review. Ils sont ensuite comparés selon leurs caractéristiques.}
+    %\label{fig:methodo-litrev}
+%\end{figure}
 
 \section{Tour d'horizon des modèles et de leurs fonctions de dommage}
 
@@ -60,17 +57,15 @@ La littérature existante s'articule autour de trois axes. D'abord, il y a une a
 \paragraph{Les modèles sont accompagnés d'analyses}
 
 La principale source d'information que l'on a sur les modèles est les publications scientifiques qui en présentent les résultats.
-Il s'agit de publications qui démontrent quelque chose ou répondent à une question (voir, par exemple, \cite{int_panis_externe_2000, dafermos_how_2021, baumstark_remind21_2021, dafermos_stock-flow-fund_2017, cherp_global_2016, burke_global_2015}). Le modèle et/ou la fonction de dommage y sont peu décrits (au plus une équation sans paramétrisation), souvent dans la section méthodologie. Ces articles sont intéressants car ils permettent de comprendre la finalité des modèles, les conditions pour lesquelles ils ont été conçus. En revanche, ils ne permettent pas à eux seuls de reproduire l'analyse ou de la modifier. 
+Il s'agit de publications qui démontrent quelque chose ou répondent à une question (voir, par exemple, \autocite{int_panis_externe_2000, dafermos_how_2021, baumstark_remind21_2021, dafermos_stock-flow-fund_2017, cherp_global_2016, burke_global_2015}). Le modèle et/ou la fonction de dommage y sont peu décrits (au plus une équation sans paramétrisation), souvent dans la section méthodologie. Ces articles sont intéressants car ils permettent de comprendre la finalité des modèles, les conditions pour lesquelles ils ont été conçus. En revanche, ils ne permettent pas à eux seuls de reproduire l'analyse ou de la modifier. 
 
 
 \paragraph{Le niveau de documentation et d'ouverture varie considérablement}
 
-Une autre source de documentation est la littérature grise qui accompagne les publications scientifiques. On en trouve des formes très variées, telles que des rapports (voir \cite{medeas_guiding_2019, asbjorn_aaheim_grace_2018, european_commission_ginfors-e_2022, european_commission_gem-e3_2013, nordhaus_dice_2013}), des \emph{working papers} (voir par exemple \cite{dafermos_stock-flow-fund_2017, giraud_coping_2016, calvin_gcam_2019, bosetti_witch_2006, ghersi_imaclim-p_2014}), des blogs (voir par exemple \cite{tol}
+Une autre source de documentation est la littérature grise qui accompagne les publications scientifiques. On en trouve des formes très variées, telles que des rapports (voir \autocite{medeas_guiding_2019, asbjorn_aaheim_grace_2018, european_commission_ginfors-e_2022, european_commission_gem-e3_2013, nordhaus_dice_2013}), des \emph{working papers} (voir par exemple \autocite{dafermos_stock-flow-fund_2017, giraud_coping_2016, calvin_gcam_2019, bosetti_witch_2006, ghersi_imaclim-p_2014}), des blogs (voir par exemple \autocite{tol_fund_nodate})
 
-\paragraph{}
 
 \subsubsection{Sur les résultats des IAMs}
-
 
 
 
@@ -91,9 +86,9 @@ Meta analyse des estimations du niveau du changement climatique
 
 \paragraph{Il existe des fonctions de dommage, mais sous des modèles semblables entre eux et orthodoxes.}
 
-Dans une importante revue de littérature sur l'évaluation des dommages climatiques par les modèles intégrés, \cite{diaz_quantifying_2017} passe en revue les caractéristiques et contraintes liées aux fonctions de dommages. Elle inspecte en particulier DICE, FUND et PAGE, qui sont trois modèles conçus spécifiquement pour évaluer monétairement les impacts. Elle formule de nombreuses critiques : l'extrapolation à de hautes températures ou à d'autres régions, le choix des impacts représentés, l'absence d'interaction inter-régionales ou temporelles, l'absence de représentation de l'adaptation, des données scientifiques datées, la représentation lacunaire de l'incertitude, et d'autres encore. 
+Dans une importante revue de littérature sur l'évaluation des dommages climatiques par les modèles intégrés, \textcite{diaz_quantifying_2017} passe en revue les caractéristiques et contraintes liées aux fonctions de dommages. Elle inspecte en particulier DICE, FUND et PAGE, qui sont trois modèles conçus spécifiquement pour évaluer monétairement les impacts. Elle formule de nombreuses critiques : l'extrapolation à de hautes températures ou à d'autres régions, le choix des impacts représentés, l'absence d'interaction interrégionales ou temporelles, l'absence de représentation de l'adaptation, des données scientifiques datées, la représentation lacunaire de l'incertitude, et d'autres encore. 
 
-Cet article a servi de réference à la suite de ce travail. Néanmoins, les modèles représentés sont similaires, avec des objectifs similaires et produits par des communautés scientifiques proches. Or, la plupart des critiques faites par Diaz sont liées à des méthodes de modélisation ou  à des hypothèses générales. Pour comparer ces modèles et défier ces hypothèses, il faut sortir de cette communauté.  \\
+Cet article a servi de référence à la suite de ce travail. Néanmoins, les modèles représentés sont similaires, avec des objectifs similaires et produits par des communautés scientifiques proches. Or, la plupart des critiques faites par Diaz sont liées à des méthodes de modélisation ou  à des hypothèses générales. Pour comparer ces modèles et défier ces hypothèses, il faut sortir de cette communauté.  \\
 
 
 Nous nous intéressons donc à d'autres revues de littératures, plus large, mais permettant d'avoir un plus large panel de modèles. 
@@ -101,16 +96,16 @@ Nous nous intéressons donc à d'autres revues de littératures, plus large, mai
 \paragraph{Chercher des modèles plus divers permet de répondre à certaines des critiques}
 
 
-Par exemple, \cite{souffron_successful_2024} cherchent à explorer la diversité des modèles, et montrent qu'un plus large panel de modèles permet de mieux guider les politiques publiques. Ils montrent que les modèles orthodoxes sont particulièrement limités. Ils présentent ensuite des modèles alternatifs, mettant en avant les atouts et contraintes de chacun. Enfin, ils émettent des recommandations de caractéristiques que pourraient avoir des modèles idéaux, notamment le fait d'avoir des fonctions de dommage. 
+Par exemple, \textcite{souffron_successful_2024} cherchent à explorer la diversité des modèles, et montrent qu'un plus large panel de modèles permet de mieux guider les politiques publiques. Ils montrent que les modèles orthodoxes sont particulièrement limités. Ils présentent ensuite des modèles alternatifs, mettant en avant les atouts et contraintes de chacun. Enfin, ils émettent des recommandations de caractéristiques que pourraient avoir des modèles idéaux, notamment le fait d'avoir des fonctions de dommage. 
 
 
 
 
 
 
-\cite{souffron_successful_2024} => présente plein de modèles et les commente. Pas vraiment une revue de littérature sur les damage functions mais plus général, permet de bien se repérer dans la littérature + grosse emphase sur les modèles hétérodoxes
+%\cite{souffron_successful_2024} => présente plein de modèles et les commente. Pas vraiment une revue de littérature sur les damage functions mais plus général, permet de bien se repérer dans la littérature + grosse emphase sur les modèles hétérodoxes
 
-\cite{review of information on models}  Une revue des différents modèles 
+%\cite{review of information on models}  Une revue des différents modèles 
 
 \paragraph{D'autres revues comparent des hypothèses plus varéies dans les modèles}
 
@@ -134,7 +129,7 @@ On présente ici rapidement des modèles, leurs caractéristiques générales et
 
 \subsubsection{DICE}
 
-DICE veut dire \emph{Dynamic Integrated model of Climate and the  Economy} et constitue une des premières tentatives de modéliser les relations entre l'économie et le climat. Il comporte une fonction de dommage, extrêmement simplifiée. 
+\Gls{DICE} constitue une des premières tentatives de modéliser les relations entre l'économie et le climat. Il comporte une fonction de dommage, extrêmement simplifiée. 
 
 \begin{equation}
 \begin{array}{ll}
@@ -147,11 +142,12 @@ DICE veut dire \emph{Dynamic Integrated model of Climate and the  Economy} et co
 Avec : 
 \begin{itemize}
     \item $\Delta$ le niveau de dommage, en pourcentage du PIB
-    \item $T_{AT}$ le niveau de réchauffement climatique, en degré celsius
+    \item $T_{AT}$ le niveau de réchauffement climatique, en degré Celsius
     \item $\psi_1, \psi_2$ des paramètres permettant de calibrer la fonction
 \end{itemize}
+\vspace{15pt}
 
-Celle-ci est calibrée de manière à correspondre à des estimations issues du sixième rapport du GIEC et d'autres sources. Ils donnent un dommage de 1.62 \% du PIB pour un réchauffement de 3$\textdegree$C par rapport au niveau préindustriel \cite{barrage_policies_2023, nordhaus_dice_2013}. 
+Celle-ci est calibrée de manière à correspondre à des estimations issues du sixième rapport du GIEC et d'autres sources. Ils donnent un dommage de 1.62 \% du PIB pour un réchauffement de 3\textdegree C par rapport au niveau préindustriel \autocite{barrage_policies_2023, nordhaus_dice_2013}. 
 
 \subsubsection{FUND} 
 
@@ -163,6 +159,21 @@ Par exemple, l'impact du changement climatique sur l'agriculture est construit p
     A_{t,r}^{r}=\alpha_{r}\left(\frac{\Delta T_{t}}{0.04}\right)^{\beta}+\left(1-\frac{1}{\rho}\right)A_{t-1,r}^{r}
     \label{eq:fund_A2}
 \end{equation}
+
+avec : 
+
+\begin{itemize}
+    \item \(A_r\) représente les dommages dans la production agricole en tant que fraction dus au taux de changement climatique par temps et par région ;
+    \item \(t\) représente le temps ;
+    \item \(r\) représente la région ;
+    \item \(\Delta T\) représente la variation de la température moyenne régionale (en degrés Celsius) entre le temps \(t\) et \(t - 1\) ;
+    \item \(\alpha\) est un paramètre, indiquant la variation régionale de la production agricole pour un réchauffement annuel de 0,04\textdegree C ;
+    \item \(\beta = 2,0\) (1,5-2,5) est un paramètre, identique pour toutes les régions, indiquant la non-linéarité de la réaction à la température ; \(\beta\) est une estimation d'expert ;
+    \item \(\rho = 10\) (5-15) est un paramètre, identique pour toutes les régions, indiquant la vitesse d'adaptation ; \(\rho\) est une estimation d'expert.
+
+\end{itemize}
+\vspace{15pt}
+
 
 D'autres impacts sont aussi représentés, tels que l'impact du niveau des eaux sur le littoral, les écosystèmes, les dommages liés aux cyclones tropicaux et extra-tropicaux, etc., et ce par différents biais : des dommages directs (monétaires), et la monétarisation de perte de vie ou de perte de temps de vie. 
 
@@ -185,6 +196,8 @@ avec :
     \item $\gamma = -2.65$ un paramètre représentant l'élasticité-revenu de la mortalité (c'est-à-dire la manière dont la mortalité évolue selon le niveau de revenu)  
 \end{itemize}
 
+\vspace{15pt}
+
 On peut aussi évoquer la valeur d'une vie statistique, qui permet de d'associer une valeur monétaire à un décès : 
 \begin{equation}
     V S L_{t,r}=\alpha\left(\frac{y_{t,r}}{y_{0}}\right)^{\gamma}
@@ -199,7 +212,7 @@ Avec :
     \item $\epsilon = 1$ l'élasticité-revenu de la valeur d'une vie statistique (c'est-à-dire la manière dont la valeur d'une vie statistique évolue selon le niveau de revenu)
 \end{itemize}
 
-Cette équation est calibrée pour qu'une vie statistique soit égale à 200 fois le revenu par habitant \cite{anthoff_fund_nodate}. 
+Cette équation est calibrée pour qu'une vie statistique soit égale à 200 fois le revenu par habitant \autocite{anthoff_fund_nodate}. 
 
 \subsubsection{Autres formes quadratiques}
 
@@ -217,7 +230,7 @@ où :
     \item $\eta_1, \eta_2, \eta_3$ des paramètres
 \end{itemize}
 
-Dans le modèle WITNESS \cite{noauthor_witness_nodate}, le parti pris a été de modéliser deux types d'impacts. D'une part, les impacts que nous avons qualifiés ici de tendanciels, et d'autre part les événements catastrophiques et les tipping points. Ce modèle a donc deux fonctions de dommage. La première est une réplique de la fonction de dommage classique de DICE, et la seconde représente les évenements extremes (voir equation \ref{eq:WITNESS}). Elle permet de simuler une accélération du niveau de dommage une fois un tipping point passé. 
+Dans le modèle WITNESS, le parti pris a été de modéliser deux types d'impacts. D'une part, les impacts que nous avons qualifiés ici de tendanciels, et d'autre part les événements catastrophiques et les tipping points. Ce modèle a donc deux fonctions de dommage. La première est une réplique de la fonction de dommage classique de DICE, et la seconde représente les évenements extremes (voir equation \ref{eq:WITNESS}). Elle permet de simuler une accélération du niveau de dommage une fois un tipping point passé  \autocite{noauthor_witness_nodate}. 
 
 \begin{equation}
     D_t=\left(\frac{T_{t A T}}{20.46}\right)^2+\left(\frac{T_{t A T}}{6.081}\right)^{6.754}
@@ -249,18 +262,18 @@ et
 
 \begin{equation}
    \theta_{2,t}^s = \theta_{2,0}^s \left( \frac{Temp_0}{Temp_{t-1}} \right)^{\Upsilon_{4}^s} 
-    \label{eq:DSK2}
+    \label{eq:DSK3}
 \end{equation}
 
-Voir \cite{reissl_dsk-sfc_2024} pour une description plus complète. 
+Voir \autocite{reissl_dsk-sfc_2024} pour une description plus complète. 
  
-\section{Trois questions centrales}
+\section{Deux enjeux}
 
 
 \subsection{La forme : comment représenter un phénomène qui n'existe pas encore ?}
 \label{ss:forme}
 
-La première difficulté quant à la représentation des impacts du changement climatique est le choix de la forme de la fonction de dommage. En effet, les phénomènes à l'origine des dommages climatiques sont à la fois incertains et récents. D'abord, les phénomènes physiques, dont on a du mal à avoir une représentation fiable et précise (voir notamment la section \ref{fig:tipping-point} sur les tipping points). Ensuite, et peut-être plus encore, l'interaction entre ces événements et les sociétés humaines est extremement difficile à comprendre, et donc à modéliser. Exercice de simplification, la modélisation nécessite pourtant d'extraire des lois générales de phénomènes particuliers, pour pouvoir établir des relations entre eux. \\
+La première difficulté quant à la représentation des impacts du changement climatique est le choix de la forme de la fonction de dommage. En effet, les phénomènes à l'origine des dommages climatiques sont à la fois incertains et récents. D'abord, les phénomènes physiques, dont on a du mal à avoir une représentation fiable et précise (voir notamment la section \ref{fig:tipping-point} sur les tipping points). Ensuite, et peut-être plus encore, l'interaction entre ces événements et les sociétés humaines est extrêmement difficile à comprendre, et donc à modéliser. Exercice de simplification, la modélisation nécessite pourtant d'extraire des lois générales de phénomènes particuliers, pour pouvoir établir des relations entre eux. \\
 
 Ainsi, il est déjà très difficile de choisir une forme fonctionnelle qui soit adaptée. On peut contrer cet argument en avançant que la pratique de la modélisation doit assumer cette simplification. De ce point de vue, un modèle ne vise pas à reproduire la réalité ou des mécanismes réels, mais seulement à fournir un cadre explicatif suffisant pour rendre intelligible des choses qui ne l'étaient pas avant. \\
 
@@ -269,13 +282,13 @@ Le caractère récent des impacts du changement climatique, et encore plus de la
 Enfin, ces sources de données ne couvrent qu'un intervalle d'anomalie de température assez faible. En effet, on estime le réchauffement climatique actuel à environ 1.2 \textdegree C par rapport à la période pré-industrielle. Cependant, les estimations vont plus haut : l'accord de Paris pour le climat vise à avoir une réchauffement limité à 2 \textdegree C , et le plus proche possible de 1.5 \textdegree C; des estimations vont plus loin encore. Ainsi, des fonctions calibrées sur l'intervalle $[+0; +1.2]$ pourraient ne pas du tout capter les phénomènes observés dans le futur, sur un intervalle plus grand. Là réside un des grands défis de la modélisation des dommages : il s'agit de modéliser des phénomènes qui n'existent pas encore, et qui surviendront dans un contexte probablement très différent sur de nombreux aspects de celui dans lequel a lieu la modélisation. 
 
 \begin{landscape}
-    \input{results/table_damage_functions}
+   % \input{results/table_damage_functions}
 \end{landscape}
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth]{results/shape.png}
-\legende{Niveau de dommage en fonction de l'augmentation de température}{Différentes formes fonctionnelles peuvent avoir un pouvoir explicatif important sur l'intervalle $[+0; +1.2]$, sur lequel on dispose de données empiriques, tout en divergeant grandement pour des valeurs plus haute de changement de température. Une fonction de dommage correctement calibrée pour des phénomènes observés n'est pas forcément calibrée pour les phénomènes futurs. Il s'agit d'une représentation schématique.}
+\includegraphics[width=0.5\textwidth]{results/shape.png}
+\legende{Niveau de dommage en fonction de l'augmentation de température}{Différentes formes fonctionnelles peuvent avoir un pouvoir explicatif important sur l'intervalle $[+0; +1.2]$, sur lequel on dispose de données empiriques, tout en divergeant grandement pour des valeurs plus haute de changement de température. Une fonction de dommage correctement calibrée pour des phénomènes observés n'est pas forcément calibrée pour les phénomènes futurs. Ainsi, toutes ces formes représentent de manière similaire les dommages jusqu'en 2070; après, en revanche, elles décrivent des niveaux de dommage drastiquement différents. Il s'agit d'une représentation schématique.}
 \end{figure}
 
 
@@ -303,15 +316,17 @@ La figure \ref{fig:sankey} représente les liens que font les fonctions de domma
     \label{fig:sankey}
 \end{figure}
 
-\subsection{La calibration : un \textit{"tiens"} vaut-il deux \textit{"tu l'auras"} ?}
+%\subsection{La calibration : un \textit{"tiens"} vaut-il deux \textit{"tu l'auras"} ?}
 
-\section{Trois querelles pour répondre à ces questions}
+\section{Deux querelles pour répondre à ces questions}
+
+Nous allons aborder ici deux exemples qui illustrent les choix liés à la modélisation des fonctions de dommage. Dans ces deux cas, une question est illustrée par deux positions distinctes. Nous verrons d'abord comment traiter le taux d'actualisation, avant de s'interroger sur l'intérêt même de représenter les dommages. 
 
 \subsection{Le taux d'actualisation : la querelle Nordhaus / Stern}
 
-La controverse qui oppose William Nordhaus et Nicolas Stern est un exemple classique des enjeux éthiques et normatifs induit par la modélisation intégrée. Il est bien expliquée dans \cite{guigourez_10_2023}, sur lequel on va s'appuyer pour rappeler ici les enjeux de cette querelle. \\
+La controverse qui oppose William Nordhaus et Nicolas Stern est un exemple classique des enjeux éthiques et normatifs induit par la modélisation intégrée. Il est bien expliquée dans \textcite{guigourez_10_2023}, sur lequel on va s'appuyer pour rappeler ici les enjeux de cette querelle. \\
 
-William Nordhaus est un économiste des Etats-Unis. Au début des années 1990, il met au point le modèle DICE, qui est une des premiers à modéliser l'interaction climat - économie. Ce modèle sera ensuite mis à jour régulièrement, et sera suivi de RICE, un modèle plus régionalisé. Il obtient le Prix dit Nobel d'Economie en 2018 pour ses l'intégration du changement climatique dans l'analyse macro-économique que long terme\cite{yale}. Adepte de la théorie des choix publics, il pense que l'inaction climatique vient d'une mauvaise appréciation des coûts futurs du changement climatique, et qu'une analyse coût-bénéfice permet de suivre des trajectoires climatiques plus optimales. 
+William Nordhaus est un économiste des Etats-Unis. Au début des années 1990, il met au point le modèle DICE, qui est une des premiers à modéliser l'interaction climat - économie. Ce modèle sera ensuite mis à jour régulièrement, et sera suivi de RICE, un modèle plus régionalisé. Il obtient le Prix dit Nobel d'Economie en 2018 pour ses l'intégration du changement climatique dans l'analyse macro-économique que long terme \autocite{noauthor_william_nodate-1}. Adepte de la théorie des choix publics, il pense que l'inaction climatique vient d'une mauvaise appréciation des coûts futurs du changement climatique, et qu'une analyse coût-bénéfice permet de suivre des trajectoires climatiques plus optimales. 
 Sir Nicolas Stern a été vice-président senior de la Banque Mondiale de 2000 à 2003. Peu après, le gouvernement britannique lui commande un rapport sur les effets du changement climatique sur l'économie. \\
 
 Les deux auteurs utilisent des modèles intégrés : Nordhaus utilise DICE, et Stern utilise PAGE. Les deux modèles sont similaires en termes d'hypothèses et de fonctionnement. Ces modèles sont des modèles d'optimisation, qui visent à donner un coût optimal à une tonne de carbone. Ils sont d'ailleurs utilisés pour calculer le coût social du carbone (voir figure \ref{fig:scc}). Pour pouvoir comparer le coût de politiques publiques aujourd'hui, aux gains ultérieurs (c'est-à-dire aux dommages futurs évités), il faut pouvoir comparer ces deux grandeurs. \\
@@ -333,7 +348,6 @@ Nordhaus utilise comme paramètres $\delta = 1.5\%$ et $\eta=2$, tandis que Ster
 
 À partir de ces simples hypothèses, et en utilisant des similaires, les auteurs obtiennent des résultats drastiquement différents. Stern suggère des investissements massifs et rapides, tandis que Nordhaus promeut de faibles investissements aujourd'hui, pour n'investir que plus tard. 
 
-\cite{guigourez_10_2023} => description de la querelle
 
 \begin{figure}
     \centering
@@ -352,16 +366,10 @@ C'est dans cette perspective que se place de nombreux modèles, qui cherchent à
 
 D'autre part, on peut argumenter que la représentation de ces dommages donne une fausse sensation de certitude. D'une part, elle done l'impression que le modèle est plus réaliste, en ce sens que ce qu'il dit \textit{serait} plus proche de la réalité et moins sujet aux travers de la simplification car justement plus complexe. Pourtant, on peut argumenter que la représentation des dommages, y compris quand elle est sophistiquée, fait appel à de nombreuses hypothèses, notamment concernant la permanence des phénomènes qui ont lieu. On a alors un modèle qui non seulement n'est pas forcément plus fiable ou plus proche de la réalité, mais qui est en plus nettement moins lisible, compréhensible - et dont les limites ne peuvent que très difficilement être interprétées et critiquées. 
 
-\subsection{Compter ce qui n'a pas de prix : la difficile monétarisation}
+%\subsection{Compter ce qui n'a pas de prix : la difficile monétarisation}
 
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\linewidth]{results/carte_progressive.png}
-    \legende{Double progression du niveau de dommage}{Le niveau de dommage suit une double progression. D'une part, il augmente avec le temps (qui est lui même très lié au niveau de réchauffement); d'autre part, il augmente avec le modèle : certains modèles donnent des niveaux de dommage plus importants que d'autres.}
-    \label{fig:carte-progressive}
-\end{figure}
-TODO 
+
 
 

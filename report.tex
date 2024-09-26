@@ -1,8 +1,8 @@
 \documentclass{layout/epfl-report}
 
 %% Set up the bibliography
-\usepackage[style=authoryear, backend=biber, backref=true, url=false]{biblatex}
-\addbibresource{references.bib}
+\usepackage[style=authoryear, citestyle=authoryear, backend=biber, backref=true, url=false]{biblatex}
+\addbibresource{bib_memoire.bib}
 
 \usepackage{lipsum}
 \usepackage{printlen}
@@ -13,12 +13,67 @@
 \makeindex[columns=2]
 
 \usepackage{cleveref}
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
+\usepackage{listings}
+
 
 % Pour avoir des citations sympas 
+
+
+
+\usepackage{xcolor}
+\usepackage{framed} % Pour ajouter un encadré
+% changer les quotes :
 \usepackage{csquotes}
-%\SetBlockEnvironment{displayquote}
-%\SetBlockEnvironmentText{\itshape}
+
+\usepackage{etoolbox}
+
+% Définir la couleur de la barre
+\definecolor{barcolor}{rgb}{0.6,0.6,0.6} % Ajustez la couleur si nécessaire
+
+
+\renewcommand{\enquote}[1]{\textit{«#1»}}
+
+% Définir la couleur de la barre
+\definecolor{barcolor}{gray}{0.6}
+
+% Redéfinir l'environnement displayquote avec un argument facultatif
+\renewenvironment{displayquote}[1][] % [1] permet de passer un argument optionnel
+  {\vspace{30pt}\noindent\begin{minipage}{0.98\textwidth} % Ajustez la largeur du minipage si besoin
+   \setlength{\parindent}{20pt}% Pas de retrait au début de la citation
+   \hspace{2mm}% Espacement à gauche de la barre
+   \color{barcolor}\vrule width 0.5mm\hspace{6pt}% Barre verticale de 1 mm d'épaisseur et espacement à droite
+   \begin{minipage}{0.85\textwidth}\itshape} % Texte en italique dans un second minipage
+   {\end{minipage}\end{minipage}\vspace{20pt}\par}
+
+
+% Création de l'environnement authoredquote
+\newenvironment{authoredquote}[1][]
+  {% \begin{authoredquote}[Auteur]
+   \def\optarg{#1}% Capture l'argument optionnel
+   % Début de l'environnement displayquote
+   \edef\envstart{\noexpand\begin{displayquote}}%
+   \envstart
+  }
+  {\ifx\optarg\empty % Vérifie si l'argument optionnel est vide
+     \else
+       \par\hfill --- \textit{\optarg}% Ajoute l'auteur aligné à droite si fourni
+     \fi
+   \end{displayquote}}% \end{authoredquote}
+
+
+   
+\newenvironment{footcitedquote}[1][]
+  {% \begin{footcitedquote}[.]
+   \let\mkcitation\footnote% Citations will be footnotes
+   \def\optarg{#1}% Capture optional argument
+   % Set up start of displayquote environment
+   \edef\envstart{\noexpand\begin{displayquote}\if$\optarg$\else[\noexpand\optarg]\fi}%
+   \envstart}
+  {\end{displayquote}}% \end{footcitedquote}
+
+\AtEveryCitekey{\ifcsdef{currentenvironment:authoredquote}{\renewcommand{\autocite}{\textcite}}{}}
+
 
 %\usepackage{epigraph}
 
@@ -32,14 +87,12 @@
 \usepackage{enumitem}
 %\usepackage{adjustbox}
 
-% changer les quotes :
-\usepackage{etoolbox}
+
 
 % Redéfinir l'environnement quote
 %\renewenvironment{quote}{\begin{displayquote}}{\end{displayquote}}
 
 % Pour pouvoir ajouter des fragments de code
-\usepackage{listings}
 
 \lstset{
   language=Python,         % Choisir le langage de programmation (Python ici, mais tu peux changer pour R, C++, etc.)
@@ -111,7 +164,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=gray,
-    citecolor=blue,
+    citecolor=gray,
     urlcolor=blue
 }
 
@@ -179,7 +232,7 @@
 
 %% Define the main parameters
 \title{Fonctions de dommages dans les modèles intégrés}
-\subtitle{Quelle forme, étendus et enjeux pour les fonctions de dommage ?}
+\subtitle{Comment représenter les dommages du changement climatique ?}
 \author{Gabriel Genelot}
 
 \subject{\textit{Mémoire de recherche}} % Cover only
@@ -245,7 +298,7 @@
 
 \chapter{Bibliographie}
 \begin{multicols}{2}
-\printbibliography[heading=subbibliography,segment=0,title={Préambule}]
+%\printbibliography[heading=subbibliography,segment=0,title={Préambule}]
 \printbibliography[heading=subbibliography,segment=1,title={Introduction}]
 \printbibliography[heading=subbibliography,segment=2,title={Impact, risques et mesures}]
 \printbibliography[heading=subbibliography,segment=3,title={La relative diversité de la représentation des dommages}]

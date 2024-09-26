@@ -76,7 +76,7 @@
 
     \newcommand{\titlestyle}{\fontfamily{RobotoSlab-TLF}\fontseries{light}\selectfont}
     \newcommand{\largetitlestyle}{\fontfamily{RobotoSlab-TLF}
-    \newcommand{\headerstyle}{\fontfamily{cmr}\fontseries{m}\fontshape{it}\selectfont}
+    %\newcommand{\headerstyle}{\fontfamily{cmr}\fontseries{m}\fontshape{it}\selectfont}
     \fontseries{thin}\selectfont}
 \else
     %% If XeLaTeX or LuaLaTeX is set as the compiler, the EPFL house style fonts are used
@@ -254,7 +254,7 @@
             \includegraphics[height=30mm]{figures/logos/CMA.png}};
 
         \node[above left=15mm] at (current page.south east) {%
-            \includegraphics[height=30mm]{figures/logos/iedes_logo.jpg}};
+            \includegraphics[height=30mm]{figures/logos/iedes_alpha.png}};
 
         %% Add the banner with the title, subtitle, subject and author(s)
         \node[below=2cm,fill=black!55,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
