@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.7" bltxversion="3.16" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.21" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -138,6 +143,10 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
       <bcf:key>singletitle</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
@@ -159,7 +168,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>english</bcf:value>
+      <bcf:value>french</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -488,9 +502,11 @@
     <bcf:option datatype="xml">inheritance</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">uniquenametemplate</bcf:option>
+    <bcf:option datatype="xml">namehashtemplate</bcf:option>
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -498,6 +514,7 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string">citepagerange</bcf:option>
     <bcf:option datatype="string">texencoding</bcf:option>
     <bcf:option datatype="string">bibencoding</bcf:option>
     <bcf:option datatype="string">sortingtemplatename</bcf:option>
@@ -543,6 +560,7 @@
     <bcf:option datatype="string">datelabel</bcf:option>
     <bcf:option datatype="string">backrefstyle</bcf:option>
     <bcf:option datatype="string">arxiv</bcf:option>
+    <bcf:option datatype="string">mergedate</bcf:option>
     <bcf:option datatype="boolean">familyinits</bcf:option>
     <bcf:option datatype="boolean">giveninits</bcf:option>
     <bcf:option datatype="boolean">prefixinits</bcf:option>
@@ -599,6 +617,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -626,7 +645,6 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">dashed</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -657,6 +675,7 @@
     <bcf:option datatype="string">loccittracker</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="string">mergedate</bcf:option>
     <bcf:option datatype="boolean">familyinits</bcf:option>
     <bcf:option datatype="boolean">giveninits</bcf:option>
     <bcf:option datatype="boolean">prefixinits</bcf:option>
@@ -708,12 +727,12 @@
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -732,9 +751,10 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
     <bcf:option datatype="string" backendout="1">indexing</bcf:option>
@@ -745,6 +765,7 @@
     <bcf:option datatype="string" backendout="1">loccittracker</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
+    <bcf:option datatype="string" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
     <bcf:option datatype="boolean" backendout="1">giveninits</bcf:option>
     <bcf:option datatype="boolean" backendout="1">prefixinits</bcf:option>
@@ -795,7 +816,6 @@
     <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -811,9 +831,10 @@
     <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
@@ -827,9 +848,10 @@
     <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
@@ -1043,8 +1065,15 @@
     <bcf:namepart order="2" base="1">family</bcf:namepart>
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
+  <!-- NAME HASH TEMPLATES -->
+  <bcf:namehashtemplate name="global">
+    <bcf:namepart order="1" hashscope="full">family</bcf:namepart>
+    <bcf:namepart order="2" hashscope="full">given</bcf:namepart>
+    <bcf:namepart order="3" hashscope="full">prefix</bcf:namepart>
+    <bcf:namepart order="4" hashscope="full">suffix</bcf:namepart>
+  </bcf:namehashtemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -1249,14 +1278,14 @@
       <bcf:field fieldtype="field" datatype="datepart">minute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">second</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">timezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">season</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">yeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">endtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">endseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">endyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">eventdate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">eventyear</bcf:field>
@@ -1266,14 +1295,14 @@
       <bcf:field fieldtype="field" datatype="datepart">eventminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">eventseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">eventendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">eventendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">eventendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">origdate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">origendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">origyear</bcf:field>
@@ -1283,14 +1312,14 @@
       <bcf:field fieldtype="field" datatype="datepart">origminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">origseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">origendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">origendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">origendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="date" skip_output="true">urldate</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlendyear</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart" nullok="true">urlyear</bcf:field>
@@ -1300,14 +1329,14 @@
       <bcf:field fieldtype="field" datatype="datepart">urlminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urltimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">urlseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendmonth</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendday</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendhour</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendminute</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendsecond</bcf:field>
       <bcf:field fieldtype="field" datatype="datepart">urlendtimezone</bcf:field>
-      <bcf:field fieldtype="field" datatype="datepart">urlendseason</bcf:field>
+      <bcf:field fieldtype="field" datatype="datepart">urlendyeardivision</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">doi</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">eprint</bcf:field>
       <bcf:field fieldtype="field" datatype="verbatim">file</bcf:field>
@@ -1340,10 +1369,10 @@
       <bcf:field>endhour</bcf:field>
       <bcf:field>endminute</bcf:field>
       <bcf:field>endmonth</bcf:field>
-      <bcf:field>endseason</bcf:field>
       <bcf:field>endsecond</bcf:field>
       <bcf:field>endtimezone</bcf:field>
       <bcf:field>endyear</bcf:field>
+      <bcf:field>endyeardivision</bcf:field>
       <bcf:field>entryset</bcf:field>
       <bcf:field>entrysubtype</bcf:field>
       <bcf:field>execute</bcf:field>
@@ -1382,17 +1411,17 @@
       <bcf:field>origendhour</bcf:field>
       <bcf:field>origendminute</bcf:field>
       <bcf:field>origendmonth</bcf:field>
-      <bcf:field>origendseason</bcf:field>
       <bcf:field>origendsecond</bcf:field>
       <bcf:field>origendtimezone</bcf:field>
       <bcf:field>origendyear</bcf:field>
+      <bcf:field>origendyeardivision</bcf:field>
       <bcf:field>orighour</bcf:field>
       <bcf:field>origminute</bcf:field>
       <bcf:field>origmonth</bcf:field>
-      <bcf:field>origseason</bcf:field>
       <bcf:field>origsecond</bcf:field>
       <bcf:field>origtimezone</bcf:field>
       <bcf:field>origyear</bcf:field>
+      <bcf:field>origyeardivision</bcf:field>
       <bcf:field>origlocation</bcf:field>
       <bcf:field>origpublisher</bcf:field>
       <bcf:field>origtitle</bcf:field>
@@ -1402,7 +1431,6 @@
       <bcf:field>relatedoptions</bcf:field>
       <bcf:field>relatedstring</bcf:field>
       <bcf:field>relatedtype</bcf:field>
-      <bcf:field>season</bcf:field>
       <bcf:field>second</bcf:field>
       <bcf:field>shortauthor</bcf:field>
       <bcf:field>shorteditor</bcf:field>
@@ -1444,6 +1472,7 @@
       <bcf:field>xdata</bcf:field>
       <bcf:field>xref</bcf:field>
       <bcf:field>year</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>set</bcf:entrytype>
@@ -1872,12 +1901,12 @@
       <bcf:field>note</bcf:field>
       <bcf:field>number</bcf:field>
       <bcf:field>pubstate</bcf:field>
-      <bcf:field>season</bcf:field>
       <bcf:field>series</bcf:field>
       <bcf:field>subtitle</bcf:field>
       <bcf:field>title</bcf:field>
       <bcf:field>titleaddon</bcf:field>
       <bcf:field>volume</bcf:field>
+      <bcf:field>yeardivision</bcf:field>
     </bcf:entryfields>
     <bcf:entryfields>
       <bcf:entrytype>mvproceedings</bcf:entrytype>
@@ -1889,17 +1918,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -1930,17 +1959,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -1981,17 +2010,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>isbn</bcf:field>
@@ -2063,17 +2092,17 @@
       <bcf:field>eventendhour</bcf:field>
       <bcf:field>eventendminute</bcf:field>
       <bcf:field>eventendmonth</bcf:field>
-      <bcf:field>eventendseason</bcf:field>
       <bcf:field>eventendsecond</bcf:field>
       <bcf:field>eventendtimezone</bcf:field>
       <bcf:field>eventendyear</bcf:field>
+      <bcf:field>eventendyeardivision</bcf:field>
       <bcf:field>eventhour</bcf:field>
       <bcf:field>eventminute</bcf:field>
       <bcf:field>eventmonth</bcf:field>
-      <bcf:field>eventseason</bcf:field>
       <bcf:field>eventsecond</bcf:field>
       <bcf:field>eventtimezone</bcf:field>
       <bcf:field>eventyear</bcf:field>
+      <bcf:field>eventyeardivision</bcf:field>
       <bcf:field>eventtitle</bcf:field>
       <bcf:field>eventtitleaddon</bcf:field>
       <bcf:field>howpublished</bcf:field>
@@ -2342,6 +2371,191 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib_memoire.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">palsky_borges_1999</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">edenhofer_mapmakers_2014</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">lee_ipcc_2023</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">lee_ipcc_2023</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">cointe_ar6_2024</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">lee_ipcc_2023</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">lee_ipcc_2023</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">lee_ipcc_2023</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">scheffer_foreseeing_2010</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">scheffer_foreseeing_2010</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">noauthor_tipping_nodate</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">noauthor_tipping_nodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">noauthor_tipping_nodate</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">noauthor_tipping_nodate</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">united_nations_university_-_institute_for_environment_and_human_security_unu-ehs_interconnected_2023</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">harris_charles_2010</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">harris_charles_2010</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">cointe_organising_2019</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">nordhaus_dice_2013</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">stanton_inside_2009</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">national_academy_of_sciences_valuing_2017</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">national_academy_of_sciences_valuing_2017</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">national_academy_of_sciences_valuing_2017</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">waidelich_climate_2024</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">souffron_successful_2024</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">int_panis_externe_2000</bcf:citekey>
+    <bcf:citekey order="32" intorder="2">dafermos_how_2021</bcf:citekey>
+    <bcf:citekey order="32" intorder="3">baumstark_remind21_2021</bcf:citekey>
+    <bcf:citekey order="32" intorder="4">dafermos_stock-flow-fund_2017</bcf:citekey>
+    <bcf:citekey order="32" intorder="5">cherp_global_2016</bcf:citekey>
+    <bcf:citekey order="32" intorder="6">burke_global_2015</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">medeas_guiding_2019</bcf:citekey>
+    <bcf:citekey order="33" intorder="2">asbjorn_aaheim_grace_2018</bcf:citekey>
+    <bcf:citekey order="33" intorder="3">european_commission_ginfors-e_2022</bcf:citekey>
+    <bcf:citekey order="33" intorder="4">european_commission_gem-e3_2013</bcf:citekey>
+    <bcf:citekey order="33" intorder="5">nordhaus_dice_2013</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">dafermos_stock-flow-fund_2017</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">giraud_coping_2016</bcf:citekey>
+    <bcf:citekey order="34" intorder="3">calvin_gcam_2019</bcf:citekey>
+    <bcf:citekey order="34" intorder="4">bosetti_witch_2006</bcf:citekey>
+    <bcf:citekey order="34" intorder="5">ghersi_imaclim-p_2014</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">tol_fund_nodate</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">howard_few_2017</bcf:citekey>
+    <bcf:citekey order="36" intorder="2">keppo_exploring_2021</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">harmsen_integrated_2021</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">diaz_quantifying_2017</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">souffron_successful_2024</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">krey_looking_2019</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">mercure_modelling_2019</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">barrage_policies_2023</bcf:citekey>
+    <bcf:citekey order="42" intorder="2">nordhaus_dice_2013</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">anthoff_fund_nodate</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">noauthor_witness_nodate</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">reissl_dsk-sfc_2024</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">guigourez_10_2023</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">noauthor_william_nodate-1</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">janssens_global_2020</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">wooldridge_introductory_2016</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">gillingham_modeling_2015</bcf:citekey>
+    <bcf:citekey order="50" intorder="2">gillingham_modeling_2018</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">dennig_inequality_2015</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">tuana_climate_2019</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">tuana_climate_2019</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">tuana_leading_2010</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">noauthor_mitigation_nodate</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">tuana_leading_2010</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">stern_economic_2007</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">locomotion-h2020_locomotion-h2020wiliam_model_vensim_2024</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">anthoff_fund_nodate</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">tuana_leading_2010</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">beck_epistemic_2016</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">edenhofer_mapmakers_2014</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">edenhofer_mapmakers_2014</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">dennig_inequality_2015</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">intergovernmental_panel_on_climate_change_ipcc_mitigation_2023</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">cointe_ar6_2024</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">beck_epistemic_2016</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">nordhaus_dice_2013</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">mercure_modelling_2019</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">mercure_modelling_2019</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">intergovernmental_panel_on_climate_change_ipcc_annex_2023</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">stern_economic_2007</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">longino_science_1990</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">gross_routledge_2015</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">noauthor_carnet_2024</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">proctor_agnotology_2008</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">girel_vertus_2023</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">benalloua_polemique_2023</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">douglas_values_2014</bcf:citekey>
+    <bcf:citekey order="94" intorder="2">douglas_science_2009</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">beck_epistemic_2016</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">beck_epistemic_2016</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">beck_epistemic_2016</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">stern_why_2015</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">stern_why_2015</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">keen_appallingly_2021</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">melo-martin_fight_2018</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">forrester_world_1971</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">meadows_limits_1972</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">edwards_global_1996</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">aykut_gouverner_2015</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">cointe_organising_2019</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">weyant_integrated_1995</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">edwards_global_1996</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">edwards_global_1996</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">wynne_institutional_1984</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">cointe_understanding_2023</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">briens_decroissance_2015</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">boulanger_models_2005</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">auer_climate_2021</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">shackley_representing_1996</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">cointe_organising_2019</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">noauthor_models_nodate</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">keppo_exploring_2021</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">keppo_exploring_2021</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">dennig_inequality_2015</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">pacchetti_for_2024</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">van_beek_persuasive_2023</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">noauthor_future_nodate</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nyt/global//global/global/global"
+                type="entry"
+                sortingtemplatename="nyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>
