@@ -16,6 +16,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{layout/epfl-report}[17-12-2022 v1.1 EPFL Report Class]
 
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass[10pt,twoside]{book}
