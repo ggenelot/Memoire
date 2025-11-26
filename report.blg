@@ -1,18 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'report.blg'
-[225] biber-MSWIN64:342> INFO - === 
-[330] Biber.pm:421> INFO - Reading 'report.bcf'
-[433] Biber.pm:1002> INFO - Found 81 citekeys in bib section 0
-[444] Biber.pm:4487> INFO - Processing section 0
-[465] Biber.pm:4678> INFO - Looking for bibtex file 'bib_memoire.bib' for section 0
-[667] bibtex.pm:1713> INFO - LaTeX decoding ...
-[4091] bibtex.pm:1519> INFO - Found BibTeX data source 'bib_memoire.bib'
-[4989] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4990] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4995] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'fr-FR'
-[4995] Biber.pm:4313> INFO - No sort tailoring available for locale 'fr-FR'
-[5130] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[5342] bbl.pm:779> INFO - Output to report.bbl
-[5343] Biber.pm:132> WARN - ISBN '978-0-8047-5652-5 978-0-8047-5901-4' in entry 'proctor_agnotology_2008' is invalid - run biber with '--validate_datamodel' for details.
-[5344] Biber.pm:132> WARN - I didn't find a database entry for 'aykut_gouverner_nodate' (section 0)
-[5344] Biber.pm:134> INFO - WARNINGS: 2
+[261] biber-MSWIN64:342> INFO - === 
+[354] Biber.pm:421> INFO - Reading 'report.bcf'
+[461] Biber.pm:1002> INFO - Found 81 citekeys in bib section 0
+[471] Biber.pm:4487> INFO - Processing section 0
+[498] Biber.pm:4678> INFO - Looking for bibtex file 'bib_memoire.bib' for section 0
+[720] bibtex.pm:1713> INFO - LaTeX decoding ...
+[4496] bibtex.pm:1519> INFO - Found BibTeX data source 'bib_memoire.bib'
+[5472] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[5472] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[5472] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'fr-FR'
+[5472] Biber.pm:4313> INFO - No sort tailoring available for locale 'fr-FR'
+[5632] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[5854] bbl.pm:779> INFO - Output to report.bbl
+[5854] Biber.pm:132> WARN - ISBN '978-0-8047-5652-5 978-0-8047-5901-4' in entry 'proctor_agnotology_2008' is invalid - run biber with '--validate_datamodel' for details.
+[5854] Biber.pm:132> WARN - I didn't find a database entry for 'aykut_gouverner_nodate' (section 0)
+[5854] Biber.pm:134> INFO - WARNINGS: 2

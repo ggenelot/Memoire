@@ -1,3 +1,5 @@
+# Fonctions de dommage dans les modèles intégrés
+
 Ce repo contient le code source latex de mon mémoire de M2, réalisé au sein de Centre de Mathématiques Appliquées (Mines Paris - PSL).Il permet de recréer le document pdf en éxecutant le code latex.
 
 La dernière version compilée est disponible sur la droite, dans l'onglet "releases", ou encore en cliquant ici : [Télécharger le PDF](https://github.com/ggenelot/Memoire/releases/latest/download/report.pdf).
@@ -19,7 +21,7 @@ les interprétations possibles (3), avant de discuter des enjeux éthiques liés
 s’intéresse à la manière dont cette chaîne de production de connaissance alimente le débat public (5).
 
 
-# Quel rôle pour les fonctions de dommage dans les modèles intégrés ? 
+## Quel rôle pour les fonctions de dommage dans les modèles intégrés ? 
 
 Nous explorons les enjeux éthiques liés à la modélisation des impacts du changement climatique. Dans
 un premier temps, nous recensons des fonctions de dommages issues de différents modèles, pour en
@@ -31,7 +33,7 @@ climatique (chercheurs, décideurs). Nous montrons que les fonctions de dommage 
 implications éthiques sous-jacentes, et qu’il faut qu’elles soit explicitées et modifiables par les utilisateurs.
 
 
-## Impacts, risques et mesures
+### Impacts, risques et mesures
 
 Le changement climatique est à la fois extremement incertain, et nécessite des actions et des
 prises de décisions rapides et de grande envergure. Ce paradoxe a donné naissance à des institutions,
@@ -40,7 +42,7 @@ est de réduire l’incertitude et de favoriser le rapprochement entre l’actio
 scientifique. Dans cette introduction, nous introduisons quelques uns des concepts cadres qui nous serons
 utiles tout au long du mémoire.
 
-## La relative diversité de la représentation des dommages
+### La relative diversité de la représentation des dommages
 
 Cette partie s’intéresse à la représentation des dommages climatiques dans les modèles intégrés.
 Nous commençons par recenser le plus de fonctions de dommages, issues de différents modèles. Nous
@@ -48,7 +50,7 @@ explorons ensuite les choix qui se posent aux modélisateurs, en explicitant les
 de chacun. Nous observons que la majeure partie de ces dommages est représenté en terme de PIB, ce qui
 pourrait exclure d’autres mécanismes préjudiciables.
 
-## Rendre visible : quantifier les choix éthiques
+### Rendre visible : quantifier les choix éthiques
 
 Ce chapitre propose une approche économétrique des effets de la modélisation des fonctions de
 dommage. On utilise le modèle de simulation WILIAM auquel on ajoute des fonctions de dommage issues
@@ -67,7 +69,7 @@ magnitude peut être comparée à celle des autres variations.
 
 *Figure — On ajoute des fonctions de dommage issues d'autre modèle à WILIAM. On fait tourner ce nouveau modèle de nombreuses fois en faisant varier différents paramètres, et on interprète les variables de sortie du modèle.*
 
-## Ethique de la modélisation des dommages
+### Ethique de la modélisation des dommages
 
 Nous avons identifié dans le chapitre 3 que les choix éthiques implicites ou explicites réalisés par
 les modélisateurs ont un impact sur le niveau de dommage dont l’amplitude est comparable à celle d’autres
@@ -79,7 +81,7 @@ avançons qu’il est essentiel que les hypothèses normatives soient plus clair
 peuvent remettrent en cause la pertinence des modèles. Cependant, ces hypothèses ne semblent pas
 représenter de doute normativement innaproprié.
 
-## Interpréter le modèle dans le monde réel
+### Interpréter le modèle dans le monde réel
 
 Cette partie du mémoire s’intéresse à la manière dont les résultats issus de la modélisation
 intégrée sont interprétés dans le débat public et permettent de prendre des décisions. Plus précisement,
@@ -87,3 +89,16 @@ on s’interroge sur les utilisations des modèles par divers acteurs de la poli
 décideurs, journalistes, scientifiques, activistes. Pour cela, on réalise une série d’entretiens semis-directifs.
 Ils ont pour but de répondre aux questions suivantes : comment est interprétée l’incertitutde inhérente
 aux modèles pour la prise de décision ?
+
+## Licence
+
+Ce mémoire est diffusé sous licence **Creative Commons Attribution – NonCommercial – NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
+
+Vous êtes libre de le partager, sous réserve de :
+
+- **créditer l’auteur**,
+- **ne pas l’utiliser à des fins commerciales**,
+- **ne pas le modifier** ni en produire des œuvres dérivées.
+
+Texte complet de la licence :  
+https://creativecommons.org/licenses/by-nc-nd/4.0/
