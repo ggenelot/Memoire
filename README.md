@@ -4,6 +4,20 @@ La dernière version compilée est disponible sur la droite, dans l'onglet "rele
 
 Un site readthedocs permet d'avoir accès au code source qui a permis de produire les figures et à des ressources aditionnelles. 
 
+Voici une approche schématique du contenu du mémoire, ainsi que les résumés de chaque chapitre. 
+
+![Schéma de la chaîne de modélisation](illustrations/intro.png)
+
+*Figure — Schéma illustrant le processus présenté dans l'introduction.*
+
+La modélisation consiste à représenter de manière simplifiée des phénomènes.
+Dans notre cas, il s’agit de phénomènes liés au changement climatique. Il existent avant toute forme de représentation (A), puis font
+l’objet d’une simplification (B). Ils sont ensuite interprétés (C), avant de conduire à des actions, telles que des décisions politiques (D).
+Chacune de ces étapes correspond à un chapitre : d’abord, on commence par évoquer les différents phénomènes qui sont modélisés
+(1), puis on cherche à savoir comment ceux-ci sont représentés (2). On analyse ensuite l’importance du choix de représentation sur
+les interprétations possibles (3), avant de discuter des enjeux éthiques liés à l’interprétation des résultats des modèles (4). Enfin, on
+s’intéresse à la manière dont cette chaîne de production de connaissance alimente le débat public (5).
+
 
 # Quel rôle pour les fonctions de dommage dans les modèles intégrés ? 
 
@@ -44,6 +58,10 @@ varier ce pondérateur de manière aléatoire. On interpréte les données obten
 économétrique, qui permet d’évaluer l’impact relatif des variables physiques, méthodologiques et éthiques
 sur le niveau comptabilisé de dommages. on trouve que ce coefficient a un impact important, dont la
 magnitude peut être comparée à celle des autres variations. 
+
+![Schéma de la méthodologie'](illustrations/rect1.png)
+
+*Figure — On ajoute des fonctions de dommage issues d'autre modèle à WILIAM. On fait tourner ce nouveau modèle de nombreuses fois en faisant varier différents paramètres, et on interprète les variables de sortie du modèle.*
 
 ## Ethique de la modélisation des dommages
 
