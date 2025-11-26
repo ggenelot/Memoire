@@ -59,7 +59,18 @@ varier ce pondérateur de manière aléatoire. On interpréte les données obten
 sur le niveau comptabilisé de dommages. on trouve que ce coefficient a un impact important, dont la
 magnitude peut être comparée à celle des autres variations. 
 
-![Schéma de la méthodologie'](illustrations/rect1.png)
+<!-- LaTeX build: use full text width -->
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{illustrations/rect1.png}
+\caption{Schéma de la méthodologie}
+\label{fig:methodologie}
+\end{figure}
+
+<!-- HTML/GitHub fallback -->
+<p align="center">
+    <img src="illustrations/rect1.png" alt="Schéma de la méthodologie" style="max-width:100%;height:auto;">
+</p>
 
 *Figure — On ajoute des fonctions de dommage issues d'autre modèle à WILIAM. On fait tourner ce nouveau modèle de nombreuses fois en faisant varier différents paramètres, et on interprète les variables de sortie du modèle.*
 
