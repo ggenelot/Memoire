@@ -1,3 +1,5 @@
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 # Fonctions de dommage dans les modèles intégrés
 
 Ce repo contient le code source latex de mon mémoire de M2, réalisé au sein de Centre de Mathématiques Appliquées (Mines Paris - PSL).Il permet de recréer le document pdf en éxecutant le code latex.
