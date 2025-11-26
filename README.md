@@ -6,7 +6,7 @@ Ce repo contient le code source latex de mon mémoire de M2, réalisé au sein d
 
 La dernière version compilée au format PDF est visible en ligne [ici](report.pdf), ou [téléchargeable ici](https://github.com/ggenelot/Memoire/releases/latest/download/report.pdf).
 
-[Un site readthedocs](https://damage-functions-modeling.readthedocs.io/en/latest/) permet d'avoir accès au code source qui a permis de produire les figures et à des ressources aditionnelles. 
+[Un site readthedocs](https://damage-functions-modeling.readthedocs.io/en/latest/) permet d'avoir accès au code source qui a permis de produire les figures et à des ressources aditionnelles. Par ailleurs, l'ensemble du code source ayant servi à l'analyse est disponible [ici](https://github.com/ggenelot/damage-functions-modeling).
 
 Voici une approche schématique du contenu du mémoire, ainsi que les résumés de chaque chapitre. 
 
