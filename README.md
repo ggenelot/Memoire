@@ -4,7 +4,7 @@
 
 Ce repo contient le code source latex de mon mémoire de M2, réalisé au sein de Centre de Mathématiques Appliquées (Mines Paris - PSL).Il permet de recréer le document pdf en éxecutant le code latex.
 
-La dernière version compilée est disponible sur la droite, dans l'onglet "releases", ou encore en cliquant ici : [Télécharger le PDF](https://github.com/ggenelot/Memoire/releases/latest/download/report.pdf).
+La dernière version compilée au format PDF est visible en ligne [ici](report.pdf), ou [téléchargeable ici](https://github.com/ggenelot/Memoire/releases/latest/download/report.pdf).
 
 Un site readthedocs permet d'avoir accès au code source qui a permis de produire les figures et à des ressources aditionnelles. 
 
