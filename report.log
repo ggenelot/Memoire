@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.13)  27 NOV 2025 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.13)  27 NOV 2025 11:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2155,13 +2155,16 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
-No file report.aux.
+(./report.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 19.
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 228.
 LaTeX Font Info:    Trying to load font information for OML+npxmi on input line
  228.
-(c:/texlive/2025/texmf-dist/tex/latex/newpx/omlnpxmi.fd
+ (c:/texlive/2025/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
 LaTeX Font Info:    ... okay on input line 228.
@@ -2251,6 +2254,8 @@ F (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package hyperref Info: Link coloring ON on input line 228.
+
+(./report.out) (./report.out)
 \@outlinefile=\write8
 \openout8 = `report.out'.
 
@@ -2335,8 +2340,6 @@ Package biblatex Warning: The following entry could not be found
 )
 Package biblatex Info: Reference section=0 on input line 228.
 Package biblatex Info: Reference segment=0 on input line 228.
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 228.
 LaTeX Info: Redefining \degres on input line 228.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
@@ -2354,17 +2357,17 @@ Package newfloat Info: `float' package detected.
 brarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-<figures/logos/clouds.jpg, id=7, 3468.96pt x 5203.44pt>
+<figures/logos/clouds.jpg, id=296, 3468.96pt x 5203.44pt>
 File: figures/logos/clouds.jpg Graphic file (type jpg)
 <use figures/logos/clouds.jpg>
 Package pdftex.def Info: figures/logos/clouds.jpg  used on input line 247.
 (pdftex.def)             Requested size: 597.50787pt x 896.24463pt.
-<figures/logos/CMA.png, id=10, 456.0237pt x 120.45pt>
+<figures/logos/CMA.png, id=299, 456.0237pt x 120.45pt>
 File: figures/logos/CMA.png Graphic file (type png)
 <use figures/logos/CMA.png>
 Package pdftex.def Info: figures/logos/CMA.png  used on input line 247.
 (pdftex.def)             Requested size: 312.40218pt x 82.51299pt.
-<figures/logos/iedes_alpha.png, id=12, 3318.3975pt x 1778.645pt>
+<figures/logos/iedes_alpha.png, id=301, 3318.3975pt x 1778.645pt>
 File: figures/logos/iedes_alpha.png Graphic file (type png)
 <use figures/logos/iedes_alpha.png>
 Package pdftex.def Info: figures/logos/iedes_alpha.png  used on input line 247.
@@ -2449,14 +2452,14 @@ tle-report.tex
 [2
 
 ]
-<illustrations/cc_by_nd.png, id=27, 1084.05pt x 598.235pt>
+<illustrations/cc_by_nd.png, id=316, 1084.05pt x 598.235pt>
 File: illustrations/cc_by_nd.png Graphic file (type png)
 <use illustrations/cc_by_nd.png>
 Package pdftex.def Info: illustrations/cc_by_nd.png  used on input line 39.
 (pdftex.def)             Requested size: 85.35826pt x 47.10213pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 45.
-<figures/logos/iedes_logo.jpg, id=28, 3318.3975pt x 1778.645pt>
+<figures/logos/iedes_logo.jpg, id=317, 3318.3975pt x 1778.645pt>
 File: figures/logos/iedes_logo.jpg Graphic file (type jpg)
 <use figures/logos/iedes_logo.jpg>
 Package pdftex.def Info: figures/logos/iedes_logo.jpg  used on input line 85.
@@ -2521,12 +2524,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 ] [6
 
-]
-No file report.toc.
+] (./report.toc [7]
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 95.
+ [8])
 \tf@toc=\write10
 \openout10 = `report.toc'.
 
-[7] [8
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.16994pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.16994pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
+
+[9] [10
 
 ] (./mainmatter/0_Introduction.tex
 Package biblatex Info: Reference segment=1 on input line 9.
@@ -2554,7 +2567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 [1
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}]
-<figures/trajectoire_spm6.png, id=76, 1871.99374pt x 1313.90875pt>
+<figures/trajectoire_spm6.png, id=457, 1871.99374pt x 1313.90875pt>
 File: figures/trajectoire_spm6.png Graphic file (type png)
 <use figures/trajectoire_spm6.png>
 Package pdftex.def Info: figures/trajectoire_spm6.png  used on input line 39.
@@ -2578,77 +2591,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-Package babel Info: 'french' activates 'french' shorthands.
-(babel)             Reported on input line 45.
 [2 <./figures/trajectoire_spm6.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<illustrations/intro.png, id=89, 426.8748pt x 191.9973pt>
+<illustrations/intro.png, id=470, 426.8748pt x 191.9973pt>
 File: illustrations/intro.png Graphic file (type png)
 <use illustrations/intro.png>
 Package pdftex.def Info: illustrations/intro.png  used on input line 66.
 (pdftex.def)             Requested size: 455.24411pt x 204.77003pt.
-
-LaTeX Warning: Reference `chapter:introduction' on page 3 undefined on input li
-ne 67.
-
-
-LaTeX Warning: Reference `chapter:litrev' on page 3 undefined on input line 67.
-
-
-
-LaTeX Warning: Reference `chapter:modelisation' on page 3 undefined on input li
-ne 67.
-
-
-LaTeX Warning: Reference `chapter:ethique' on page 3 undefined on input line 67
-.
-
-
-LaTeX Warning: Reference `chapter:socio' on page 3 undefined on input line 67.
-
-
-LaTeX Warning: Reference `chapter:introduction' on page 3 undefined on input li
-ne 67.
-
-
-LaTeX Warning: Reference `chapter:litrev' on page 3 undefined on input line 67.
-
-
-
-LaTeX Warning: Reference `chapter:modelisation' on page 3 undefined on input li
-ne 67.
-
-
-LaTeX Warning: Reference `chapter:ethique' on page 3 undefined on input line 67
-.
-
-
-LaTeX Warning: Reference `chapter:socio' on page 3 undefined on input line 67.
-
-
-LaTeX Warning: Reference `chapter:introduction' on page 3 undefined on input li
-ne 73.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 
-LaTeX Warning: Reference `chapter:litrev' on page 3 undefined on input line 75.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
-
-
-LaTeX Warning: Reference `chapter:modelisation' on page 3 undefined on input li
-ne 77.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
@@ -2663,30 +2624,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [3] [4 <./illustrations/intro.png>]
-
-LaTeX Warning: Reference `chapter:ethique' on page 5 undefined on input line 79
-.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
-
-
-LaTeX Warning: Reference `chapter:socio' on page 5 undefined on input line 82.
-
-
-LaTeX Warning: Reference `fig:logo' on page 5 undefined on input line 85.
-
-
-LaTeX Warning: Reference `fig:qrcode' on page 5 undefined on input line 85.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-<figures/logos/development.png, id=109, 385.44pt x 385.44pt>
+<figures/logos/development.png, id=506, 385.44pt x 385.44pt>
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 90.
@@ -2696,7 +2643,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 91.
 See the caption package documentation for explanation.
 
-<illustrations/frame.png, id=110, 301.125pt x 301.125pt>
+<illustrations/frame.png, id=507, 301.125pt x 301.125pt>
 File: illustrations/frame.png Graphic file (type png)
 <use illustrations/frame.png>
 Package pdftex.def Info: illustrations/frame.png  used on input line 97.
@@ -2757,7 +2704,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<figures/spm1.png, id=135, 1866.975pt x 2436.10126pt>
+<figures/spm1.png, id=533, 1866.975pt x 2436.10126pt>
 File: figures/spm1.png Graphic file (type png)
 <use figures/spm1.png>
 Package pdftex.def Info: figures/spm1.png  used on input line 42.
@@ -2785,29 +2732,20 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 49.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
 (Font)              `T1/RobotoSlab-TLF/bold/n' on input line 49.
-<figures/tipping_point.png, id=160, 920.43875pt x 322.20375pt>
+<figures/tipping_point.png, id=556, 920.43875pt x 322.20375pt>
 File: figures/tipping_point.png Graphic file (type png)
 <use figures/tipping_point.png>
 Package pdftex.def Info: figures/tipping_point.png  used on input line 70.
 (pdftex.def)             Requested size: 455.24411pt x 159.36105pt.
-<figures/earth_tipping_point.png, id=165, 591.4095pt x 384.2355pt>
+<figures/earth_tipping_point.png, id=561, 591.4095pt x 384.2355pt>
 File: figures/earth_tipping_point.png Graphic file (type png)
 <use figures/earth_tipping_point.png>
 Package pdftex.def Info: figures/earth_tipping_point.png  used on input line 77
 .
 (pdftex.def)             Requested size: 227.62206pt x 147.88129pt.
-
-
-LaTeX Warning: Reference `fig:tipping-point' on page 10 undefined on input line
- 78.
-
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 78.
-
-LaTeX Warning: Reference `fig:tipping-point' on page 10 undefined on input line
- 78.
-
-<figures/Tipping_points_2022_list.jpeg, id=170, 1927.2pt x 1255.69125pt>
+<figures/Tipping_points_2022_list.jpeg, id=568, 1927.2pt x 1255.69125pt>
 File: figures/Tipping_points_2022_list.jpeg Graphic file (type jpg)
 <use figures/Tipping_points_2022_list.jpeg>
 Package pdftex.def Info: figures/Tipping_points_2022_list.jpeg  used on input l
@@ -2859,12 +2797,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [13]
-
-LaTeX Warning: Reference `fig:keeling' on page 14 undefined on input line 109.
-
 LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input lin
 e 109.
-(c:/texlive/2025/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
+ (c:/texlive/2025/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2021/11/24 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
@@ -2874,7 +2809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<figures/keeling.png, id=219, 341.275pt x 156.585pt>
+<figures/keeling.png, id=613, 341.275pt x 156.585pt>
 File: figures/keeling.png Graphic file (type png)
 <use figures/keeling.png>
 Package pdftex.def Info: figures/keeling.png  used on input line 114.
@@ -2893,15 +2828,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newpx/zpl_TOsF.enc} <./figures/k
 eeling.png>]
-
-LaTeX Warning: Reference `fig:COP' on page 15 undefined on input line 130.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<figures/UNFCCC_Party_Groupings.svg.png, id=240, 1927.2pt x 1005.7575pt>
+<figures/UNFCCC_Party_Groupings.svg.png, id=634, 1927.2pt x 1005.7575pt>
 File: figures/UNFCCC_Party_Groupings.svg.png Graphic file (type png)
 <use figures/UNFCCC_Party_Groupings.svg.png>
 Package pdftex.def Info: figures/UNFCCC_Party_Groupings.svg.png  used on input 
@@ -2949,7 +2880,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [16]
-<figures/spm2_5.png, id=280, 2097.8375pt x 1100.11pt>
+<figures/spm2_5.png, id=671, 2097.8375pt x 1100.11pt>
 File: figures/spm2_5.png Graphic file (type png)
 <use figures/spm2_5.png>
 Package pdftex.def Info: figures/spm2_5.png  used on input line 178.
@@ -2989,7 +2920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<figures/scc.png, id=312, 1309.89375pt x 782.925pt>
+<figures/scc.png, id=702, 1309.89375pt x 782.925pt>
 File: figures/scc.png Graphic file (type png)
 <use figures/scc.png>
 Package pdftex.def Info: figures/scc.png  used on input line 233.
@@ -3068,15 +2999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-
-LaTeX Warning: Reference `mdf@pagelabel-1' on page 24 undefined on input line 3
-6.
-
 [24]
-
-LaTeX Warning: Reference `mdf@pagelabel-2' on page 25 undefined on input line 3
-6.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.16994pt, for example:
@@ -3100,10 +3023,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [26]
-Package marginnote Info: Suggest that margin note 37.1 will be on
-(marginnote)             absolute page 37.
-(marginnote)             This may be wrong on input line 117.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 117.
+Package marginnote Info: Margin note 39.1 is on absolute page 39 on input line 
+117.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 117.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 117.
@@ -3122,19 +3044,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-
-LaTeX Warning: Reference `eq:fund_A2' on page 28 undefined on input line 145.
-
 [28]
-
-LaTeX Warning: Reference `ss:forme' on page 29 undefined on input line 208.
-
-
-LaTeX Warning: Reference `eq:DEFINE' on page 29 undefined on input line 208.
-
-
-LaTeX Warning: Reference `eq:WITNESS' on page 29 undefined on input line 222.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.16994pt, for example:
@@ -3145,11 +3055,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [29]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 239.
-
-
-LaTeX Warning: Reference `fig:tipping-point' on page 30 undefined on input line
- 265.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
@@ -3180,7 +3085,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [31]
-<results/shape.png, id=466, 361.35pt x 216.81pt>
+<results/shape.png, id=854, 361.35pt x 216.81pt>
 File: results/shape.png Graphic file (type png)
 <use results/shape.png>
 Package pdftex.def Info: results/shape.png  used on input line 279.
@@ -3191,13 +3096,7 @@ Overfull \hbox (7.0324pt too wide) in paragraph at lines 286--286
 faut-il, et que prendre en compte ?| 
  []
 
-
-LaTeX Warning: Reference `fig:sankey' on page 32 undefined on input line 290.
-
-
-LaTeX Warning: Reference `eq:DEFINE' on page 32 undefined on input line 290.
-
-<figures/sankey.png, id=467, 594.7821pt x 297.0297pt>
+<figures/sankey.png, id=857, 594.7821pt x 297.0297pt>
 File: figures/sankey.png Graphic file (type png)
 <use figures/sankey.png>
 Package pdftex.def Info: figures/sankey.png  used on input line 303.
@@ -3221,9 +3120,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
-
-
-LaTeX Warning: Reference `fig:scc' on page 33 undefined on input line 321.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 321--322
@@ -3257,7 +3153,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
-<results/actualisation.png, id=491, 722.7pt x 433.62pt>
+<results/actualisation.png, id=877, 722.7pt x 433.62pt>
 File: results/actualisation.png Graphic file (type png)
 <use results/actualisation.png>
 Package pdftex.def Info: results/actualisation.png  used on input line 343.
@@ -3302,16 +3198,11 @@ Package biblatex Info: Setting label 'refsegment:04' on input line 3.
 [37
 
 ]
-<results/carte_progressive.png, id=513, 1445.4pt x 1084.05pt>
+<results/carte_progressive.png, id=898, 1445.4pt x 1084.05pt>
 File: results/carte_progressive.png Graphic file (type png)
 <use results/carte_progressive.png>
 Package pdftex.def Info: results/carte_progressive.png  used on input line 21.
 (pdftex.def)             Requested size: 455.24411pt x 341.42793pt.
-
-
-LaTeX Warning: Reference `chapter:introduction' on page 38 undefined on input l
-ine 36.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
@@ -3353,15 +3244,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-
-LaTeX Warning: Reference `mdf@pagelabel-3' on page 40 undefined on input line 6
-6.
-
 [40]
-
-LaTeX Warning: Reference `mdf@pagelabel-4' on page 41 undefined on input line 6
-6.
-
 Package mdframed Info: mdframed works in twoside mode on input line 68.
 
 Underfull \hbox (badness 10000) in paragraph at lines 68--68
@@ -3377,10 +3260,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
-
-
-LaTeX Warning: Reference `mdf@pagelabel-5' on page 41 undefined on input line 7
-6.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
@@ -3416,33 +3295,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--98
 
  []
 
-Package marginnote Info: Suggest that margin note 53.1 will be on
-(marginnote)             absolute page 53.
-(marginnote)             This may be wrong on input line 106.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 106.
+Package marginnote Info: Margin note 55.1 is on absolute page 55 on input line 
+106.
+Package marginnote Info: xpos seems to be 95.35826pt on input line 106.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 106.
 
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-
-LaTeX Warning: Reference `fig:ponderateur_selon' on page 43 undefined on input 
-line 118.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-6' on page 43 undefined on input line 1
-24.
-
 Package mdframed Info: mdframed works in twoside mode on input line 125.
 
 Underfull \hbox (badness 10000) in paragraph at lines 125--125
 
  []
 
-Package marginnote Info: Suggest that margin note 53.2 will be on
-(marginnote)             absolute page 53.
-(marginnote)             This may be wrong on input line 126.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 126.
+Package marginnote Info: Margin note 55.2 is on absolute page 55 on input line 
+126.
+Package marginnote Info: xpos seems to be 453.09663pt on input line 126.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 126.
@@ -3461,10 +3330,6 @@ Package mdframed Warning: You got a bad break
 (mdframed)                or something else on input line 131.
 
 
-LaTeX Warning: Reference `mdf@pagelabel-7' on page 43 undefined on input line 1
-31.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.16994pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.16994pt}.
@@ -3472,11 +3337,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [43]
-
-LaTeX Warning: Reference `mdf@pagelabel-8' on page 44 undefined on input line 1
-31.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
@@ -3499,19 +3359,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [45]
-
-LaTeX Warning: Reference `eq:modele' on page 46 undefined on input line 208.
-
-Package marginnote Info: Suggest that margin note 56.1 will be on
-(marginnote)             absolute page 56.
-(marginnote)             This may be wrong on input line 208.
+Package marginnote Info: Margin note 58.1 is on absolute page 58 on input line 
+208.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 208.
 
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 208.
-<results/slr_4_2.png, id=576, 1084.05pt x 722.7pt>
+Package marginnote Info: xpos seems to be 379.67517pt on input line 208.
+<results/slr_4_2.png, id=960, 1084.05pt x 722.7pt>
 File: results/slr_4_2.png Graphic file (type png)
 <use results/slr_4_2.png>
 Package pdftex.def Info: results/slr_4_2.png  used on input line 212.
@@ -3522,15 +3378,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--221
 
  []
 
-Package marginnote Info: Suggest that margin note 56.2 will be on
-(marginnote)             absolute page 56.
-(marginnote)             This may be wrong on input line 221.
+Package marginnote Info: Margin note 58.2 is on absolute page 58 on input line 
+221.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 221.
 
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 221.
+Package marginnote Info: xpos seems to be 398.02515pt on input line 221.
 
 Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
@@ -3541,10 +3396,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-
-LaTeX Warning: Reference `mdf@pagelabel-9' on page 46 undefined on input line 2
-27.
-
 [46]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3554,29 +3405,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [47 <./results/slr_4_2.png>]
-
-LaTeX Warning: Reference `mdf@pagelabel-10' on page 48 undefined on input line 
-227.
-
-<illustrations/rect1.png, id=591, 423.08063pt x 232.61906pt>
+<illustrations/rect1.png, id=975, 423.08063pt x 232.61906pt>
 File: illustrations/rect1.png Graphic file (type png)
 <use illustrations/rect1.png>
 Package pdftex.def Info: illustrations/rect1.png  used on input line 231.
 (pdftex.def)             Requested size: 455.24411pt x 250.31262pt.
-[48 <./illustrations/rect1.png>] (./results/regression_1.tex)
-
-LaTeX Warning: Reference `tab:reg_region' on page 49 undefined on input line 25
-8.
-
-
+ [48 <./illustrations/rect1.png>]
+(./results/regression_1.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
-Package marginnote Info: Suggest that margin note 59.1 will be on
-(marginnote)             absolute page 59.
-(marginnote)             This may be wrong on input line 267.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 267.
+Package marginnote Info: Margin note 61.1 is on absolute page 61 on input line 
+267.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 267.
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 267.
@@ -3610,15 +3452,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--279
  []
 
 (./results/regression_global.tex)
-
-LaTeX Warning: Reference `tab:reg_glob' on page 51 undefined on input line 289.
-
-
-
-LaTeX Warning: Reference `tab:reg_region' on page 51 undefined on input line 28
-9.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
@@ -3631,7 +3464,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [51] [52]
-<results/cartogramme_4.png, id=623, 650.43pt x 1084.05pt>
+<results/cartogramme_4.png, id=1005, 650.43pt x 1084.05pt>
 File: results/cartogramme_4.png Graphic file (type png)
 <use results/cartogramme_4.png>
 Package pdftex.def Info: results/cartogramme_4.png  used on input line 304.
@@ -3641,29 +3474,11 @@ Package pdftex.def Info: results/cartogramme_4.png  used on input line 304.
 LaTeX Warning: Float too large for page by 73.98856pt on input line 307.
 
 
-LaTeX Warning: Reference `tab:reg_region' on page 53 undefined on input line 33
-0.
-
-
-LaTeX Warning: Reference `eq:df_dice2023' on page 53 undefined on input line 33
-2.
-
-
-LaTeX Warning: Reference `eq:DEFINE' on page 53 undefined on input line 332.
-
-
-LaTeX Warning: Reference `eq:WITNESS' on page 53 undefined on input line 332.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 330--334
 
  []
 
-
-LaTeX Warning: Reference `tab:reg_glob' on page 53 undefined on input line 335.
-
-
-<results/exponent.png, id=624, 462.528pt x 346.896pt>
+<results/exponent.png, id=1011, 462.528pt x 346.896pt>
 File: results/exponent.png Graphic file (type png)
 <use results/exponent.png>
 Package pdftex.def Info: results/exponent.png  used on input line 344.
@@ -3672,7 +3487,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 7.0pt on input line 345.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 7.0pt on input line 345.
-<results/norm_constant.png, id=625, 462.528pt x 346.896pt>
+<results/norm_constant.png, id=1012, 462.528pt x 346.896pt>
 File: results/norm_constant.png Graphic file (type png)
 <use results/norm_constant.png>
 Package pdftex.def Info: results/norm_constant.png  used on input line 351.
@@ -3737,16 +3552,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapitre 4.
 Package biblatex Info: Reference segment=5 on input line 3.
 Package biblatex Info: Setting label 'refsegment:05' on input line 3.
-
-LaTeX Warning: Reference `chapter:modelisation' on page 59 undefined on input l
-ine 8.
-
 [59]
-
-LaTeX Warning: Reference `chapter:socio' on page 60 undefined on input line 39.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
@@ -3767,7 +3573,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<venn_ethics.png, id=677, 1058.95625pt x 1117.17375pt>
+<venn_ethics.png, id=1058, 1058.95625pt x 1117.17375pt>
 File: venn_ethics.png Graphic file (type png)
 <use venn_ethics.png>
 Package pdftex.def Info: venn_ethics.png  used on input line 54.
@@ -3801,10 +3607,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [63]
 
-LaTeX Warning: Reference `chapter:socio' on page 64 undefined on input line 95.
-
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.16994pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.16994pt}.
@@ -3812,21 +3614,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [64]
-<results/carte_fund.png, id=716, 361.35pt x 216.81pt>
+<results/carte_fund.png, id=1097, 361.35pt x 216.81pt>
 File: results/carte_fund.png Graphic file (type png)
 <use results/carte_fund.png>
 Package pdftex.def Info: results/carte_fund.png  used on input line 128.
 (pdftex.def)             Requested size: 204.85846pt x 122.9147pt.
-<results/carte_wiliam.png, id=717, 361.35pt x 216.81pt>
+<results/carte_wiliam.png, id=1098, 361.35pt x 216.81pt>
 File: results/carte_wiliam.png Graphic file (type png)
 <use results/carte_wiliam.png>
 Package pdftex.def Info: results/carte_wiliam.png  used on input line 135.
 (pdftex.def)             Requested size: 204.85846pt x 122.9147pt.
-
-
-LaTeX Warning: Reference `fig:trois_cartes' on page 65 undefined on input line 
-143.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
@@ -3876,7 +3673,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [68]
-<reductionisme.png, id=755, 943.525pt x 938.50626pt>
+<reductionisme.png, id=1135, 943.525pt x 938.50626pt>
 File: reductionisme.png Graphic file (type png)
 <use reductionisme.png>
 Package pdftex.def Info: reductionisme.png  used on input line 215.
@@ -3991,9 +3788,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [76]
 
-LaTeX Warning: Reference `ss:cadrage' on page 77 undefined on input line 376.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.16994pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.16994pt}.
@@ -4001,11 +3795,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [77]
-
-LaTeX Warning: Reference `chapter:modelisation' on page 78 undefined on input l
-ine 401.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
@@ -4068,9 +3857,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
  []
 
 
-LaTeX Warning: Reference `ch:grille' on page 82 undefined on input line 40.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
@@ -4080,20 +3866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-
-LaTeX Warning: Reference `mdf@pagelabel-11' on page 82 undefined on input line 
-46.
-
 [82]
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 83 undefined on input line 
-46.
-
-
-LaTeX Warning: Reference `ss:model-lineaire' on page 83 undefined on input line
- 56.
-
-
 Underfull \vbox (badness 3158) has occurred while \output is active []
 
 
@@ -4137,18 +3910,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
  []
 
 
-LaTeX Warning: Reference `chapter:litrev' on page 86 undefined on input line 10
-0.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-
-Underfull \vbox (badness 3323) has occurred while \output is active []
-
- [86]
+[86]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
@@ -4216,10 +3982,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Chapitre 6.
 Package biblatex Info: Reference segment=7 on input line 3.
 Package biblatex Info: Setting label 'refsegment:07' on input line 3.
-
-LaTeX Warning: Reference `eq:df_dice2023' on page 95 undefined on input line 10
-.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
@@ -4355,6 +4117,13 @@ Underfull \hbox (badness 5359) in paragraph at lines 308--308
  []
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.16994pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.16994pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
+
+[106]
 Underfull \hbox (badness 7012) in paragraph at lines 310--310
 [][][]\T1/zpltlf/m/sc/10 (+20) Aykut[]\T1/zpltlf/m/n/10 (+20) , Ste-fan C. et A
 my []\T1/zpltlf/m/sc/10 (+20) Dahan []\T1/zpltlf/m/n/10 (+20) (2015).
@@ -4378,20 +4147,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
-[106]
+[107]
 Overfull \hbox (0.26256pt too wide) in paragraph at lines 310--310
 [][][]\T1/zpltlf/m/sc/10 (-20) LOCOMOTION-h2020 []\T1/zpltlf/m/n/10 (-20) (7 fé
 v. 2024). \T1/zpltlf/m/it/10 (-20) LOCOMOTION-
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.16994pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.16994pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
-
-[107]
 Underfull \hbox (badness 5403) in paragraph at lines 311--311
 |\T1/RobotoSlab-TLF/bold/n/14.4 Interpréter le mo-dèle dans le
  []
@@ -4442,10 +4204,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [113] [114
 
-]
-No file report.lof.
+] (./report.lof)
 \tf@lof=\write11
 \openout11 = `report.lof'.
+
 
 
 Package caption Warning: Unused \captionsetup[method] on input line 190.
@@ -4460,37 +4222,20 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  73A9F04B64923614AB284399FB93AC90;17849.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                report
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 73A9F04B64923614AB284399FB93AC90;17849.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71286 strings out of 468662
- 1590262 string characters out of 5444563
- 2629098 words of memory out of 5000000
- 98228 multiletter control sequences out of 15000+600000
- 825780 words of font info for 360 fonts, out of 8000000 for 9000
+ 71693 strings out of 468662
+ 1597206 string characters out of 5444563
+ 2661870 words of memory out of 5000000
+ 98619 multiletter control sequences out of 15000+600000
+ 825988 words of font info for 362 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 99i,17n,108p,3779b,2776s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,3779b,2898s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{cite.0@noauthor_future_nodate} has been referenced 
 but does not exist, replaced by a fixed one
@@ -4515,10 +4260,10 @@ xmf-dist/fonts/type1/public/newtx/txexs.pfb><c:/texlive/2025/texmf-dist/fonts/t
 ype1/public/newpx/zplb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newpx
 /zplbi.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb><c:/te
 xlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on report.pdf (125 pages, 9987563 bytes).
+Output written on report.pdf (127 pages, 10010427 bytes).
 PDF statistics:
- 1375 PDF objects out of 1440 (max. 8388607)
- 1129 compressed objects within 12 object streams
- 359 named destinations out of 1000 (max. 500000)
- 57001 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1938 PDF objects out of 2073 (max. 8388607)
+ 1668 compressed objects within 17 object streams
+ 361 named destinations out of 1000 (max. 500000)
+ 57577 words of extra memory for PDF output out of 61914 (max. 10000000)
 
