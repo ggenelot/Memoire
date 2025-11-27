@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.13)  27 NOV 2025 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.11.13)  27 NOV 2025 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2452,11 +2452,11 @@ tle-report.tex
 [2
 
 ]
-<illustrations/ccby.png, id=316, 97.0827pt x 33.9669pt>
-File: illustrations/ccby.png Graphic file (type png)
-<use illustrations/ccby.png>
-Package pdftex.def Info: illustrations/ccby.png  used on input line 39.
-(pdftex.def)             Requested size: 85.35826pt x 29.86607pt.
+<illustrations/cc_by_nd.png, id=316, 1084.05pt x 598.235pt>
+File: illustrations/cc_by_nd.png Graphic file (type png)
+<use illustrations/cc_by_nd.png>
+Package pdftex.def Info: illustrations/cc_by_nd.png  used on input line 39.
+(pdftex.def)             Requested size: 85.35826pt x 47.10213pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 45.
 <figures/logos/iedes_logo.jpg, id=317, 3318.3975pt x 1778.645pt>
@@ -2471,7 +2471,7 @@ been already used, duplicate ignored
                    \relax 
 l.89 \end{titlepage}
                      [1{c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec
--tlf.enc} <./illustrations/ccby.png> <./figures/logos/iedes_logo.jpg>])
+-tlf.enc} <./illustrations/cc_by_nd.png> <./figures/logos/iedes_logo.jpg>])
 (./frontmatter/intention.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
@@ -2567,7 +2567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 [1
 
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}]
-<figures/trajectoire_spm6.png, id=458, 1871.99374pt x 1313.90875pt>
+<figures/trajectoire_spm6.png, id=457, 1871.99374pt x 1313.90875pt>
 File: figures/trajectoire_spm6.png Graphic file (type png)
 <use figures/trajectoire_spm6.png>
 Package pdftex.def Info: figures/trajectoire_spm6.png  used on input line 39.
@@ -2596,7 +2596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<illustrations/intro.png, id=471, 426.8748pt x 191.9973pt>
+<illustrations/intro.png, id=470, 426.8748pt x 191.9973pt>
 File: illustrations/intro.png Graphic file (type png)
 <use illustrations/intro.png>
 Package pdftex.def Info: illustrations/intro.png  used on input line 66.
@@ -2633,7 +2633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-<figures/logos/development.png, id=507, 385.44pt x 385.44pt>
+<figures/logos/development.png, id=506, 385.44pt x 385.44pt>
 File: figures/logos/development.png Graphic file (type png)
 <use figures/logos/development.png>
 Package pdftex.def Info: figures/logos/development.png  used on input line 90.
@@ -2643,7 +2643,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 91.
 See the caption package documentation for explanation.
 
-<illustrations/frame.png, id=508, 301.125pt x 301.125pt>
+<illustrations/frame.png, id=507, 301.125pt x 301.125pt>
 File: illustrations/frame.png Graphic file (type png)
 <use illustrations/frame.png>
 Package pdftex.def Info: illustrations/frame.png  used on input line 97.
@@ -2658,7 +2658,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<illustrations/cc_by_nd.png, id=509, 1084.05pt x 598.235pt>
 File: illustrations/cc_by_nd.png Graphic file (type png)
 <use illustrations/cc_by_nd.png>
 Package pdftex.def Info: illustrations/cc_by_nd.png  used on input line 114.
@@ -2685,7 +2684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [5 <./figures/logos/development.png> <./illustrations/frame.png>])
-(./mainmatter/1_impacts-risques.tex [6 <./illustrations/cc_by_nd.png>]
+(./mainmatter/1_impacts-risques.tex [6]
 Chapitre 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 
 1.
@@ -2705,7 +2704,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<figures/spm1.png, id=535, 1866.975pt x 2436.10126pt>
+<figures/spm1.png, id=533, 1866.975pt x 2436.10126pt>
 File: figures/spm1.png Graphic file (type png)
 <use figures/spm1.png>
 Package pdftex.def Info: figures/spm1.png  used on input line 42.
@@ -2733,12 +2732,12 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 49.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
 (Font)              `T1/RobotoSlab-TLF/bold/n' on input line 49.
-<figures/tipping_point.png, id=558, 920.43875pt x 322.20375pt>
+<figures/tipping_point.png, id=556, 920.43875pt x 322.20375pt>
 File: figures/tipping_point.png Graphic file (type png)
 <use figures/tipping_point.png>
 Package pdftex.def Info: figures/tipping_point.png  used on input line 70.
 (pdftex.def)             Requested size: 455.24411pt x 159.36105pt.
-<figures/earth_tipping_point.png, id=563, 591.4095pt x 384.2355pt>
+<figures/earth_tipping_point.png, id=561, 591.4095pt x 384.2355pt>
 File: figures/earth_tipping_point.png Graphic file (type png)
 <use figures/earth_tipping_point.png>
 Package pdftex.def Info: figures/earth_tipping_point.png  used on input line 77
@@ -2746,7 +2745,7 @@ Package pdftex.def Info: figures/earth_tipping_point.png  used on input line 77
 (pdftex.def)             Requested size: 227.62206pt x 147.88129pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 78.
-<figures/Tipping_points_2022_list.jpeg, id=570, 1927.2pt x 1255.69125pt>
+<figures/Tipping_points_2022_list.jpeg, id=568, 1927.2pt x 1255.69125pt>
 File: figures/Tipping_points_2022_list.jpeg Graphic file (type jpg)
 <use figures/Tipping_points_2022_list.jpeg>
 Package pdftex.def Info: figures/Tipping_points_2022_list.jpeg  used on input l
@@ -2810,7 +2809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-<figures/keeling.png, id=615, 341.275pt x 156.585pt>
+<figures/keeling.png, id=613, 341.275pt x 156.585pt>
 File: figures/keeling.png Graphic file (type png)
 <use figures/keeling.png>
 Package pdftex.def Info: figures/keeling.png  used on input line 114.
@@ -2833,7 +2832,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<figures/UNFCCC_Party_Groupings.svg.png, id=636, 1927.2pt x 1005.7575pt>
+<figures/UNFCCC_Party_Groupings.svg.png, id=634, 1927.2pt x 1005.7575pt>
 File: figures/UNFCCC_Party_Groupings.svg.png Graphic file (type png)
 <use figures/UNFCCC_Party_Groupings.svg.png>
 Package pdftex.def Info: figures/UNFCCC_Party_Groupings.svg.png  used on input 
@@ -2881,7 +2880,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [16]
-<figures/spm2_5.png, id=673, 2097.8375pt x 1100.11pt>
+<figures/spm2_5.png, id=671, 2097.8375pt x 1100.11pt>
 File: figures/spm2_5.png Graphic file (type png)
 <use figures/spm2_5.png>
 Package pdftex.def Info: figures/spm2_5.png  used on input line 178.
@@ -2921,7 +2920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<figures/scc.png, id=704, 1309.89375pt x 782.925pt>
+<figures/scc.png, id=702, 1309.89375pt x 782.925pt>
 File: figures/scc.png Graphic file (type png)
 <use figures/scc.png>
 Package pdftex.def Info: figures/scc.png  used on input line 233.
@@ -3086,7 +3085,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [31]
-<results/shape.png, id=856, 361.35pt x 216.81pt>
+<results/shape.png, id=854, 361.35pt x 216.81pt>
 File: results/shape.png Graphic file (type png)
 <use results/shape.png>
 Package pdftex.def Info: results/shape.png  used on input line 279.
@@ -3097,7 +3096,7 @@ Overfull \hbox (7.0324pt too wide) in paragraph at lines 286--286
 faut-il, et que prendre en compte ?| 
  []
 
-<figures/sankey.png, id=859, 594.7821pt x 297.0297pt>
+<figures/sankey.png, id=857, 594.7821pt x 297.0297pt>
 File: figures/sankey.png Graphic file (type png)
 <use figures/sankey.png>
 Package pdftex.def Info: figures/sankey.png  used on input line 303.
@@ -3154,7 +3153,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
-<results/actualisation.png, id=879, 722.7pt x 433.62pt>
+<results/actualisation.png, id=877, 722.7pt x 433.62pt>
 File: results/actualisation.png Graphic file (type png)
 <use results/actualisation.png>
 Package pdftex.def Info: results/actualisation.png  used on input line 343.
@@ -3199,7 +3198,7 @@ Package biblatex Info: Setting label 'refsegment:04' on input line 3.
 [37
 
 ]
-<results/carte_progressive.png, id=900, 1445.4pt x 1084.05pt>
+<results/carte_progressive.png, id=898, 1445.4pt x 1084.05pt>
 File: results/carte_progressive.png Graphic file (type png)
 <use results/carte_progressive.png>
 Package pdftex.def Info: results/carte_progressive.png  used on input line 21.
@@ -3368,7 +3367,7 @@ Package pdftex.def Info: figures/logos/development.png  used on input line 208.
 
 (pdftex.def)             Requested size: 42.67912pt x 42.67494pt.
 Package marginnote Info: xpos seems to be 379.67517pt on input line 208.
-<results/slr_4_2.png, id=962, 1084.05pt x 722.7pt>
+<results/slr_4_2.png, id=960, 1084.05pt x 722.7pt>
 File: results/slr_4_2.png Graphic file (type png)
 <use results/slr_4_2.png>
 Package pdftex.def Info: results/slr_4_2.png  used on input line 212.
@@ -3406,7 +3405,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [47 <./results/slr_4_2.png>]
-<illustrations/rect1.png, id=977, 423.08063pt x 232.61906pt>
+<illustrations/rect1.png, id=975, 423.08063pt x 232.61906pt>
 File: illustrations/rect1.png Graphic file (type png)
 <use illustrations/rect1.png>
 Package pdftex.def Info: illustrations/rect1.png  used on input line 231.
@@ -3465,7 +3464,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [51] [52]
-<results/cartogramme_4.png, id=1007, 650.43pt x 1084.05pt>
+<results/cartogramme_4.png, id=1005, 650.43pt x 1084.05pt>
 File: results/cartogramme_4.png Graphic file (type png)
 <use results/cartogramme_4.png>
 Package pdftex.def Info: results/cartogramme_4.png  used on input line 304.
@@ -3479,7 +3478,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 330--334
 
  []
 
-<results/exponent.png, id=1013, 462.528pt x 346.896pt>
+<results/exponent.png, id=1011, 462.528pt x 346.896pt>
 File: results/exponent.png Graphic file (type png)
 <use results/exponent.png>
 Package pdftex.def Info: results/exponent.png  used on input line 344.
@@ -3488,7 +3487,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 7.0pt on input line 345.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 7.0pt on input line 345.
-<results/norm_constant.png, id=1014, 462.528pt x 346.896pt>
+<results/norm_constant.png, id=1012, 462.528pt x 346.896pt>
 File: results/norm_constant.png Graphic file (type png)
 <use results/norm_constant.png>
 Package pdftex.def Info: results/norm_constant.png  used on input line 351.
@@ -3574,7 +3573,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<venn_ethics.png, id=1060, 1058.95625pt x 1117.17375pt>
+<venn_ethics.png, id=1058, 1058.95625pt x 1117.17375pt>
 File: venn_ethics.png Graphic file (type png)
 <use venn_ethics.png>
 Package pdftex.def Info: venn_ethics.png  used on input line 54.
@@ -3615,12 +3614,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [64]
-<results/carte_fund.png, id=1099, 361.35pt x 216.81pt>
+<results/carte_fund.png, id=1097, 361.35pt x 216.81pt>
 File: results/carte_fund.png Graphic file (type png)
 <use results/carte_fund.png>
 Package pdftex.def Info: results/carte_fund.png  used on input line 128.
 (pdftex.def)             Requested size: 204.85846pt x 122.9147pt.
-<results/carte_wiliam.png, id=1100, 361.35pt x 216.81pt>
+<results/carte_wiliam.png, id=1098, 361.35pt x 216.81pt>
 File: results/carte_wiliam.png Graphic file (type png)
 <use results/carte_wiliam.png>
 Package pdftex.def Info: results/carte_wiliam.png  used on input line 135.
@@ -3674,7 +3673,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.16994pt}.
 
 [68]
-<reductionisme.png, id=1137, 943.525pt x 938.50626pt>
+<reductionisme.png, id=1135, 943.525pt x 938.50626pt>
 File: reductionisme.png Graphic file (type png)
 <use reductionisme.png>
 Package pdftex.def Info: reductionisme.png  used on input line 215.
@@ -4234,10 +4233,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71700 strings out of 468662
- 1597408 string characters out of 5444563
- 2662923 words of memory out of 5000000
- 98626 multiletter control sequences out of 15000+600000
+ 71693 strings out of 468662
+ 1597206 string characters out of 5444563
+ 2661870 words of memory out of 5000000
+ 98619 multiletter control sequences out of 15000+600000
  825988 words of font info for 362 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  99i,17n,108p,3779b,2898s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4265,10 +4264,10 @@ xmf-dist/fonts/type1/public/newtx/txexs.pfb><c:/texlive/2025/texmf-dist/fonts/t
 ype1/public/newpx/zplb.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newpx
 /zplbi.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/newpx/zplr.pfb><c:/te
 xlive/2025/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on report.pdf (127 pages, 10019267 bytes).
+Output written on report.pdf (127 pages, 10010427 bytes).
 PDF statistics:
- 1940 PDF objects out of 2073 (max. 8388607)
+ 1938 PDF objects out of 2073 (max. 8388607)
  1668 compressed objects within 17 object streams
  361 named destinations out of 1000 (max. 500000)
- 57582 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 57577 words of extra memory for PDF output out of 61914 (max. 10000000)
 

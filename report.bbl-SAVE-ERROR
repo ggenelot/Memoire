@@ -5242,6 +5242,86 @@
       \endverb
       \keyw{modele,economics,litrev,{PARCOURU},A {LIRE},iam}
     \endentry
+    \entry{steffen_trajectory_2015}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=c73a2896f09b80b3df3ade10d957b068}{%
+           family={Steffen},
+           familyi={S\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d83208ac7e78b3ad0b10429b5e0506a6}{%
+           family={Broadgate},
+           familyi={B\bibinitperiod},
+           given={Wendy},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9041d9d301e448b48ed34cbd8379372d}{%
+           family={Deutsch},
+           familyi={D\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e66915009e254a34ae0dccbf8823a616}{%
+           family={Gaffney},
+           familyi={G\bibinitperiod},
+           given={Owen},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b01236d73a10ee810bb8455ecc118e85}{%
+           family={Ludwig},
+           familyi={L\bibinitperiod},
+           given={Cornelia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{fullhash}{e7988147d379149a77cabdd2036f8c98}
+      \strng{fullhashraw}{e7988147d379149a77cabdd2036f8c98}
+      \strng{bibnamehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{authorbibnamehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{authornamehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{authorfullhash}{e7988147d379149a77cabdd2036f8c98}
+      \strng{authorfullhashraw}{e7988147d379149a77cabdd2036f8c98}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The ‘Great Acceleration’ graphs, originally published in 2004 to show socio-economic and Earth System trends from 1750 to 2000, have now been updated to 2010. In the graphs of socio-economic trends, where the data permit, the activity of the wealthy ({OECD}) countries, those countries with emerging economies, and the rest of the world have now been differentiated. The dominant feature of the socio-economic trends is that the economic activity of the human enterprise continues to grow at a rapid rate. However, the differentiated graphs clearly show that strong equity issues are masked by considering global aggregates only. Most of the population growth since 1950 has been in the non-{OECD} world but the world’s economy ({GDP}), and hence consumption, is still strongly dominated by the {OECD} world. The Earth System indicators, in general, continued their long-term, post-industrial rise, although a few, such as atmospheric methane concentration and stratospheric ozone loss, showed a slowing or apparent stabilisation over the past decade. The post-1950 acceleration in the Earth System indicators remains clear. Only beyond the mid-20th century is there clear evidence for fundamental shifts in the state and functioning of the Earth System that are beyond the range of variability of the Holocene and driven by human activities. Thus, of all the candidates for a start date for the Anthropocene, the beginning of the Great Acceleration is by far the most convincing from an Earth System science perspective.}
+      \field{day}{1}
+      \field{issn}{2053-0196}
+      \field{journaltitle}{The Anthropocene Review}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{note}{Publisher: {SAGE} Publications}
+      \field{number}{1}
+      \field{shorttitle}{The trajectory of the Anthropocene}
+      \field{title}{The trajectory of the Anthropocene: The Great Acceleration}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{2}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{81\bibrangedash 98}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1177/2053019614564785
+      \endverb
+      \verb{file}
+      \verb Steffen et al. - 2015 - The trajectory of the Anthropocene The Great Acce.pdf:C\:\\Users\\gabriel.genelot\\Zotero\\storage\\D6K8IE8V\\Steffen et al. - 2015 - The trajectory of the Anthropocene The Great Acce.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/2053019614564785
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/2053019614564785
+      \endverb
+      \keyw{/unread,{LU},theory,limits to growth}
+    \endentry
     \entry{stern_why_2015}{book}{}{}
       \name{author}{1}{}{%
         {{un=1,uniquepart=given,hash=fd905cebe804177c426887de64984166}{%
@@ -5974,7 +6054,6 @@
     \endentry
   \enddatalist
   \missing{aykut_gouverner_nodate}
-  \missing{steffen_trajectory_2018}
 \endrefsection
 \endinput
 
