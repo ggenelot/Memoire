@@ -1,4 +1,6 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18324853.svg)](https://doi.org/10.5281/zenodo.18324853)
+
 
 # Fonctions de dommage dans les modèles intégrés
 
